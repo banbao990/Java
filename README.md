@@ -23,3 +23,8 @@ java xxx
 ## 1 [FileFilter](./file/FileFilter/FileFilter.java)
 
 + 将源文件夹(src)中的所有文件都移动到目的文件夹下(dst)
+
+## 2 [NaiveBayes](./ML/NaiveBayes/NaiveBayes.java)
+
++ 使用 `Data.txt` 文件中的数据进行朴素贝叶斯估计
+
