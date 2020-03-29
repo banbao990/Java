@@ -20,7 +20,7 @@ java xxx
 java xxx
 ```
 
-## 1 [FileFilter](./file/FileFilter/FileFilter.java)
+## 1 [FileFilter](./File/FileFilter/FileFilter.java)
 
 + 将源文件夹(src)中的所有文件都移动到目的文件夹下(dst)
 
@@ -28,3 +28,9 @@ java xxx
 
 + 使用 `Data.txt` 文件中的数据进行朴素贝叶斯估计
 
+## 3 [Rename](./File/Rename/Rename.java)
+
++ 按照 `key-values.txt` 中的规则对文件进行重命名
++ 其中每一行都包含两个参数(旧文件名,新文件名)
++ 两个参数之间用空格隔开(可以有多余的空格)
++ 例:`aa.txt bb.txt`,`  aa.txt   bb.txt   `
