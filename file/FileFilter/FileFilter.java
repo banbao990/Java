@@ -4,9 +4,8 @@ import java.nio.*;
 import java.util.*;
 
 /**
- * 将源文件夹(src)中的所有文件都移动到目的文件夹下(dst)
- * 编码格式: ANSI
  * @author banbao
+ * @encode ANSI
  */
 
 public class FileFilter {
