@@ -1,6 +1,6 @@
 /**
- * @author:banbao
- * @encode:ANSI
+ * @author banbao
+ * @encode ANSI
 */
 
 import static java.lang.System.out;
