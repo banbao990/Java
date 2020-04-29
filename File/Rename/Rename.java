@@ -1,9 +1,11 @@
 import java.io.*;
 
 /**
- * @author banbao
- * @encode ANSI
+ * @author:banbao
+ * @encode:ANSI
 */
+
+// 现在仅支持同目录下文件的重命名
 
 public class Rename{
     // bbq: 为什么 "  a.txt b.txt" 匹配长度会是3?
@@ -52,11 +54,15 @@ public class Rename{
                 }
 
                 // 获取新旧文件名
-                fileNameBefore = infos[0];
-                fileNameAfter = infos[1];
+                fileNameBefore = infos[0].trim();
+                fileNameAfter = infos[1].trim();
+                if("".equals(fileNameBefore) || "".equals(fileNameAfter)){
+                    errorPrinter("One fileName is blank!");
+                    continue;
+                }
 
                 // 新旧文件重名
-                if(!fileNameBefore.equals(fileNameAfter)){
+                if(fileNameBefore.equals(fileNameAfter)){
                     errorPrinter("The new file name is equals to the old one!");
                     continue;
                 }
