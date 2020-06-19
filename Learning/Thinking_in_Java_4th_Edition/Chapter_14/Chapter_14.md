@@ -1,3 +1,3 @@
-# Chapter_14 类型信息
+# Chapter_14 绫诲瀷淇℃伅
 
-> [总目录](../README.md)
+> [鎬荤洰褰昡(../README.md)

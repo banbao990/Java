@@ -1,3 +1,3 @@
-# Chapter_08 ��̬
+# Chapter_08 多态
 
-> [��Ŀ¼](../README.md)
+> [总目录](../README.md)

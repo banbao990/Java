@@ -1,3 +1,3 @@
-# Chapter_12 通过异常处理错误
+# Chapter_12 閫氳繃寮傚父澶勭悊閿欒
 
-> [总目录](../README.md)
+> [鎬荤洰褰昡(../README.md)

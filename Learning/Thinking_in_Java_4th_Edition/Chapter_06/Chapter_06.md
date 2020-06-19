@@ -1,3 +1,3 @@
-# Chapter_06 访问权限控制
+# Chapter_06 璁块棶鏉冮檺鎺у埗
 
-> [总目录](../README.md)
+> [鎬荤洰褰昡(../README.md)

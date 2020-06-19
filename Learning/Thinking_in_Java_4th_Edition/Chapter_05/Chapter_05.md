@@ -1,3 +1,3 @@
-# Chapter_05 初始化与清理
+# Chapter_05 鍒濆鍖栦笌娓呯悊
 
-> [总目录](../README.md)
+> [鎬荤洰褰昡(../README.md)
