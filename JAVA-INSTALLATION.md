@@ -67,7 +67,7 @@ D:\installed-application\Java\JRE
     
     ```shell
     D:\installed-application\Java\JDK\bin
-D:\installed-application\Java\JDK\jre\bin
+    D:\installed-application\Java\JDK\jre\bin
     ```
 
     + 或者是如下值
