@@ -51,14 +51,14 @@ D:\installed-application\Java\JRE
 + **环境变量**
 + **系统变量** 中新建 `JAVA_HOME`
     + 变量名 : `JAVA_HOME`
-    + 值 : `D:\installed-application\Java\JDK`
+    + 变量值 : `D:\installed-application\Java\JDK`
     + 这里 `JAVA_HOME` 只是为了后面的设置可以使用相对路径，比较简单
     + 后面使用到 `%JAVA_HOME%` 只是字符串的简单拼接
 + **系统变量** 中新建 `CLASSPATH`
   
     + 变量名 : `CLASSPATH`
-+ 值 : `.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;`
-  
+    + 变量值 : `.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;`
+    
 + **系统变量** 中找到 **PATH** 变量
 
     + `PATH` 是 `cmd` 运行文件的查找路径，这一部分的配置是为了命令行使用
@@ -123,7 +123,7 @@ D:\installed-application\Java\OtherLib
 
 + **系统变量** 中新建变量 `otherJavaLib`
     + 变量名 : `otherJavaLib`
-    + 值 : `D:\installed-application\Java\OtherLib`
+    + 变量值 : `D:\installed-application\Java\OtherLib`
 
 
 
@@ -190,3 +190,15 @@ javac test.java
 ```shell
 D:\installed-application\Java\JDK\src.zip
 ```
+
+
+
+## 7. 卸载
+
++ `jre` 
+    + 直接点安装的 `exe` 选择删除即可
++ `jdk`
+    +  `win+R` 输入`control` 打开 `控制面板` 
+        + 或者搜索栏搜索 `控制面板`
+    + 标题栏输入`控制面板\所有控制面板项\程序和功能`
+    + 找到 `jdk` 右键卸载即可
