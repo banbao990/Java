@@ -57,7 +57,7 @@ package test;
 
 + 使用自己独特 **域名** 反序
 
-+ java` 解释器的运行过程
++ `java` 解释器的运行过程
 
     + 找到环境变量 `CLASSPATH`
         + `CLASSPATH` 为找 `.class` 文件的根目录
