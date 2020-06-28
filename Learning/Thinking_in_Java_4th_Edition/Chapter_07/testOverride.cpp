@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 class Test{
-    
+
 };
 
 class A{
@@ -28,18 +28,18 @@ class B : A{
 int main() {
     A testA = A();
     B testB = B();
-    testA.fun(1.0f); // warning C4244: '²ÎÊı' : ´Ó 'float' ×ª»»µ½ 'int', ¿ÉÄÜ¶ªÊ§Êı¾İ
+    testA.fun(1.0f); // warning C4244: 'å‚æ•°' : ä» 'float' è½¬æ¢åˆ° 'int', å¯èƒ½ä¸¢å¤±æ•°æ®
     testA.fun(1);
     testA.fun(Test());
-    
+
     printf("------\n");
     testB.fun(1.0f);
     testB.fun(1);
-    // testB.fun(Test()); // error C2664: 'void B::fun(float)' : ÎŞ·¨½«²ÎÊı 1 ´Ó 'Test' ×ª»»Îª 'float'
-    
+    // testB.fun(Test()); // error C2664: 'void B::fun(float)' : æ— æ³•å°†å‚æ•° 1 ä» 'Test' è½¬æ¢ä¸º 'float'
+
     return 0;
 }
-/* 
+/*
  * output :
  * A:1
  * A:1
