@@ -136,7 +136,7 @@ try{
 
 + 导出类重新定义的方法 **不会** 屏蔽其在基类中的任何版本
 + `c++`  在子类重载了方法之后，基类的所有重载方法失效
-+ [TestOverride.cpp](TestOverride.cpp)
++ [TestOverride.cpp](testOverride.cpp)
 
 ```C++
 #include <stdio.h>
