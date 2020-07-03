@@ -18,14 +18,6 @@
 ### 0.2 注意编码格式, 如果无法运行请转换成指定格式
 
 + 一般是 `ANSI`
-+ 如果编码格式是 `UTF-8` 需要在编译时添加命令 ` -encoding UTF-8 `
-
-```java
-// 举个例子
-TestUTF8.java // 编码格式为 UTF-8
-// 编译命令
-javac -encoding UTF-8 TestUTF8.java
-```
 
 
 
