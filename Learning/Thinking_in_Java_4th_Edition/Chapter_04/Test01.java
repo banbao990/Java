@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment 4ä½æ•°çš„å¸è¡€é¬¼æ•°å­—:
+ * @comment 4Î»ÊýµÄÎüÑª¹íÊý×Ö:
  *          ab*cd = efgh => sort(a,b,c,d) = sort(e,f,g,h)
  */
 
@@ -11,7 +11,7 @@ public class Test01{
         for(int i = 10; i < 99; ++i){
             for(int j = i; j < 99; ++j){
                 int ij = i * j;
-                // ä¸æ˜¯ 4 ä½æ•°
+                // ²»ÊÇ 4 Î»Êý
                 if(ij < 1000) continue;
                 // i,j
                 ArrayList<Integer> factor = new ArrayList<>();
@@ -20,7 +20,7 @@ public class Test01{
                 factor.add(i/10);
                 factor.add(j%10);
                 factor.add(j/10);
-                // lambda è¡¨è¾¾å¼(java 8)
+                // lambda ±í´ïÊ½(java 8)
                 factor.sort((a,b)->(a-b));
                 // ij
                 ArrayList<Integer> product = new ArrayList<>();

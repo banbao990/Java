@@ -12,8 +12,8 @@ class B{
 class A{
     public static void testFinal(final B b){
         // b = new B(10);
-        // 错误: 不能分配最终参数 b
-        b.a = 2; // OK, 没有改变 b 指向的对象是哪一个,只是改变了 b 指向对象的值
+        // ����: ���ܷ������ղ��� b
+        b.a = 2; // OK, û�иı� b ָ��Ķ�������һ��,ֻ�Ǹı��� b ָ������ֵ
     }
 }
 

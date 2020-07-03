@@ -25,11 +25,11 @@ public class TestOverride{
         B testB = new B();
         // testA.fun(1.0f);
         /*
-         * TestOverride.java:26: é”™è¯¯: å¯¹äºfun(float), æ‰¾ä¸åˆ°åˆé€‚çš„æ–¹æ³•
-         * æ–¹æ³• A.fun(int)ä¸é€‚ç”¨
-         * (å‚æ•°ä¸åŒ¹é…; ä»floatè½¬æ¢åˆ°intå¯èƒ½ä¼šæœ‰æŸå¤±)
-         * æ–¹æ³• A.fun(Test)ä¸é€‚ç”¨
-         * (å‚æ•°ä¸åŒ¹é…; floatæ— æ³•è½¬æ¢ä¸ºTest)
+         * TestOverride.java:26: ´íÎó: ¶ÔÓÚfun(float), ÕÒ²»µ½ºÏÊÊµÄ·½·¨
+         * ·½·¨ A.fun(int)²»ÊÊÓÃ
+         * (²ÎÊı²»Æ¥Åä; ´Ófloat×ª»»µ½int¿ÉÄÜ»áÓĞËğÊ§)
+         * ·½·¨ A.fun(Test)²»ÊÊÓÃ
+         * (²ÎÊı²»Æ¥Åä; floatÎŞ·¨×ª»»ÎªTest)
          */ 
         testA.fun(1);
         testA.fun(new Test());

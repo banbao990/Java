@@ -5,13 +5,13 @@
 class A{
     final int a;
     A(int a){
-        // åœ¨æ„é€ å‡½æ•°ä¸­ä¸º final å˜é‡ a èµ‹å€¼
+        // ÔÚ¹¹Ôìº¯ÊıÖĞÎª final ±äÁ¿ a ¸³Öµ
         this.a = a;
     }
 
     public void change(int a){
         // this.a = a;
-        // é”™è¯¯: æ— æ³•ä¸ºæœ€ç»ˆå˜é‡ a åˆ†é…å€¼
+        // ´íÎó: ÎŞ·¨Îª×îÖÕ±äÁ¿ a ·ÖÅäÖµ
     }
 
     public void func(){

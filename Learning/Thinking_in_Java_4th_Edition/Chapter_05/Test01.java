@@ -4,15 +4,15 @@
 
 class Tank{
 
-    // æ˜¯å¦å¼¹è¯å……è¶³
+    // ÊÇ·ñµ¯Ò©³ä×ã
     private boolean full;
 
-    // æ„é€ å‡½æ•°
+    // ¹¹Ôìº¯Êı
     Tank(boolean full){
         this.full = full;
     }
 
-    // è¿›æ”»
+    // ½ø¹¥
     public boolean attack(){
         if(!this.full){
             System.out.println("ERROR:The tank is lack of ammunition!");
@@ -64,12 +64,12 @@ public class Test01{
 /*
  * 
  * output:
- * åˆ†åˆ«æ³¨é‡Š test01,test02
- * case1 : æ³¨é‡Š test02, åªæœ‰ test01(å½“å‰æ— æ³•ç¡®è®¤tank1,2,3,4æ˜¯å¦ä¸ºåƒåœ¾)
+ * ·Ö±ğ×¢ÊÍ test01,test02
+ * case1 : ×¢ÊÍ test02, Ö»ÓĞ test01(µ±Ç°ÎŞ·¨È·ÈÏtank1,2,3,4ÊÇ·ñÎªÀ¬»ø)
  * ---test01---
  * ERROR:The tank is lack of ammunition!
  * 
- * case2 : æ³¨é‡Š test01, åªæœ‰ test02
+ * case2 : ×¢ÊÍ test01, Ö»ÓĞ test02
  * ---test02---
  * ERROR:The tank is lack of ammunition!
  * GC
