@@ -7,6 +7,7 @@
     - 如果编码格式为 `UTF-8` ，请在编译时加上 `-encoding UTF-8`
     - `*.java` 文件编码格式 `ANSI(GBK)`
     - `*.md` 文件编码格式为 `UTF-8`
+- `Example_Code` 文件夹内为书中自带的样例代码
 
 
 
