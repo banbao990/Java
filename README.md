@@ -64,3 +64,27 @@ java xxx
 + 其中每一行都包含两个参数(旧文件名,新文件名)
 + 两个参数之间用空格隔开(可以有多余的空格)
 + 例:`aa.txt bb.txt`,`  aa.txt   bb.txt   `
+
+
+
+## 4 [FormatChange](./File/FormatChange)
+
++ `UTF8` 和 `GBK` 的编码转换
+
++ [FormatChange.java](./File/FormatChange/FormatChange.java)
+
+    + 单个文件转换
+
+    ```powershell
+    java FormatChange <U2G|G2U> inputFileName [outputFileName]
+    ```
+
++ [FormatChangeBat.java](./File/FormatChange/FormatChangeBat.java)
+
+    + 批量文件转换
+
+    ```powershell
+    java FormatChangeBat <U2G|G2U> dirName
+    ```
+
+    
