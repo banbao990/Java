@@ -466,11 +466,13 @@ Classes for Unicode scripts, blocks, categories and binary properties
 | ----------------- | ------------------------------------------------------------ |
 | `\R`              | Any Unicode linebreak sequence, is equivalent to `\u000D\u000A|[\u000A\u000B\u000C\u000D\u0085\u2028\u2029]` |
 
-| Logical operators |                                                              |
-| ----------------- | ------------------------------------------------------------ |
-| *XY*              | *X* followed by *Y*                                          |
-| *X*`|`*Y*         | Either *X* or *Y*                                            |
-| `(`*X*`)`         | X, as a [capturing group](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#cg) |
+```java
+Logical operators
+| XY      | X followed by Y           |
+| X|Y     | Either X or Y             |
+| (X)     | X, as a [capturing group] |
+```
+
 
 | Back references |                                                              |
 | --------------- | ------------------------------------------------------------ |
