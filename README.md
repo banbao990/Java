@@ -87,4 +87,14 @@ java xxx
     java FormatChangeBat <U2G|G2U> dirName
     ```
 
-    
+
+
+
+## 5. [Dump](File/Dump/Dump.java)
+
++ 将文件转为 `16` 进制输出
+
+```powershell
+java Dump FileName # 默认输出到标准输出
+```
+
