@@ -20,4 +20,4 @@ int main() {
   manipulator.manipulate();
 } /* Output:
 HasF::f()
-///:~
+*///:~
