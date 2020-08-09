@@ -13,8 +13,8 @@ public class ShowMethods {
     // 提示信息
     private static String usage =
         "usage:(FULL NAME)\n"
-        + "(1)java ShowMethods ClassName"
-        + "(2)java ShowMethods ClassName returnType";
+        + "    (1)java ShowMethods ClassName\n"
+        + "    (2)java ShowMethods ClassName returnType";
     private static Pattern p = Pattern.compile("\\w+\\.");
     private static boolean oneArgs = true;
     private static String returnType = "";
@@ -58,7 +58,7 @@ public class ShowMethods {
     }
     
     private static void print(String modifier, List<String> list) {
-        System.out.println("~~~~~" + modifier + "~~~~~");
+        System.out.println("// ~~~~~" + modifier + "~~~~~ //");
         for(String method : list) {
             if(oneArgs || method.indexOf(returnType) == -1) {
                 System.out.println(method);
