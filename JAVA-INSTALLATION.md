@@ -55,23 +55,23 @@ D:\installed-application\Java\JRE
     + 这里 `JAVA_HOME` 只是为了后面的设置可以使用相对路径，比较简单
     + 后面使用到 `%JAVA_HOME%` 只是字符串的简单拼接
 + **系统变量** 中新建 `CLASSPATH`
-  
+
     + 变量名 : `CLASSPATH`
     + 变量值 : `.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;`
-    
+
 + **系统变量** 中找到 **PATH** 变量
 
     + `PATH` 是 `cmd` 运行文件的查找路径，这一部分的配置是为了命令行使用
 + 只需要配置 `javac.exe`，`java.exe` 自动配置好了
     + 在最后新加如下值
-    
+
     ```shell
     D:\installed-application\Java\JDK\bin
     D:\installed-application\Java\JDK\jre\bin
     ```
 
     + 或者是如下值
-    
+
     ```shell
     %JAVA_HOME%\bin
     %JAVA_HOME%\jre\bin
@@ -124,10 +124,28 @@ D:\installed-application\Java\OtherLib
 + **系统变量** 中新建变量 `otherJavaLib`
     + 变量名 : `otherJavaLib`
     + 变量值 : `D:\installed-application\Java\OtherLib`
++ 一个方便的方法
+    + 将所有的 `*.jar` 文件放到库文件夹下
+    + 只需要把 `%OtherLib%\*` 加入 `classpath` 即可
+    + 接下来只需要把新加库加到库文件夹下即可
 
 
 
-### 5.1 例子
+### 5.1 其他设置 classpath 的方法
+
+#### (1) cmd (windows)
+
++ 但是好像退出 `cmd` 就没了，很是奇怪
+
+```powershell
+set CLASSPATH=%CLASSPATH%;newpath
+# 举个例子
+set CLASSPATH=%CLASSPATH%;D:\installed-application\Java\OtherLib\xom-1.3.5.jar
+```
+
+
+
+### 5.2 例子
 
 + 以下以 `json.jar` 为例
 + 为了方便我们将 `json.jar` 文件放在上述文件夹下
@@ -157,7 +175,7 @@ test.java:4: 错误: 程序包org.json不存在
 import org.json.*;
 ```
 
-### (2) classpath
+#### (2) classpath
 
 + 使用 `classpath` 可以正确编译
 
@@ -167,7 +185,7 @@ javac -classpath D:\installed-application\Java\OtherLib\json.jar test.java
 
 
 
-### (3) 上述方法
+#### (3) 上述方法
 
 + 在 **系统变量** `CLASSPATH` 的最后面 **添加** 如下路径
 
@@ -195,10 +213,10 @@ D:\installed-application\Java\JDK\src.zip
 
 ## 7. 卸载
 
-+ `jre` 
++ `jre`
     + 直接点安装的 `exe` 选择删除即可
 + `jdk`
-    +  `win+R` 输入`control` 打开 `控制面板` 
+    +  `win+R` 输入`control` 打开 `控制面板`
         + 或者搜索栏搜索 `控制面板`
     + 标题栏输入`控制面板\所有控制面板项\程序和功能`
     + 找到 `jdk` 右键卸载即可
