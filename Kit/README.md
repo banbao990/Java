@@ -61,8 +61,8 @@ java GZip -d GZip.java.gz
 # 等价于 java GZip -c GZip.java.gz GZip.java
 
 # 如果 test 是 "gzip" 格式的
-java GZip -d test 			# 报错
-java GZip -d test test.dat 	# 正确执行
+java GZip -d test           # 报错
+java GZip -d test test.dat  # 正确执行
 ```
 
 
