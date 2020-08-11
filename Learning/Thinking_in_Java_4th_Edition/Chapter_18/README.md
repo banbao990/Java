@@ -234,7 +234,7 @@ public boolean renameTo(File dest)
 |    过滤器：Java 1.0 类    |               相应的 Java 1.1 类                |
 | :-----------------------: | :---------------------------------------------: |
 |   **FilterInputStream**   |                **FilterReader**                 |
-|  **FilterOutputStream**   |      **FIlterWriter（抽象类，没有子类）**       |
+|  **FilterOutputStream**   |      **FilterWriter（抽象类，没有子类）**       |
 |  **BufferedInputStream**  |               **BufferedReader**                |
 | **BufferedOutputStream**  |               **BufferedWriter**                |
 |    **FileInputStream**    |        **FileReader（也有 readLine()）**        |
