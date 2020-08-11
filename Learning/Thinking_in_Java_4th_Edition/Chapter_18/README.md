@@ -247,7 +247,7 @@ public boolean renameTo(File dest)
 
 + 注意当我们使用 `readLine()` 时，不应该使用 `DataInputStream`，而是 `BufferedReader`
     + 除了这一点，`DataInputStream` 仍然是 `I/O` 的首选
-+ 方便过渡，`PrintWriter` 提供了一个技能接受 `Writer` 对象和 `OutputStream` 对象的构造器
++ 方便过渡，`PrintWriter` 提供了一个能接受 `Writer` 对象和 `OutputStream` 对象的构造器
 
 
 
