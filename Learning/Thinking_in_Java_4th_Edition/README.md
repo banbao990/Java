@@ -1,17 +1,49 @@
 # README
 
+## 1. 说明
+
 - `Java编程思想(第四版)` 学习笔记
+
 - 本书基于 `Java SE 6`,
+
 - 代码实现环境 `Java SE 8`
+
 - 编码
     - 如果编码格式为 `UTF-8` ，请在编译时加上 `-encoding UTF-8`
     - `*.java` 文件编码格式 `ANSI(GBK)`
     - `*.md` 文件编码格式为 `UTF-8`
+    
 - `Example_Code` 文件夹内为书中自带的样例代码
 
+    - 代码构建 `ant`（**并未成功编译**）
+
+        - 进入到 `Example_Code` 文件夹中
+        - `ant build`
+    - 按照提示下载依赖库
+    
+    ```txt
+        // 安装了却没用 
+    You must install the Javassist library from 
+         	http://sourceforge.net/projects/jboss/
+        ```
+    
+- 如果版本不正确会报错，此时一种解决方法如下
+    
+        - 注释掉所有 `*.xml` 文件中的如下语句
+    
+    ```xml
+        <fail message="J2SE5 required" unless="version1.5"/>
+        ```
+    
+        + 写一个 `java` 文件，然后通过文件流处理
+            + [AntVersionSkip.java](Help/AntVersionSkip.java) 
+            + 编译运行即可
+    
+    - `ant` 工具配置见文末
 
 
-## 目录
+
+## 2. 目录
 
 + [Chapter_01 对象导论](Chapter_01/README.md)
 + [Chapter_02 一切都是对象](Chapter_02/README.md)
@@ -40,7 +72,7 @@
 
 
 
-## 具体目录
+## 3. 具体目录
 
 + 第1章 对象导论 
     + 1.1 抽象过程 
@@ -317,3 +349,34 @@
     + 22.13 用Flex构建Flash Web客户端 
     + 22.14 创建SWT应用 
     + 22.15 总结 
+
+
+
+## 4. ant 工具配置
+
+### (1)下载 ant 工具 
+
+- 链接
+
+```txt
+https://ant.apache.org/bindownload.cgi
+https://mirrors.bfsu.edu.cn/apache/ant/binaries/apache-ant-1.10.8-bin.zip
+```
+
+
+
+### (2) 下载依赖库
+
+
+
+### (2) 配置环境变量
+
++ 将下载好的压缩包解压至指定目录下
+    + 例如我这里是 `D:\installed-application\Ant-1.10.8`
++ 添加环境变量
+    + 具体添加方法可以查看 [添加环境变量](../../JAVA-INSTALLATION.md)
+        + `4. 环境变量配置`
+    + 变量名：`ANT_HOME`
+    + 变量值：`D:\installed-application\Ant-1.10.8`
++ 在环境变量 `PATH` 中添加一条
+    + `%ANT_HOME%\bin`
