@@ -11,6 +11,9 @@
 - 编码
     - 如果编码格式为 `UTF-8` ，请在编译时加上 `-encoding UTF-8`
     - `*.java` 文件编码格式 `ANSI(GBK)`
+        - 如果网页查看乱码的话，可以查看源文件 `raw`，然后修改网页编码方式即可
+            - `Chrome` 扩展工具 ：` Charset `
+        - 或者直接下载到本地查看
     - `*.md` 文件编码格式为 `UTF-8`
     
 - `Example_Code` 文件夹内为书中自带的样例代码
@@ -25,15 +28,15 @@
         // 安装了却没用 
     You must install the Javassist library from 
          	http://sourceforge.net/projects/jboss/
-        ```
+    ```
     
 - 如果版本不正确会报错，此时一种解决方法如下
-    
+  
         - 注释掉所有 `*.xml` 文件中的如下语句
     
     ```xml
         <fail message="J2SE5 required" unless="version1.5"/>
-        ```
+    ```
     
         + 写一个 `java` 文件，然后通过文件流处理
             + [AntVersionSkip.java](Help/AntVersionSkip.java) 
