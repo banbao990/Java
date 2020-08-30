@@ -3,7 +3,7 @@
 // {Args: 0 5 timeout}
 import java.util.concurrent.*;
 
-public class DeadlockingDiningPhilosophers {
+public class DeadLockingDiningPhilosophers {
   public static void main(String[] args) throws Exception {
     int ponder = 5;
     if(args.length > 0)
