@@ -25,8 +25,8 @@
 + 竞争冲突 **race**
 
 ```java
-// 示例代码 
-// concurrency/EvenGenerator.java 
+// 示例代码
+// concurrency/EvenGenerator.java
 public int next() {
     // 所有的线程共享一个 Generator
     ++currentEvenValue; // 可能引发竞争(race)
@@ -198,9 +198,9 @@ if (lock.tryLock()) {
 + `Goetz` 测试（一个玩笑）
 
 + **原子操作**：指不能被线程调度机制中断的操作
-  
+
     + 一旦操作开始，那么他一定能在有可能发生的上下文切换之前执行完毕
-    
+
 + 原子性可以应用于除 `long/double`  之外的所有基本类型之上的简单操作
 
 + `JVM` 可以将 `64` 位的`long/double`  的都如何写入当作两个分离的 `32` 位操作来执行
@@ -217,7 +217,7 @@ if (lock.tryLock()) {
 
 + `volatile` 关键字还确保了应用中的可视性
 
-    + 例如一个域被声明为 `volatile` 
+    + 例如一个域被声明为 `volatile`
         + 那么一旦对这个域产生了写操作，这个修改将对所有的读操作可见
 
 + 在非 `volatile` 域上的原子操作不必刷新到主存里去
@@ -256,7 +256,7 @@ if (lock.tryLock()) {
             // }
         }
     }
-    
+
     public class TestDependingOnBound {
         public static void main(String...args) {
             TDOB1 td = new TDOB1();
@@ -265,20 +265,20 @@ if (lock.tryLock()) {
             }
         }
     }
-    
-    
+
+
     /* Output1
     100
     100
     */
-    
+
     /* Output2
     101
     101
     */
     ```
 
-    
+
 
 + 使用 `volatile` 而不是 `synchronized` 的唯一安全情况是类中只有一个可变的域
 
@@ -462,20 +462,20 @@ public class SyncOtherObj {
     public synchronized void f() {
         for(int i = 0;i < 10; ++i) {
             System.out.println("f()");
-        }        
+        }
     }
     public void g() {
         synchronized(obj) {
             for(int i = 0;i < 10; ++i) {
                 System.out.println("g()");
-            }        
+            }
         }
     }
     public void h() {
         synchronized(obj) {
             for(int i = 0;i < 10; ++i) {
                 System.out.println("h()");
-            }        
+            }
         }
     }
 }
@@ -655,14 +655,14 @@ exec.awaitTermination(250, TimeUnit.MILLISECONDS)
 + 当你打断被阻塞的任务时，可能需要清理资源
     + 因此在任务的 `run()` 方法中间打断，更像是抛出异常
 + `Thread.interrupt()` 方法可以终止被阻塞的任务
-    + 会设置线程的中断状态 
+    + 会设置线程的中断状态
         + 如果一个线程已经被阻塞，或者试图执行一个阻塞操作
         + 那么设置这个线程的中断状态将抛出异常 `InterruptedException`
         + 当抛出该异常或者该任务调用 `Thread.interrupted()` 时，中断状态将被复位
 + `Executor.shutdownNow()`
     + 发送一个 `interrupt()` 调用给它启动的所有线程
 + `Executor.submit()`
-    + 返回一个泛型 `Future<?>` 
+    + 返回一个泛型 `Future<?>`
     + 其中有一个未修饰的参数，因此 `get()` 方法不会被调用
     + 有 `cancel()` 方法
         + 如果将 `ture` 作为参数传递给 `cancel()` ，
@@ -745,7 +745,7 @@ public class CloseResource {
         print("Closing " + System.in.getClass().getName());
         System.in.close(); // Releases blocked thread
     }
-} 
+}
 ```
 
 + 在输入流上调用 `close()` 之后，任务将解除阻塞
@@ -802,7 +802,7 @@ public class NIOInterruption {
 
 
 
-#### 21.4.2.3 被互斥所阻塞 
+#### 21.4.2.3 被互斥所阻塞
 
 + 一个对象可以多次获得锁（计数）
 + [MultiLock](../Example_Code/concurrency/MultiLock.java)
@@ -815,16 +815,16 @@ public synchronized void g() {}
 + 无论在任何时刻，只要任务以不可中断方式被阻塞，那么就有潜在的会锁住程序的可能
 
 + `Java SE5` 并发类库新特性
-  
+
     ```java
     // java.util.concurrent.locks.ReentrantLock.java
-    public void lockInterruptibly() 
+    public void lockInterruptibly()
         throws InterruptedException{/*...*/}
     ```
-    
+
     + 在 `ReentrantLock` 上阻塞的任务具备可以被中断的能力
     + 与 `synchronized` 方法或者临界区的任务不同
-    
+
 + [CanNotBeInteruppted](CanNotBeInteruppted.java)
 
 ```java
@@ -887,7 +887,7 @@ public class CanBeInterrupted {
         exec.shutdownNow();
     }
 }
-/* Output 
+/* Output
 Interrupted while waiting!
 */
 ```

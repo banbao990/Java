@@ -50,9 +50,9 @@ public class Sample {
 
 ```output
 Exception in thread "main" java.lang.IllegalMonitorStateException
-	at java.lang.Object.wait(Native Method)
-	at java.lang.Object.wait(Object.java:502)
-	at Sample.main(Sample.java:4)
+    at java.lang.Object.wait(Native Method)
+    at java.lang.Object.wait(Object.java:502)
+    at Sample.main(Sample.java:4)
 ```
 
 + `sleep()` 可以在非同步方法里面调用，**因为不需要操作锁**
@@ -118,8 +118,8 @@ class TWIRunnable implements Runnable {
             System.out.println("Exiting via interrupt");
         }
     }
-    
-    private synchronized void test() 
+
+    private synchronized void test()
         throws InterruptedException {
         wait();
     }
@@ -132,7 +132,7 @@ public class TestWaitInterrupt {
         TimeUnit.SECONDS.sleep(5);
         exec.shutdownNow(); // Interrupt all tasks
     }
-} 
+}
 /* Output
 Exiting via interrupt
 */
@@ -433,7 +433,7 @@ public class PipedIO {
         TimeUnit.SECONDS.sleep(4);
         exec.shutdownNow();
     }
-} 
+}
 ```
 
 
@@ -625,7 +625,7 @@ public class CountDownLatchDemo {
 
 + `Random.nextInt()` 线程安全（可以去除 `static` 使其安全）
 + `Math.random()` 线程安全
-+ 
++
 
 ```java
 // java.util.Random.java
@@ -742,7 +742,7 @@ scheduler.scheduleAtFixedRate(
     + 允许 `n` 个对象同时访问这个资源
     + `acquire(),release()`
 + [Pool](../Example_Code/concurrency/Pool.java) 对象池
-    + [Fat](../Example_Code/concurrency/Fat.java) 
+    + [Fat](../Example_Code/concurrency/Fat.java)
     + [SemaphoreDemo](../Example_Code/concurrency/SemaphoreDemo.java)
 
 ```java
@@ -844,8 +844,8 @@ class EDProducer implements Runnable {
           // OK to terminate this way.
         }
         System.out.println(
-            this.getClass().getName() 
-            + " holds " 
+            this.getClass().getName()
+            + " holds "
             + holder.getClass().getName()
         );
     }
@@ -865,8 +865,8 @@ class EDConsumer implements Runnable {
           // OK to terminate this way.
         }
         System.out.println(
-            this.getClass().getName() 
-            + " holds " 
+            this.getClass().getName()
+            + " holds "
             + holder.getClass().getName()
         );
     }
@@ -966,7 +966,7 @@ class RobotPool {
 
 ```output
 我的机子 : Atomic < Lock < synchronized
-书上数据 : Atomic < synchronized < Lock 
+书上数据 : Atomic < synchronized < Lock
 ```
 
 
@@ -995,7 +995,7 @@ class RobotPool {
 
 ### 21.9.3 乐观加锁
 
-+ `Atomic` 
++ `Atomic`
     + `decrementAndGet()`：原子性操作
     + `compareANdSet()` ：提交新值和旧值，判断是否发生了并发错误
         + 失败会发生啥？该技术的问题所在
