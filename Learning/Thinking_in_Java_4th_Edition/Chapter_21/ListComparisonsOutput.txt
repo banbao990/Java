@@ -1,0 +1,101 @@
+Type                             Read time     Write time
+Synched ArrayList 10r 0w        8671155700              0
+Synched ArrayList 10r 0w        7330477500              0
+Synched ArrayList 10r 0w        7492416200              0
+Synched ArrayList 10r 0w        7981715800              0
+Synched ArrayList 10r 0w        7694981400              0
+Synched ArrayList 10r 0w        8307182100              0
+Synched ArrayList 10r 0w        7863245700              0
+Synched ArrayList 10r 0w        7861686700              0
+Synched ArrayList 10r 0w        8156350800              0
+Synched ArrayList 10r 0w        7986255100              0
+Synched ArrayList 9r 1w         6516316700      794158200
+readTime + writeTime =          7310474900
+Synched ArrayList 9r 1w         7125895000      831497500
+readTime + writeTime =          7957392500
+Synched ArrayList 9r 1w         6456819200      611373600
+readTime + writeTime =          7068192800
+Synched ArrayList 9r 1w         6855723900      699617500
+readTime + writeTime =          7555341400
+Synched ArrayList 9r 1w         6956949900      725919600
+readTime + writeTime =          7682869500
+Synched ArrayList 9r 1w         8128593700      977213000
+readTime + writeTime =          9105806700
+Synched ArrayList 9r 1w         6848746800      768089200
+readTime + writeTime =          7616836000
+Synched ArrayList 9r 1w         7034432300      776427000
+readTime + writeTime =          7810859300
+Synched ArrayList 9r 1w         6754668300      740950300
+readTime + writeTime =          7495618600
+Synched ArrayList 9r 1w         7271998100      814576500
+readTime + writeTime =          8086574600
+Synched ArrayList 5r 5w         3815101800     3881814100
+readTime + writeTime =          7696915900
+Synched ArrayList 5r 5w         3747642400     3893430700
+readTime + writeTime =          7641073100
+Synched ArrayList 5r 5w         4321591100     4230758800
+readTime + writeTime =          8552349900
+Synched ArrayList 5r 5w         3884524100     3732922700
+readTime + writeTime =          7617446800
+Synched ArrayList 5r 5w         3801698700     3837928400
+readTime + writeTime =          7639627100
+Synched ArrayList 5r 5w         3849042800     3922329300
+readTime + writeTime =          7771372100
+Synched ArrayList 5r 5w         4021322200     3695147600
+readTime + writeTime =          7716469800
+Synched ArrayList 5r 5w         3747052700     3493129100
+readTime + writeTime =          7240181800
+Synched ArrayList 5r 5w         3880686900     3799566300
+readTime + writeTime =          7680253200
+Synched ArrayList 5r 5w         3905985600     3474718600
+readTime + writeTime =          7380704200
+CopyOnWriteArrayList 10r 0w      330658900              0
+CopyOnWriteArrayList 10r 0w      181540000              0
+CopyOnWriteArrayList 10r 0w      163598300              0
+CopyOnWriteArrayList 10r 0w      163655200              0
+CopyOnWriteArrayList 10r 0w      177434300              0
+CopyOnWriteArrayList 10r 0w      244232900              0
+CopyOnWriteArrayList 10r 0w      162267900              0
+CopyOnWriteArrayList 10r 0w      169289600              0
+CopyOnWriteArrayList 10r 0w      216171000              0
+CopyOnWriteArrayList 10r 0w      261787500              0
+CopyOnWriteArrayList 9r 1w       179186300       90378200
+readTime + writeTime =           269564500
+CopyOnWriteArrayList 9r 1w       156369400       88579500
+readTime + writeTime =           244948900
+CopyOnWriteArrayList 9r 1w       183350700       84144000
+readTime + writeTime =           267494700
+CopyOnWriteArrayList 9r 1w       195228000       68321700
+readTime + writeTime =           263549700
+CopyOnWriteArrayList 9r 1w       176160900       82292000
+readTime + writeTime =           258452900
+CopyOnWriteArrayList 9r 1w       169113400       64644000
+readTime + writeTime =           233757400
+CopyOnWriteArrayList 9r 1w       237019400       79552400
+readTime + writeTime =           316571800
+CopyOnWriteArrayList 9r 1w       211684200       90991000
+readTime + writeTime =           302675200
+CopyOnWriteArrayList 9r 1w       168213000       63394800
+readTime + writeTime =           231607800
+CopyOnWriteArrayList 9r 1w       192579300       87125500
+readTime + writeTime =           279704800
+CopyOnWriteArrayList 5r 5w       114501200     2406317400
+readTime + writeTime =          2520818600
+CopyOnWriteArrayList 5r 5w       121766500     2434828300
+readTime + writeTime =          2556594800
+CopyOnWriteArrayList 5r 5w       122838700     2401518000
+readTime + writeTime =          2524356700
+CopyOnWriteArrayList 5r 5w       109317400     2483126300
+readTime + writeTime =          2592443700
+CopyOnWriteArrayList 5r 5w       149766500     2430413900
+readTime + writeTime =          2580180400
+CopyOnWriteArrayList 5r 5w       128766100     2431247300
+readTime + writeTime =          2560013400
+CopyOnWriteArrayList 5r 5w       141591600     2442377600
+readTime + writeTime =          2583969200
+CopyOnWriteArrayList 5r 5w       100588700     2429897700
+readTime + writeTime =          2530486400
+CopyOnWriteArrayList 5r 5w       141898800     2352793000
+readTime + writeTime =          2494691800
+CopyOnWriteArrayList 5r 5w       122180700     2419944700
+readTime + writeTime =          2542125400
