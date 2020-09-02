@@ -36,7 +36,7 @@
 + 在注解中一般都会包含一些元素以表示某些值，在分析处理注解的时候，程序或者工具可以使用它
     + 可以为元素指定默认值
 + **标记注解**：没有元素的注解
-+ [Test](..\Example_Code\net\mindview\atunit\Test.java)
++ [Test](../Example_Code/net/mindview/atunit/Test.java)
 
 ```java
 import java.lang.annotation.*;
@@ -274,7 +274,7 @@ class CanUseClass {}
 ### 20.2.3 生成外部文件
 
 + 一个 `SQL` 的例子
-    + [database](..\Example_Code\annotations\database)
+    + [database](../Example_Code/annotations/database)
 
 ```java
 //: annotations/database/DBTable.java
@@ -355,7 +355,7 @@ public class Member {
 }
 ```
 
-+ [注解处理器](..\Example_Code\annotations\database\TableCreator.java)
++ [注解处理器](../Example_Code/annotations/database/TableCreator.java)
 
 #### 20.2.3.1 变通的方法
 
@@ -374,7 +374,7 @@ public class Member {
 
 ### 20.2.5 实现处理器
 
-+ [注解处理器](..\Example_Code\annotations\database\TableCreator.java)
++ [注解处理器](../Example_Code/annotations/database/TableCreator.java)
 + 检查注解并生成 `SQL` 语句
 
 
@@ -403,9 +403,9 @@ public class Member {
 //: annotations/InterfaceExtractorProcessorFactory.java
 ```
 
-+ 定义注解：[ExtractInterface.java](..\Example_Code\annotations\ExtractInterface.java)
-+ 使用注解，用于测试的 `java` 源文件：[Multiplier.java](..\Example_Code\annotations\Multiplier.java)
-+ 处理器：[InterfaceExtractorProcessor.java](..\Example_Code\annotations\InterfaceExtractorProcessor.java)
++ 定义注解：[ExtractInterface.java](../Example_Code/annotations/ExtractInterface.java)
++ 使用注解，用于测试的 `java` 源文件：[Multiplier.java](../Example_Code/annotations/Multiplier.java)
++ 处理器：[InterfaceExtractorProcessor.java](../Example_Code/annotations/InterfaceExtractorProcessor.java)
 
 ```java
 public class InterfaceExtractorProcessor
@@ -428,7 +428,7 @@ public interface AnnotationProcessor {
             + 代码的具体生成还需要自己掌控，缺少自动的工具（`IR`）
 + 参数
     + `-s`：新生成文件放置目录
-+  配套的工厂：[InterfaceExtractorProcessorFactory.java](..\Example_Code\annotations\InterfaceExtractorProcessorFactory.java)
++  配套的工厂：[InterfaceExtractorProcessorFactory.java](../Example_Code/annotations/InterfaceExtractorProcessorFactory.java)
 
 ```java
 public class InterfaceExtractorProcessorFactory
@@ -454,7 +454,7 @@ public interface AnnotationProcessorFactory {
 ## 20.4 将观察者模式用于 apt
 
 + `visit-accept` 设计模式
-+ [TableCreationProcessorFactory.java](..\Example_Code\annotations\database\TableCreationProcessorFactory.java)
++ [TableCreationProcessorFactory.java](../Example_Code/annotations/database/TableCreationProcessorFactory.java)
 
 
 
@@ -481,7 +481,7 @@ public interface AnnotationProcessorFactory {
             .setDefaultAssertionStatus(true); // Enable asserts
         ```
 
-    + 上述要求是由代码框架要求的：[net\mindview\atunit](..\Example_Code\net\mindview\atunit)
+    + 上述要求是由代码框架要求的：[net/mindview/atunit](../Example_Code/net/mindview/atunit)
 
         + **可以自己设计一套测试方案**
 

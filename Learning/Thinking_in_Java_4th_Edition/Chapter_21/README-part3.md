@@ -1,6 +1,6 @@
-# Chapter_21 ²¢·¢(part3)
+# Chapter_21 å¹¶å‘(part3)
 
-> [×ÜÄ¿Â¼](../README.md)
+> [æ€»ç›®å½•](../README.md)
 
 ---
 
@@ -14,27 +14,27 @@
 
 
 
-## 21.5 Ïß³ÌÖ®¼äµÄĞ­×÷
+## 21.5 çº¿ç¨‹ä¹‹é—´çš„åä½œ
 
-+ Ê¹ÓÃµÄÌØĞÔ£º**»¥³â**
++ ä½¿ç”¨çš„ç‰¹æ€§ï¼š**äº’æ–¥**
 
 
 
-### 21.5.1 wait() Óë notifyAll()
+### 21.5.1 wait() ä¸ notifyAll()
 
-+ »ùÀà `Object` ÊµÏÖµÄ
-+ ÔÚµÈ´ıµÄÊ±ºò½øĞĞ¿ÕÑ­»·£º**Ã¦µÈ´ı**
-    + ²»Á¼µÄ `CPU` ÖÜÆÚÊ¹ÓÃ·½Ê½
-+ `wait()` »á¹ÒÆğÈÎÎñ£¬ÔÚÊÕµ½ `notify()/notifyAll()` Ö®ºó»Ö¸´
-+ `sleep()/yield()` ²»ÊÍ·ÅËø
-+ `wait()` ÊÍ·ÅËø
-+ `wait(ms)`£º
-    + `wait()` ÆÚ¼äÊÍ·ÅËø
-    + ¿ÉÒÔÍ¨¹ı `notify()/notifyAll()` »òÕßÊ±¼äµ½ÆÚ´Ó `wait()` ÖĞ»Ö¸´
-+ `wait()` £ºÎŞÏŞµÈ´ı
-+ ÎÒÃÇÖ»ÄÜÔÚÍ¬²½¿ØÖÆ·½·¨»òÕßÍ¬²½¿ØÖÆ¿éÀïµ÷ÓÃ `wait(),notify(),notifyAll()`
-    + ·ñÔò£ºÍ¨¹ı±àÒëµ«ÊÇÓĞÔËĞĞÊ±Òì³£
-    + ËµÃ÷ÔÚµ÷ÓÃ `wait(),notify(),notifyAll()` Ê±±ØĞëÓµÓĞ¶ÔÏóµÄËø
++ åŸºç±» `Object` å®ç°çš„
++ åœ¨ç­‰å¾…çš„æ—¶å€™è¿›è¡Œç©ºå¾ªç¯ï¼š**å¿™ç­‰å¾…**
+    + ä¸è‰¯çš„ `CPU` å‘¨æœŸä½¿ç”¨æ–¹å¼
++ `wait()` ä¼šæŒ‚èµ·ä»»åŠ¡ï¼Œåœ¨æ”¶åˆ° `notify()/notifyAll()` ä¹‹åæ¢å¤
++ `sleep()/yield()` ä¸é‡Šæ”¾é”
++ `wait()` é‡Šæ”¾é”
++ `wait(ms)`ï¼š
+    + `wait()` æœŸé—´é‡Šæ”¾é”
+    + å¯ä»¥é€šè¿‡ `notify()/notifyAll()` æˆ–è€…æ—¶é—´åˆ°æœŸä» `wait()` ä¸­æ¢å¤
++ `wait()` ï¼šæ— é™ç­‰å¾…
++ æˆ‘ä»¬åªèƒ½åœ¨åŒæ­¥æ§åˆ¶æ–¹æ³•æˆ–è€…åŒæ­¥æ§åˆ¶å—é‡Œè°ƒç”¨ `wait(),notify(),notifyAll()`
+    + å¦åˆ™ï¼šé€šè¿‡ç¼–è¯‘ä½†æ˜¯æœ‰è¿è¡Œæ—¶å¼‚å¸¸
+    + è¯´æ˜åœ¨è°ƒç”¨ `wait(),notify(),notifyAll()` æ—¶å¿…é¡»æ‹¥æœ‰å¯¹è±¡çš„é”
 
 ```java
 public class Sample {
@@ -55,12 +55,12 @@ Exception in thread "main" java.lang.IllegalMonitorStateException
     at Sample.main(Sample.java:4)
 ```
 
-+ `sleep()` ¿ÉÒÔÔÚ·ÇÍ¬²½·½·¨ÀïÃæµ÷ÓÃ£¬**ÒòÎª²»ĞèÒª²Ù×÷Ëø**
-+ Ò»¸ö¼òµ¥µÄÊ¾Àı£º´òÀ¯ºóÔÙÅ×¹â
++ `sleep()` å¯ä»¥åœ¨éåŒæ­¥æ–¹æ³•é‡Œé¢è°ƒç”¨ï¼Œ**å› ä¸ºä¸éœ€è¦æ“ä½œé”**
++ ä¸€ä¸ªç®€å•çš„ç¤ºä¾‹ï¼šæ‰“èœ¡åå†æŠ›å…‰
 + [WaxOMatic](../Example_Code/concurrency/waxomatic/WaxOMatic.java)
 
 ```java
-// ²¿·Ö´úÂë
+// éƒ¨åˆ†ä»£ç 
 class Car {
     private boolean waxOn = false;
     public synchronized void waxed() {
@@ -102,7 +102,7 @@ class WaxOn implements Runnable {
 }
 ```
 
-+ `wait()` µÄ×èÈû¿ÉÒÔ±» `shutdownNow()` ÖĞ¶Ï
++ `wait()` çš„é˜»å¡å¯ä»¥è¢« `shutdownNow()` ä¸­æ–­
 + [TestWaitInterrupt](TestWaitInterrupt.java)
 
 ```java
@@ -138,44 +138,44 @@ Exiting via interrupt
 */
 ```
 
-+ **Î±»½ĞÑ**
-    + ÁíÍâÒ»ÖÖ´Ó `wait()` ÖĞ³éÉíµÄ·½Ê½£¨**Æ½Ì¨ÒÀÀµ**£©
-    + Ò»¸öÏß³Ì¿ÉÒÔ¹ıÔçµÄÍ£Ö¹×èÈû£¬¶ø²»ĞèÒª `notify()` µÈ·½Ê½
-+ Ê¹ÓÃÒ»¸ö¸ĞĞËÈ¤µÄÌõ¼ş°üÎ§ `wait()`
-    + ¶à¸öÈÎÎñ¶¼ÔÚµÈ´ı×ÅÍ¬Ò»¸öÈÎÎñ£¨**Î´ÇÀÕ¼µ½Ö´ĞĞÈ¨µÄÈÎÎñĞèÒª¼ÌĞø¹ÒÆğÏß³Ì**£©
-    + ÏÈÇ°ÓĞÄ³¸öÈÎÎñµÄÖ´ĞĞµ¼ÖÂµ±Ç°ÈÎÎñĞèÒª¼ÌĞø±»¹ÒÆğ
-    + ÒòÎª `notifyAll()` µ¼ÖÂ²»ÕıÈ·µÄ»½ĞÑ
-+ [Á·Ï°21](Exe21.java)
++ **ä¼ªå”¤é†’**
+    + å¦å¤–ä¸€ç§ä» `wait()` ä¸­æŠ½èº«çš„æ–¹å¼ï¼ˆ**å¹³å°ä¾èµ–**ï¼‰
+    + ä¸€ä¸ªçº¿ç¨‹å¯ä»¥è¿‡æ—©çš„åœæ­¢é˜»å¡ï¼Œè€Œä¸éœ€è¦ `notify()` ç­‰æ–¹å¼
++ ä½¿ç”¨ä¸€ä¸ªæ„Ÿå…´è¶£çš„æ¡ä»¶åŒ…å›´ `wait()`
+    + å¤šä¸ªä»»åŠ¡éƒ½åœ¨ç­‰å¾…ç€åŒä¸€ä¸ªä»»åŠ¡ï¼ˆ**æœªæŠ¢å åˆ°æ‰§è¡Œæƒçš„ä»»åŠ¡éœ€è¦ç»§ç»­æŒ‚èµ·çº¿ç¨‹**ï¼‰
+    + å…ˆå‰æœ‰æŸä¸ªä»»åŠ¡çš„æ‰§è¡Œå¯¼è‡´å½“å‰ä»»åŠ¡éœ€è¦ç»§ç»­è¢«æŒ‚èµ·
+    + å› ä¸º `notifyAll()` å¯¼è‡´ä¸æ­£ç¡®çš„å”¤é†’
++ [ç»ƒä¹ 21](Exe21.java)
 
 
 
-#### 25.1.1.1 ´íÊ§µÄĞÅºÅ
+#### 25.1.1.1 é”™å¤±çš„ä¿¡å·
 
-+ ËÀËø£¬ÀıÈçÔÚ [Á·Ï°21](Exe21.java) ÖĞµÄ `notify()`  È±Ê§
-    + ÏÈ½øÈëÁË `Exe21Run2` µÄµÈ´ı£¬È»ºó½øÈë `Exe2Run1` µÄ `run()` ·½·¨
-
-
-
-### 21.5.2 notify() Óë notifyAll()
-
-+ Ê¹ÓÃ `notify()` ÊÇ¶Ô `notifyAll()` µÄÒ»ÖÖÓÅ»¯
-+ Ê¹ÓÃ `notify()` Ê±Ö»»á»½ĞÑ**Ò»¸ö**µ±Ç°Ëø¹ØÁªµÄÈÎÎñ
-+ `notifyAll()` ½«»½ĞÑËùÓĞÕıÔÚµÈ´ıµÄÈÎÎñ£¨ÊµÊ©ÉÏÊÇËùÓĞµÄ¹ØÁªµ±Ç°ËøµÄÈÎÎñ£©
-+ [TestNotifyAll](TestNotifyAll.java) ¾ßÌåµÄ²âÊÔÉÏÊöËµ·¨µÄ³ÌĞò
++ æ­»é”ï¼Œä¾‹å¦‚åœ¨ [ç»ƒä¹ 21](Exe21.java) ä¸­çš„ `notify()`  ç¼ºå¤±
+    + å…ˆè¿›å…¥äº† `Exe21Run2` çš„ç­‰å¾…ï¼Œç„¶åè¿›å…¥ `Exe2Run1` çš„ `run()` æ–¹æ³•
 
 
 
-### 21.5.3 Éú²úÕßºÍÏû·ÑÕß
+### 21.5.2 notify() ä¸ notifyAll()
 
-+ ¾­µäÄ£ĞÍ
++ ä½¿ç”¨ `notify()` æ˜¯å¯¹ `notifyAll()` çš„ä¸€ç§ä¼˜åŒ–
++ ä½¿ç”¨ `notify()` æ—¶åªä¼šå”¤é†’**ä¸€ä¸ª**å½“å‰é”å…³è”çš„ä»»åŠ¡
++ `notifyAll()` å°†å”¤é†’æ‰€æœ‰æ­£åœ¨ç­‰å¾…çš„ä»»åŠ¡ï¼ˆå®æ–½ä¸Šæ˜¯æ‰€æœ‰çš„å…³è”å½“å‰é”çš„ä»»åŠ¡ï¼‰
++ [TestNotifyAll](TestNotifyAll.java) å…·ä½“çš„æµ‹è¯•ä¸Šè¿°è¯´æ³•çš„ç¨‹åº
+
+
+
+### 21.5.3 ç”Ÿäº§è€…å’Œæ¶ˆè´¹è€…
+
++ ç»å…¸æ¨¡å‹
 + [Restautant](../Example_Code/concurrency/Restaurant.java)
-    + `interrupt()` ÔÚ·¢ËÍ¸øÒ»¸öÈÎÎñÖ®ºó
-        + Èô¸ÃÈÎÎñÕıÔÚÖ´ĞĞ£¬²»ÊÜÓ°Ïì£¨`Thread.interrupted()` ·µ»Ø `true`£©
-        + Èô¸ÃÈËÎï´¦ÓÚ¿ÉÖĞ¶ÏµÄ×èÈûÖ®ÖĞ£¬ÔòÅ×³öÒì³£ `InterruptedException`
-    + ¼ûÈçÏÂ´úÂë `shutdownNow()` ²¿·Ö
+    + `interrupt()` åœ¨å‘é€ç»™ä¸€ä¸ªä»»åŠ¡ä¹‹å
+        + è‹¥è¯¥ä»»åŠ¡æ­£åœ¨æ‰§è¡Œï¼Œä¸å—å½±å“ï¼ˆ`Thread.interrupted()` è¿”å› `true`ï¼‰
+        + è‹¥è¯¥äººç‰©å¤„äºå¯ä¸­æ–­çš„é˜»å¡ä¹‹ä¸­ï¼Œåˆ™æŠ›å‡ºå¼‚å¸¸ `InterruptedException`
+    + è§å¦‚ä¸‹ä»£ç  `shutdownNow()` éƒ¨åˆ†
 
 ```java
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 import java.util.concurrent.*;
 import static net.mindview.util.Print.*;
 
@@ -265,15 +265,15 @@ WaitPerson interrupted
 Order up! Chef interrupted
 ```
 
-+ ¶Ô `WaitPerson/Chef` ¼ÓËø
++ å¯¹ `WaitPerson/Chef` åŠ é”
 
 
 
-#### 21.5.3.1 Ê¹ÓÃÏÔÊ½µÄ Lock ºÍ Condition ¶ÔÏó
+#### 21.5.3.1 ä½¿ç”¨æ˜¾å¼çš„ Lock å’Œ Condition å¯¹è±¡
 
 + `await(),signal(),signalAll()`
-    + `signalAll()` Ïà¶ÔÓÚ `notifyAll()` ¸ü¼Ó°²È«
-    + Ö»Ó°Ïì¸Ã `Condition` ÉÏµÄ²¢·¢
+    + `signalAll()` ç›¸å¯¹äº `notifyAll()` æ›´åŠ å®‰å…¨
+    + åªå½±å“è¯¥ `Condition` ä¸Šçš„å¹¶å‘
 + [WaxOMatic2](../Example_Code/concurrency/waxomatic2/WaxOMatic2.java)
 
 ```java
@@ -345,25 +345,25 @@ class WaxOn implements Runnable {
 
 
 
-### 21.5.4 Éú²úÕß-Ïû·ÑÕßÓë¶ÓÁĞ
+### 21.5.4 ç”Ÿäº§è€…-æ¶ˆè´¹è€…ä¸é˜Ÿåˆ—
 
 + `java.util,concurrent.BlockingQueue`
-    + `LinkedBlockingQueue`£ºÎŞ½ç
-    + `ArrayBlockingQueue`£ºÓĞ½ç
-    + `SynchronousQueue`£º`1`
+    + `LinkedBlockingQueue`ï¼šæ— ç•Œ
+    + `ArrayBlockingQueue`ï¼šæœ‰ç•Œ
+    + `SynchronousQueue`ï¼š`1`
 + [TestBlockingQueues](../Example_Code/concurrency/TestBlockingQueues.java)
-    + `put()/take()` ²¢·¢²»³öÎÊÌâ
-    + Í¨¹ıÊ¹ÓÃ¶ÓÁĞµÄÏß³Ì½øĞĞ `run()` µÄµ÷ÓÃ£¬ÄÜ¹»ÊµÏÖÈÎÎñµÄÖ´ĞĞË³ĞòÎÊÌâ
-        + ±¾ÖÊÎŞ²¢·¢
+    + `put()/take()` å¹¶å‘ä¸å‡ºé—®é¢˜
+    + é€šè¿‡ä½¿ç”¨é˜Ÿåˆ—çš„çº¿ç¨‹è¿›è¡Œ `run()` çš„è°ƒç”¨ï¼Œèƒ½å¤Ÿå®ç°ä»»åŠ¡çš„æ‰§è¡Œé¡ºåºé—®é¢˜
+        + æœ¬è´¨æ— å¹¶å‘
 
 
 
-#### 21.5.1.1 ÍÂË¾ BlockingQueue
+#### 21.5.1.1 åå¸ BlockingQueue
 
 + [ToastOMatic](../Example_Code/concurrency/ToastOMatic.java)
 
-    + Ë³Ğò£ºÖÆ×÷ÍÂË¾ `->` Ä¨»ÆÓÍ `->` Í¿¹û½´
-    + Î¬»¤¼¸¸ö¶ÓÁĞ
+    + é¡ºåºï¼šåˆ¶ä½œåå¸ `->` æŠ¹é»„æ²¹ `->` æ¶‚æœé…±
+    + ç»´æŠ¤å‡ ä¸ªé˜Ÿåˆ—
 
     ```java
     ToastQueue dryQueue = new ToastQueue(),
@@ -373,15 +373,15 @@ class WaxOn implements Runnable {
 
 
 
-### 21.5.5 ÈÎÎñ¼äÍ¨¹ı¹ÜµÀ½øĞĞÊäÈë/Êä³ö
+### 21.5.5 ä»»åŠ¡é—´é€šè¿‡ç®¡é“è¿›è¡Œè¾“å…¥/è¾“å‡º
 
-+ Í¨¹ıÊäÈëÊä³öÔÚÏß³Ì¼ä½øĞĞÍ¨ĞÅÍ¨³£ºÜÓĞÓÃ
-+ Ìá¹©Ïß³Ì¹¦ÄÜµÄÀà¿âÒÔ ¡±¹ÜµÀ¡° µÄĞÎÊ½¶ÔÏß³Ì¼äµÄÊäÈëÊä³öÌá¹©ÁËÖ§³Ö
++ é€šè¿‡è¾“å…¥è¾“å‡ºåœ¨çº¿ç¨‹é—´è¿›è¡Œé€šä¿¡é€šå¸¸å¾ˆæœ‰ç”¨
++ æä¾›çº¿ç¨‹åŠŸèƒ½çš„ç±»åº“ä»¥ â€ç®¡é“â€œ çš„å½¢å¼å¯¹çº¿ç¨‹é—´çš„è¾“å…¥è¾“å‡ºæä¾›äº†æ”¯æŒ
 + `PipedReader,PipedWriter`
 + [PipedIO](../Example_Code/concurrency/PipedIO.java)
 
 ```java
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 import java.util.concurrent.*;
 import java.io.*;
 import java.util.*;
@@ -438,12 +438,12 @@ public class PipedIO {
 
 
 
-## 21.6 ËÀËø deadlock
+## 21.6 æ­»é” deadlock
 
-+ ÈÎÎñ»¥ÏàµÈ´ı£¬¶¼²»ÄÜÖ´ĞĞ
-+ **ÕÜÑ§¼Ò¾Í²ÍÎÊÌâ**£¨`Edsger Dijkstra`£©
-    + ×´Ì¬£º³Ô·¹£¬µÈ´ı
-    + `5` ¸öÈË£¬Ö»ÓĞ `5` ¸ù¿ê×Ó£¬Ö»ÓĞÄÃµ½ `2` ¸ù¿ê×Ó²ÅÄÜ³Ôµ½·¹
++ ä»»åŠ¡äº’ç›¸ç­‰å¾…ï¼Œéƒ½ä¸èƒ½æ‰§è¡Œ
++ **å“²å­¦å®¶å°±é¤é—®é¢˜**ï¼ˆ`Edsger Dijkstra`ï¼‰
+    + çŠ¶æ€ï¼šåƒé¥­ï¼Œç­‰å¾…
+    + `5` ä¸ªäººï¼Œåªæœ‰ `5` æ ¹ç­·å­ï¼Œåªæœ‰æ‹¿åˆ° `2` æ ¹ç­·å­æ‰èƒ½åƒåˆ°é¥­
     + [Chopstick](../Example_Code/concurrency/Chopstick.java)
     + [Philosopher](../Example_Code/concurrency/Philosopher.java)
     + [DeadLockingDiningPhilosophers](../Example_Code/concurrency/DeadLockingDiningPhilosophers.java)
@@ -511,8 +511,8 @@ public class Chopstick {
 ```
 
 ```java
-// ²¿·Ö´úÂë
-// ¶¼ÊÇÏÈÄÃÆğÓÒ±ßµÄ¿ê×Ó,ÔÙÄÃÆğ×ó±ßµÄ¿ê×Ó
+// éƒ¨åˆ†ä»£ç 
+// éƒ½æ˜¯å…ˆæ‹¿èµ·å³è¾¹çš„ç­·å­,å†æ‹¿èµ·å·¦è¾¹çš„ç­·å­
 for(int i = 0; i < size; i++)
     exec.execute(new Philosopher(
         sticks[i], sticks[(i+1) % size], i, ponder));
@@ -520,33 +520,33 @@ for(int i = 0; i < size; i++)
 
 
 
-+ ÓĞ¿ÉÄÜ»á´¥·¢ËÀËø£¬µ«ÊÇ²»Ò»¶¨
-+ ËÀËøÎÊÌâ²úÉúµÄÌõ¼ş£¨Í¬Ê±Âú×ã£©
-    + **»¥³âÌõ¼ş**£ºÈÎÎñÊ¹ÓÃµÄ×ÊÔ´ÖĞÖÁÉÙÓĞÒ»¸öÊÇ²»ÄÜ¹²ÏíµÄ
-        + Ò»¸ù¿ê×ÓÖ»ÄÜ±»Ò»¸öÕÜÑ§¼ÒÊ¹ÓÃ
-    + ÖÁÉÙÓĞÒ»¸öÈÎÎñËû±ØĞë³ÖÓĞÒ»¸ö×ÊÔ´²¢ÇÒµÈ´ı»ñÈ¡Ò»¸öµ±Ç°±»±ğµÄÈÎÎñ³ÖÓĞµÄ×ÊÔ´
-        + ÕÜÑ§¼Ò±ØĞë³ÖÓĞÒ»¸ù¿ê×Ó£¬ÔÚµÈ´ıÁíÍâÒ»¸ù¿ê×Ó
-    + ×ÊÔ´²»ÄÜ±»ÈÎÎñÇÀÕ¼£¬ÈÎÎñ±ØĞë°Ñ×ÊÔ´ÊÍ·Åµ±×÷ÆÕÍ¨ÊÂ¼ş
-        + ÕÜÑ§¼Ò²»ÄÜ´ÓÆäËûÕÜÑ§¼ÒÄÇÀïÇÀ¿ê×Ó
-    + ±ØĞëÓĞÑ­»·µÈ´ı
-        + ¶¼ÊÇÏÈÄÃÓÒ±ßµÄ¿ê×Ó,ÔÙÄÃ×ó±ßµÄ¿ê×Ó
-+ ËÀËøµÄ½â¾ö£ºÆÆ»µÌõ¼ş `4` £¬ÈÃÒ»¸öÈËÏÈÄÃ×ó±ßµÄ¿ê×Ó
++ æœ‰å¯èƒ½ä¼šè§¦å‘æ­»é”ï¼Œä½†æ˜¯ä¸ä¸€å®š
++ æ­»é”é—®é¢˜äº§ç”Ÿçš„æ¡ä»¶ï¼ˆåŒæ—¶æ»¡è¶³ï¼‰
+    + **äº’æ–¥æ¡ä»¶**ï¼šä»»åŠ¡ä½¿ç”¨çš„èµ„æºä¸­è‡³å°‘æœ‰ä¸€ä¸ªæ˜¯ä¸èƒ½å…±äº«çš„
+        + ä¸€æ ¹ç­·å­åªèƒ½è¢«ä¸€ä¸ªå“²å­¦å®¶ä½¿ç”¨
+    + è‡³å°‘æœ‰ä¸€ä¸ªä»»åŠ¡ä»–å¿…é¡»æŒæœ‰ä¸€ä¸ªèµ„æºå¹¶ä¸”ç­‰å¾…è·å–ä¸€ä¸ªå½“å‰è¢«åˆ«çš„ä»»åŠ¡æŒæœ‰çš„èµ„æº
+        + å“²å­¦å®¶å¿…é¡»æŒæœ‰ä¸€æ ¹ç­·å­ï¼Œåœ¨ç­‰å¾…å¦å¤–ä¸€æ ¹ç­·å­
+    + èµ„æºä¸èƒ½è¢«ä»»åŠ¡æŠ¢å ï¼Œä»»åŠ¡å¿…é¡»æŠŠèµ„æºé‡Šæ”¾å½“ä½œæ™®é€šäº‹ä»¶
+        + å“²å­¦å®¶ä¸èƒ½ä»å…¶ä»–å“²å­¦å®¶é‚£é‡ŒæŠ¢ç­·å­
+    + å¿…é¡»æœ‰å¾ªç¯ç­‰å¾…
+        + éƒ½æ˜¯å…ˆæ‹¿å³è¾¹çš„ç­·å­,å†æ‹¿å·¦è¾¹çš„ç­·å­
++ æ­»é”çš„è§£å†³ï¼šç ´åæ¡ä»¶ `4` ï¼Œè®©ä¸€ä¸ªäººå…ˆæ‹¿å·¦è¾¹çš„ç­·å­
 
 
 
-## 21.7 ĞÂÀà¿âÖĞµÄ¹¹¼ş
+## 21.7 æ–°ç±»åº“ä¸­çš„æ„ä»¶
 
 ### 21.7.1 CountDownLatch
 
-+ ÓÃÀ´Í¬²½»òÕß¶à¸öÈÎÎñ£¬Ç¿ÖÆËûÃÇµÈ´ıÓÉÆäËûÈÎÎñÖ´ĞĞµÄÒ»×é²Ù×÷µÄÍê³É
-+ `await()` ·½·¨»áÒ»Ö±×èÈû£¬Ö±µ½¼ÆÊıÎª `0`
-+ ¼ÆÊıÖµ²»ÄÜÖØÖÃ£¬`countDown()` ¿ÉÒÔ¼õÉÙ¼ÆÊıÖµ
-+ `CyclicBarrier` ¿ÉÒÔÖØÖÃ¼ÆÊıÖµ
-+ µäĞÍÓÃ·¨ÈçÏÂ
++ ç”¨æ¥åŒæ­¥æˆ–è€…å¤šä¸ªä»»åŠ¡ï¼Œå¼ºåˆ¶ä»–ä»¬ç­‰å¾…ç”±å…¶ä»–ä»»åŠ¡æ‰§è¡Œçš„ä¸€ç»„æ“ä½œçš„å®Œæˆ
++ `await()` æ–¹æ³•ä¼šä¸€ç›´é˜»å¡ï¼Œç›´åˆ°è®¡æ•°ä¸º `0`
++ è®¡æ•°å€¼ä¸èƒ½é‡ç½®ï¼Œ`countDown()` å¯ä»¥å‡å°‘è®¡æ•°å€¼
++ `CyclicBarrier` å¯ä»¥é‡ç½®è®¡æ•°å€¼
++ å…¸å‹ç”¨æ³•å¦‚ä¸‹
     + [CountDownLatchDemo](../Example_Code/concurrency/CountDownLatchDemo.java)
-        + ½«³ÌĞò²ğ½â³É `n` ¸ö¿ÉÏà»¥¶ÀÁ¢½â¾öµÄÈÎÎñ£¬´´½¨ÖµÎª `n` µÄ `CountDownLatch`
-        + µ±Ã¿¸öÈÎÎñÍê³ÉÊ±£¬¶¼»áÔÚÕâ¸öËø´æÆ÷ÉÏµ÷ÓÃ `countDown()`
-        + µÈ´ıÎÊÌâ±»½â¾öµÄÈÎÎñÔÙÕâ¸öËø´æÆ÷ÉÏµ÷ÓÃ `await()`
+        + å°†ç¨‹åºæ‹†è§£æˆ `n` ä¸ªå¯ç›¸äº’ç‹¬ç«‹è§£å†³çš„ä»»åŠ¡ï¼Œåˆ›å»ºå€¼ä¸º `n` çš„ `CountDownLatch`
+        + å½“æ¯ä¸ªä»»åŠ¡å®Œæˆæ—¶ï¼Œéƒ½ä¼šåœ¨è¿™ä¸ªé”å­˜å™¨ä¸Šè°ƒç”¨ `countDown()`
+        + ç­‰å¾…é—®é¢˜è¢«è§£å†³çš„ä»»åŠ¡å†è¿™ä¸ªé”å­˜å™¨ä¸Šè°ƒç”¨ `await()`
 
 ```java
 //: concurrency/CountDownLatchDemo.java
@@ -621,10 +621,10 @@ public class CountDownLatchDemo {
 
 
 
-#### 21.7.1.1 Àà¿âÖĞµÄÏß³Ì°²È«
+#### 21.7.1.1 ç±»åº“ä¸­çš„çº¿ç¨‹å®‰å…¨
 
-+ `Random.nextInt()` Ïß³Ì°²È«£¨¿ÉÒÔÈ¥³ı `static` Ê¹Æä°²È«£©
-+ `Math.random()` Ïß³Ì°²È«
++ `Random.nextInt()` çº¿ç¨‹å®‰å…¨ï¼ˆå¯ä»¥å»é™¤ `static` ä½¿å…¶å®‰å…¨ï¼‰
++ `Math.random()` çº¿ç¨‹å®‰å…¨
 +
 
 ```java
@@ -644,9 +644,9 @@ protected int next(int bits) {
 
 ### 21.7.2 CyclicBarrier
 
-+ ¿ÉÒÔÖØÖÃ£¬ÀàËÆÓÚ `CountDownLatch`
-    + Õ¤À¸¶¯×÷£º`new CyclicBarrier(int, Runnable)`£¬¼ÆÊıÎª `0` Ê±×Ô¶¯Ö´ĞĞ
-    + µ±¹ØÁªµÄÏß³Ì£¨Ö¸¶¨¸öÊı`int`£©¶¼µ½´ï×èÈûÖ®ºó£¬×Ô¶¯µ÷ÓÃ `Runnable`
++ å¯ä»¥é‡ç½®ï¼Œç±»ä¼¼äº `CountDownLatch`
+    + æ …æ åŠ¨ä½œï¼š`new CyclicBarrier(int, Runnable)`ï¼Œè®¡æ•°ä¸º `0` æ—¶è‡ªåŠ¨æ‰§è¡Œ
+    + å½“å…³è”çš„çº¿ç¨‹ï¼ˆæŒ‡å®šä¸ªæ•°`int`ï¼‰éƒ½åˆ°è¾¾é˜»å¡ä¹‹åï¼Œè‡ªåŠ¨è°ƒç”¨ `Runnable`
 + [HorseRace](../Example_Code/concurrency/HorseRace.java)
 + [GetChildrenBack2](GetChildrenBack2.java)
 
@@ -654,7 +654,7 @@ protected int next(int bits) {
 
 ### 21.7.3 DelayQueue
 
-+ ÎŞ½çµÄ `BlockingQueue` £¬ÓÃÓÚ·ÀÖ¹ÊµÏÖÁË `Delayed` ½Ó¿ÚµÄ¶ÔÏó
++ æ— ç•Œçš„ `BlockingQueue` ï¼Œç”¨äºé˜²æ­¢å®ç°äº† `Delayed` æ¥å£çš„å¯¹è±¡
 
 ```java
 // java.util.concurrent.Delayed.java
@@ -671,9 +671,9 @@ public interface Delayed extends Comparable<Delayed> {
 }
 ```
 
-+ `poll()` Èô¶ÓÍ·ÔªËØ»¹Î´ÑÓ³Ùµ½ÆÚ£¬·µ»Ø `null`
-+ `take()` ·µ»Ø¶ÓÍ·ÔªËØ£¬ÈôÎŞµ½ÆÚ£¬ÔòµÈ´ıÖÁµ½ÆÚ
-+ ÊÇÒ»¸öÓÅÏÈ¶ÓÁĞ£¨ÑÓ³Ùµ½ÆÚÊ±¼äÔ½³¤Ô½ÏÈ³ö¶ÓÁĞ£©
++ `poll()` è‹¥é˜Ÿå¤´å…ƒç´ è¿˜æœªå»¶è¿Ÿåˆ°æœŸï¼Œè¿”å› `null`
++ `take()` è¿”å›é˜Ÿå¤´å…ƒç´ ï¼Œè‹¥æ— åˆ°æœŸï¼Œåˆ™ç­‰å¾…è‡³åˆ°æœŸ
++ æ˜¯ä¸€ä¸ªä¼˜å…ˆé˜Ÿåˆ—ï¼ˆå»¶è¿Ÿåˆ°æœŸæ—¶é—´è¶Šé•¿è¶Šå…ˆå‡ºé˜Ÿåˆ—ï¼‰
 
 ```java
 public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
@@ -688,7 +688,7 @@ public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
 + [DelayQueueDemo](../Example_Code/concurrency/DelayQueueDemo.java)
 
 ```java
-// ²¿·Ö´úÂë
+// éƒ¨åˆ†ä»£ç 
 class DelayedTaskConsumer implements Runnable {
     private DelayQueue<DelayedTask> q;
     public DelayedTaskConsumer(DelayQueue<DelayedTask> q) {
@@ -710,15 +710,15 @@ class DelayedTaskConsumer implements Runnable {
 
 ### 21.7.4 PriorityBlockingQueue
 
-+ Ò»¸ö¿ÉÒÔÓÃÓÚ²¢·¢±à³ÌµÄÓÅÏÈ¶ÓÁĞ
++ ä¸€ä¸ªå¯ä»¥ç”¨äºå¹¶å‘ç¼–ç¨‹çš„ä¼˜å…ˆé˜Ÿåˆ—
 
 
 
-### 21.7.5 Ê¹ÓÃ ScheduledExecutor µÄÎÂÊÒ¿ØÖÆÆ÷
+### 21.7.5 ä½¿ç”¨ ScheduledExecutor çš„æ¸©å®¤æ§åˆ¶å™¨
 
 + `ScheduledTHreadPoolExecutor`
-    + `schedule()` ÔËĞĞÒ»´ÎÈÎÎñ
-    + `scheduleAtFixedRate()` Ã¿¸ö¹æÔòµÄÊ±¼äÖØ¸´Ö´ĞĞÈÎÎñ
+    + `schedule()` è¿è¡Œä¸€æ¬¡ä»»åŠ¡
+    + `scheduleAtFixedRate()` æ¯ä¸ªè§„åˆ™çš„æ—¶é—´é‡å¤æ‰§è¡Œä»»åŠ¡
 + [GreenHouseScheduler](../Example_Code/concurrency/GreenHouseScheduler.java)
 
 ```java
@@ -738,10 +738,10 @@ scheduler.scheduleAtFixedRate(
 
 ### 21.7.6 Semaphore
 
-+ **¼ÆÊıĞÅºÅÁ¿**
-    + ÔÊĞí `n` ¸ö¶ÔÏóÍ¬Ê±·ÃÎÊÕâ¸ö×ÊÔ´
++ **è®¡æ•°ä¿¡å·é‡**
+    + å…è®¸ `n` ä¸ªå¯¹è±¡åŒæ—¶è®¿é—®è¿™ä¸ªèµ„æº
     + `acquire(),release()`
-+ [Pool](../Example_Code/concurrency/Pool.java) ¶ÔÏó³Ø
++ [Pool](../Example_Code/concurrency/Pool.java) å¯¹è±¡æ± 
     + [Fat](../Example_Code/concurrency/Fat.java)
     + [SemaphoreDemo](../Example_Code/concurrency/SemaphoreDemo.java)
 
@@ -796,19 +796,19 @@ public class Pool<T> {
 }
 ```
 
-+ ÀıÈçÒ»¸ö²Í¹İÖ»ÓĞ `25` ¸ö·şÎñÔ±£¬Õâ±ãÊÊÓÃÓÚÒÔÉÏ³¡¾°
++ ä¾‹å¦‚ä¸€ä¸ªé¤é¦†åªæœ‰ `25` ä¸ªæœåŠ¡å‘˜ï¼Œè¿™ä¾¿é€‚ç”¨äºä»¥ä¸Šåœºæ™¯
 
 
 
 ### 21.7.7 Exchanger
 
-+ `Exchanger` ÊÇÔÚÁ½¸öÈÎÎñÖ®¼ä½»»»¶ÔÏóµÄÕ¤À¸
-    + Á½¸öÈÎÎñ½ø³öÕ¤À¸Ç°ºó£¬ÓµÓĞ¶ÔÏó»¥»»
-+ µäĞÍÓ¦ÓÃ³¡¾°£º
-    + Ò»¸öÈÎÎñÔÚ´´½¨¶ÔÏó£¬ÕâĞ©¶ÔÏóµÄÉú²ú´ú¼ÛÊ®·Ö¸ß°º£¬Òò´ËÁíÒ»¸öÈÎÎñ¸ºÔğÏû·ÑÕâĞ©¶ÔÏó
-    + Í¨¹ıÕâÖÖ·½Ê½£¬¿ÉÒÔÓĞ¸û¶ÁµÄ¶ÔÏóÔÚ±»´´½¨µÄÍ¬Ê±±»Ïû·Ñ
-    + Á½¸ö `List` »¥»»£¨¿Õ»»ÓĞ£©
-+ `CopyOnWriteArrayList` ÔÊĞíÔÚ±éÀúµÄÊ±ºòµ÷ÓÃ `remove()`
++ `Exchanger` æ˜¯åœ¨ä¸¤ä¸ªä»»åŠ¡ä¹‹é—´äº¤æ¢å¯¹è±¡çš„æ …æ 
+    + ä¸¤ä¸ªä»»åŠ¡è¿›å‡ºæ …æ å‰åï¼Œæ‹¥æœ‰å¯¹è±¡äº’æ¢
++ å…¸å‹åº”ç”¨åœºæ™¯ï¼š
+    + ä¸€ä¸ªä»»åŠ¡åœ¨åˆ›å»ºå¯¹è±¡ï¼Œè¿™äº›å¯¹è±¡çš„ç”Ÿäº§ä»£ä»·ååˆ†é«˜æ˜‚ï¼Œå› æ­¤å¦ä¸€ä¸ªä»»åŠ¡è´Ÿè´£æ¶ˆè´¹è¿™äº›å¯¹è±¡
+    + é€šè¿‡è¿™ç§æ–¹å¼ï¼Œå¯ä»¥æœ‰è€•è¯»çš„å¯¹è±¡åœ¨è¢«åˆ›å»ºçš„åŒæ—¶è¢«æ¶ˆè´¹
+    + ä¸¤ä¸ª `List` äº’æ¢ï¼ˆç©ºæ¢æœ‰ï¼‰
++ `CopyOnWriteArrayList` å…è®¸åœ¨éå†çš„æ—¶å€™è°ƒç”¨ `remove()`
 
 ```java
 for(T x : holder) {
@@ -818,10 +818,10 @@ for(T x : holder) {
 ```
 
 + [ExchangerDemo](../Example_Code/concurrency/ExchangerDemo.java)
-+ µ÷ÓÃ `Exchanger.exchange()` µÄÊ±ºò£¬Ëü½«×èÈûÖ±ÖÁ¶Ô·½ÈÎÎñµ÷ÓÃ×Ô¼ºµÄ `exchange()` ·½·¨
-    + ¶¼Íê³Éºó£¬¶şÕß»¥»»
++ è°ƒç”¨ `Exchanger.exchange()` çš„æ—¶å€™ï¼Œå®ƒå°†é˜»å¡ç›´è‡³å¯¹æ–¹ä»»åŠ¡è°ƒç”¨è‡ªå·±çš„ `exchange()` æ–¹æ³•
+    + éƒ½å®Œæˆåï¼ŒäºŒè€…äº’æ¢
 + [ExchangerDemo](ExchangerDemo.java)
-    + Ò»¸öºÜ¼òµ¥µÄÊ¾Àı
+    + ä¸€ä¸ªå¾ˆç®€å•çš„ç¤ºä¾‹
 
 ```java
 import java.util.concurrent.*;
@@ -889,34 +889,34 @@ EDProducer holds EDConsumerHolder
 
 
 
-## 21.8 ·ÂÕæ
+## 21.8 ä»¿çœŸ
 
-### 21.8.1 ÒøĞĞ³öÄÉÔ±·ÂÕæ
+### 21.8.1 é“¶è¡Œå‡ºçº³å‘˜ä»¿çœŸ
 
-+ ³¡¾°ÃèÊö
-    + ¶ÔÏóËæ»úµÄ³öÏÖ
-    + ÊıÁ¿ÓĞÏŞµÄ·şÎñÆ÷Ìá¹©Ëæ»úÊıÁ¿µÄ·şÎñÊ±¼ä
++ åœºæ™¯æè¿°
+    + å¯¹è±¡éšæœºçš„å‡ºç°
+    + æ•°é‡æœ‰é™çš„æœåŠ¡å™¨æä¾›éšæœºæ•°é‡çš„æœåŠ¡æ—¶é—´
 + [BankTellerSimulation](../Example_Code/concurrency/BankTellerSimulation.java)
 + [BankerTellerDemo](BankerTellerDemo.java)
-    + ÔÚÖĞ¶Ï `I/O` ×èÈûÉÏ»¹ÊÇ×öµÃ²»Ì«ºÃ
+    + åœ¨ä¸­æ–­ `I/O` é˜»å¡ä¸Šè¿˜æ˜¯åšå¾—ä¸å¤ªå¥½
 
 
 
-### 21.8.2 ·¹µê·ÂÕæ
+### 21.8.2 é¥­åº—ä»¿çœŸ
 
 + [RestaurantWithQueues](../Example_Code/concurrency/restaurant2/RestaurantWithQueues.java)
-+ Í¨¹ı **¶ÓÁĞ** ½øĞĞÈÎÎñ¼äÍ¨ĞÅ
++ é€šè¿‡ **é˜Ÿåˆ—** è¿›è¡Œä»»åŠ¡é—´é€šä¿¡
 
 
 
-### 21.8.3 ·Ö·¢¹¤×÷
+### 21.8.3 åˆ†å‘å·¥ä½œ
 
 + [CarBuilder](../Example_Code/concurrency/CarBuilder.java)
-    + Õâ¸öÊ¾Àı´úÂë»¹ÊÇ±È½Ï°ôµÄ
-    + ´´½¨µ×ÅÌ£¬°²×°·¢¶¯»ú¡¢³µÏá¡¢ÂÖ×Ó£¨Ê£Óà `3` ¸öÈÎÎñÎŞĞò£©
+    + è¿™ä¸ªç¤ºä¾‹ä»£ç è¿˜æ˜¯æ¯”è¾ƒæ£’çš„
+    + åˆ›å»ºåº•ç›˜ï¼Œå®‰è£…å‘åŠ¨æœºã€è½¦å¢ã€è½®å­ï¼ˆå‰©ä½™ `3` ä¸ªä»»åŠ¡æ— åºï¼‰
 
 ```java
-// ²¿·Ö´úÂë
+// éƒ¨åˆ†ä»£ç 
 class RobotPool {
     // Quietly prevents identical entries:
     private Set<Robot> pool = new HashSet<Robot>();
@@ -935,7 +935,7 @@ class RobotPool {
                 return;
             }
         wait(); // None available
-        hire(robotType, d); // Try again, recursively ÖØÆô
+        hire(robotType, d); // Try again, recursively é‡å¯
     }
     public synchronized void release(Robot r) { add(r); }
 }
@@ -943,63 +943,63 @@ class RobotPool {
 
 
 
-## 21.9 ĞÔÄÜµ÷ÓÅ
+## 21.9 æ€§èƒ½è°ƒä¼˜
 
-### 21.9.1 ±È½Ï¸÷Àà»¥³â¼¼Êõ
+### 21.9.1 æ¯”è¾ƒå„ç±»äº’æ–¥æŠ€æœ¯
 
 + `synchronized,Lock,Atomic`
 + [SimpleMicroBenchmark](../Example_Code/concurrency/SimpleMicroBenchmark.java)
 
 ```output
-ÎÒµÄ»ú×Ó : Lock/synchronized = 0.879
-ÊéÉÏÊı¾İ : Lock/synchronized = 3.834
+æˆ‘çš„æœºå­ : Lock/synchronized = 0.879
+ä¹¦ä¸Šæ•°æ® : Lock/synchronized = 3.834
 ```
 
-+ ´æÔÚµÄÎÊÌâ
-    + ²âÊÔÎªµ¥Ïß³Ì
-    + ²»ÖªµÀ±àÒëÆ÷µ×²ãÊÇ·ñ½øĞĞÓÅ»¯
-+ ¸´ÔÓµÄ²âÊÔ£¬ÈÃ±àÒëÆ÷¼õÉÙÓÅ»¯£¨ÄÑÒÔÔ¤²â£©£¬¶àÏß³Ì
++ å­˜åœ¨çš„é—®é¢˜
+    + æµ‹è¯•ä¸ºå•çº¿ç¨‹
+    + ä¸çŸ¥é“ç¼–è¯‘å™¨åº•å±‚æ˜¯å¦è¿›è¡Œä¼˜åŒ–
++ å¤æ‚çš„æµ‹è¯•ï¼Œè®©ç¼–è¯‘å™¨å‡å°‘ä¼˜åŒ–ï¼ˆéš¾ä»¥é¢„æµ‹ï¼‰ï¼Œå¤šçº¿ç¨‹
 + [SynchronizationComparisons](../Example_Code/concurrency/SynchronizationComparisons.java)
-    + Õâ¸ö²âÊÔÖ±½ÓÕ¨ÁË£¬Êı×éÔ½½ç£¨»¹ÊÇ´æÔÚ¶àÏß³Ìµ¼ÖÂµÄ¾ºÕùÎÊÌâ£©
-        + Ö±½ÓÊı×éÍù´óÁË¿ª£¨`SIZE*2`£©
-    + **Ä£°åÉè¼Æ·½·¨**
+    + è¿™ä¸ªæµ‹è¯•ç›´æ¥ç‚¸äº†ï¼Œæ•°ç»„è¶Šç•Œï¼ˆè¿˜æ˜¯å­˜åœ¨å¤šçº¿ç¨‹å¯¼è‡´çš„ç«äº‰é—®é¢˜ï¼‰
+        + ç›´æ¥æ•°ç»„å¾€å¤§äº†å¼€ï¼ˆ`SIZE*2`ï¼‰
+    + **æ¨¡æ¿è®¾è®¡æ–¹æ³•**
 
 ```output
-ÎÒµÄ»ú×Ó : Atomic < Lock < synchronized
-ÊéÉÏÊı¾İ : Atomic < synchronized < Lock
+æˆ‘çš„æœºå­ : Atomic < Lock < synchronized
+ä¹¦ä¸Šæ•°æ® : Atomic < synchronized < Lock
 ```
 
 
 
-### 21.9.2 ÃâËøÈİÆ÷
+### 21.9.2 å…é”å®¹å™¨
 
-+ ĞŞ¸ÄºÍ¶ÁÈ¡¿ÉÒÔÍ¬Ê±·¢Éú
++ ä¿®æ”¹å’Œè¯»å–å¯ä»¥åŒæ—¶å‘ç”Ÿ
 + `CopyOnWriteArrayList`
-    + ÔÊĞíÊ¹ÓÃµü´úÆ÷Ê±½øĞĞ `remove()`
-    + Ğ´ÈëÔòµ¼ÖÂ´´½¨Õû¸öµ×²ãÊı×éµÄ¸±±¾
-+ `ConcurentHashMap,ConcurrentLinkedQueue` ÀàËÆ¼ÆÊı£¬µ«ÊÇÊÇ²¿·Ö¶ø²»ÊÇÕû¸öÊı×é
+    + å…è®¸ä½¿ç”¨è¿­ä»£å™¨æ—¶è¿›è¡Œ `remove()`
+    + å†™å…¥åˆ™å¯¼è‡´åˆ›å»ºæ•´ä¸ªåº•å±‚æ•°ç»„çš„å‰¯æœ¬
++ `ConcurentHashMap,ConcurrentLinkedQueue` ç±»ä¼¼è®¡æ•°ï¼Œä½†æ˜¯æ˜¯éƒ¨åˆ†è€Œä¸æ˜¯æ•´ä¸ªæ•°ç»„
 
 
 
-#### 21.9.2.1 ÀÖ¹ÛËø
+#### 21.9.2.1 ä¹è§‚é”
 
 + [Tester](../Example_Code/concurrency/Tester.java)
 + [ListComparisons](../Example_Code/concurrency/ListComparisons.java)
     + [ListComparisonsOutput](ListComparisonsOutput.txt)
-+ ½á¹ûÏÔÊ¾µ±²»ÔõÃ´Ğ´Èë£¬ÉõÖÁÊÇÊ¹ÓÃÉÙÁ¿Ğ´ÈëÊ±
-    + `CopyOnWriteArrayList` Ğ§ÂÊ¶¼»¹ÊÇ±È `synchronized ArrayList` Òª¸ß
-+ Ê¹ÓÃ `Tester` ²âÊÔ¿ò¼Ü¿ÉÒÔ±È½Ï `Map`
++ ç»“æœæ˜¾ç¤ºå½“ä¸æ€ä¹ˆå†™å…¥ï¼Œç”šè‡³æ˜¯ä½¿ç”¨å°‘é‡å†™å…¥æ—¶
+    + `CopyOnWriteArrayList` æ•ˆç‡éƒ½è¿˜æ˜¯æ¯” `synchronized ArrayList` è¦é«˜
++ ä½¿ç”¨ `Tester` æµ‹è¯•æ¡†æ¶å¯ä»¥æ¯”è¾ƒ `Map`
     + [MapComparisons](../Example_Code/concurrency/MapComparisons.java)
 
 
 
-### 21.9.3 ÀÖ¹Û¼ÓËø
+### 21.9.3 ä¹è§‚åŠ é”
 
 + `Atomic`
-    + `decrementAndGet()`£ºÔ­×ÓĞÔ²Ù×÷
-    + `compareANdSet()` £ºÌá½»ĞÂÖµºÍ¾ÉÖµ£¬ÅĞ¶ÏÊÇ·ñ·¢ÉúÁË²¢·¢´íÎó
-        + Ê§°Ü»á·¢ÉúÉ¶£¿¸Ã¼¼ÊõµÄÎÊÌâËùÔÚ
-        + ĞèÒªÓĞÒ»¸öºÏÀíµÄ½â¾ö·½°¸
+    + `decrementAndGet()`ï¼šåŸå­æ€§æ“ä½œ
+    + `compareANdSet()` ï¼šæäº¤æ–°å€¼å’Œæ—§å€¼ï¼Œåˆ¤æ–­æ˜¯å¦å‘ç”Ÿäº†å¹¶å‘é”™è¯¯
+        + å¤±è´¥ä¼šå‘ç”Ÿå•¥ï¼Ÿè¯¥æŠ€æœ¯çš„é—®é¢˜æ‰€åœ¨
+        + éœ€è¦æœ‰ä¸€ä¸ªåˆç†çš„è§£å†³æ–¹æ¡ˆ
 + [FastSimulation](../Example_Code/concurrency/FastSimulation.java)
 
 ```java
@@ -1015,10 +1015,10 @@ if(!GRID[element][i].compareAndSet(oldvalue, newvalue)) {
 
 ### 21.9.4 ReadWriteLock
 
-+ **ÉÙĞ´¶à¶Á** Ó¦ÓÃ³¡¾°
-    + ÎŞĞ´Õß£º¿ÉÒÔ¶à¶Á
-    + ÓĞĞ´Õß£º²»ÄÜ¶Á
-+ ÊÇ·ñÓĞĞÔÄÜÌáÉı»¹ÊÇÈ¡¾öÓÚÓ¦ÓÃ³¡¾°
++ **å°‘å†™å¤šè¯»** åº”ç”¨åœºæ™¯
+    + æ— å†™è€…ï¼šå¯ä»¥å¤šè¯»
+    + æœ‰å†™è€…ï¼šä¸èƒ½è¯»
++ æ˜¯å¦æœ‰æ€§èƒ½æå‡è¿˜æ˜¯å–å†³äºåº”ç”¨åœºæ™¯
 + [ReaderWriterList](../Example_Code/concurrency/ReaderWriterList.java)
 
 ```java
@@ -1052,12 +1052,12 @@ public T get(int index) {
 
 
 
-## 21.10 »î¶¯¶ÔÏó
+## 21.10 æ´»åŠ¨å¯¹è±¡
 
-+ ¶àÏß³Ì±à³ÌÄ£ĞÍ±¾ÉíÊÇÃæÏò¹ı³ÌµÄ
-+ ¿ÉÌæ»»µÄ·½Ê½£º**»î¶¯¶ÔÏó/ĞĞ¶¯Õß**
-    + Ã¿Ò»¸ö¶ÔÏó¶¼Î¬»¤×Å×Ô¼ºµÄ¹¤×÷Æ÷Ïß³ÌºÍÏûÏ¢¶ÓÁĞ
-+ `Future` ÀàÔÚÕâÖÖÉè¼ÆÄ£Ê½ÖĞºÜÓĞÓÃ
++ å¤šçº¿ç¨‹ç¼–ç¨‹æ¨¡å‹æœ¬èº«æ˜¯é¢å‘è¿‡ç¨‹çš„
++ å¯æ›¿æ¢çš„æ–¹å¼ï¼š**æ´»åŠ¨å¯¹è±¡/è¡ŒåŠ¨è€…**
+    + æ¯ä¸€ä¸ªå¯¹è±¡éƒ½ç»´æŠ¤ç€è‡ªå·±çš„å·¥ä½œå™¨çº¿ç¨‹å’Œæ¶ˆæ¯é˜Ÿåˆ—
++ `Future` ç±»åœ¨è¿™ç§è®¾è®¡æ¨¡å¼ä¸­å¾ˆæœ‰ç”¨
 + [ActiveObjectDemo](../Example_Code/concurrency/ActiveObjectDemo.java)
 
 ```java
@@ -1126,14 +1126,14 @@ public class ActiveObjectDemo {
 }
 ```
 
-+ Í¨¹ı `Future` »ñÈ¡Ïß³ÌÖ´ĞĞµÄ½á¹û
++ é€šè¿‡ `Future` è·å–çº¿ç¨‹æ‰§è¡Œçš„ç»“æœ
     + `submit(),get()`
 
 
 
-## 21.11 ×Ü½á
+## 21.11 æ€»ç»“
 
-### 21.11.1 ½ø½×¶ÁÎï
+### 21.11.1 è¿›é˜¶è¯»ç‰©
 
 + `Java Concuurency in Practice`
 + `Concurrent Programming in Java`
