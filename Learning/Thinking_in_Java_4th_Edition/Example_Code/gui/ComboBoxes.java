@@ -11,7 +11,7 @@ public class ComboBoxes extends JFrame {
     "Somnescent", "Timorous", "Florid", "Putrescent"
   };
   private JTextField t = new JTextField(15);
-  private JComboBox c = new JComboBox();
+  private JComboBox<String> c = new JComboBox<>();
   private JButton b = new JButton("Add items");
   private int count = 0;
   public ComboBoxes() {
