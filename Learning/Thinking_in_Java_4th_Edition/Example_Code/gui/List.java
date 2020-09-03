@@ -12,8 +12,8 @@ public class List extends JFrame {
     "Mint Chip", "Mocha Almond Fudge", "Rum Raisin",
     "Praline Cream", "Mud Pie"
   };
-  private DefaultListModel lItems = new DefaultListModel();
-  private JList lst = new JList(lItems);
+  private DefaultListModel<String> lItems = new DefaultListModel<>();
+  private JList<String> lst = new JList<>(lItems);
   private JTextArea t =
     new JTextArea(flavors.length, 20);
   private JButton b = new JButton("Add Item");
@@ -33,7 +33,7 @@ public class List extends JFrame {
       public void valueChanged(ListSelectionEvent e) {
         if(e.getValueIsAdjusting()) return;
         t.setText("");
-        for(Object item : lst.getSelectedValues())
+        for(Object item : lst.getSelectedValuesList())
           t.append(item + "\n");
       }
     };
