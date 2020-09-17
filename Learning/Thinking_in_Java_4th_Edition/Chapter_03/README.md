@@ -289,12 +289,15 @@ while(x = y){
 
 + `cast`
 + 窄化转换 `narrowing conversion`
-    + 需要显示操作
+    
+    + 需要显式操作
 + 扩展转换 `widening conversion`
+    
     + 编译器自动操作
 + 允许所有的基本操作类型互转
-    + `boolean`  除外
-
+    
++ `boolean`  除外
+    
 + **截尾和舍入**
 
     + 默认截尾 

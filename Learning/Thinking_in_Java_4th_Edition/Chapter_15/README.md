@@ -640,7 +640,7 @@ public class SimpleHolder {
 
 ## 15.8 擦除的补偿
 
-+ 擦除丢失了反省代码中那个某些操作的能力，任何在运行时需要知道确切类型的操作都无法工作
++ 擦除丢失了泛型代码中某些操作的能力，任何在运行时需要知道确切类型的操作都无法工作
 + [Erased](Erased.java)
 
 ```java
@@ -726,7 +726,7 @@ public class InstantiateGenericType {
         System.out.println("ClassAsFactory<Employee> succeeded");
         try {
             // 失败,因为 Integer 没有默认构造函数
-            // 编译通过,因为这个不在编译器检查
+            // 编译通过,因为这个不在编译期检查
             ClassAsFactory<Integer> fi =
                 new ClassAsFactory<Integer>(Integer.class);
         } catch(Exception e) {
@@ -1116,7 +1116,7 @@ true
 
 
 
-### 15.10.0 逆变
+### 15.10.2 逆变
 
 + **超类型通配符**
     + `List<? super MyClass>`
@@ -1251,7 +1251,7 @@ public class UnboundedWildcards1 {
 
 + 无界通配符的一种重要应用
     + 处理多个泛型参数的时候，有时允许其中一个参数可以是任何类型，
-    + 同时为其他参数确定魔种特定类型的这种能力显得尤为重要
+    + 同时为其他参数确定某种特定类型的这种能力显得尤为重要
 + 但是如果全都是无界通配符时，编译器不好将其与原生类型区别开
     + `Map<?,?>  -  Map`
 

@@ -521,7 +521,7 @@ copy(List<? super T> dest, List<? extends T> src)
 ```
 
 ```java
-swap(List, int i, int j) // 通常比自己的代码块(优化?)
+swap(List, int i, int j) // 通常比自己的代码快(优化?)
 ```
 
 ```java

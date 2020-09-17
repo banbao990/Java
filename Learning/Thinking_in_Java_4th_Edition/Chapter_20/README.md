@@ -146,7 +146,7 @@ public enum ElementType {
 }
 ```
 
-+ `@Retention`：via哦是需要在什么级别保存该注解信息
++ `@Retention`：表示是需要在什么级别保存该注解信息
 
 ```java
 // java.lang.annotation.RetentionPolicy.java
@@ -245,7 +245,7 @@ public @interface AnnotationType {
     // public String id2() default nullStr; // 等价于 ""
     public Class id3() default Null.class;
     public CanUseEnum id4() default CanUseEnum.NULL;
-    // public CanUseClass id5(); // 错误: 注释类型元素 {0} 的类型无效
+    // public CanNotUseClass id5(); // 错误: 注释类型元素 {0} 的类型无效
     public CanUseAnnotation id6() default @CanUseAnnotation();
     // public CanUseAnnotation id6() default @CanUseAnnotation; // 都表示使用默认值
     public int[] id7() default {-1};
@@ -254,7 +254,7 @@ public @interface AnnotationType {
 class Null {}
 enum NullEnum {}
 enum CanUseEnum { NULL, }
-class CanUseClass {}
+class CanNotUseClass {}
 @interface CanUseAnnotation {}
 @interface NullAnnotation {}
 ```

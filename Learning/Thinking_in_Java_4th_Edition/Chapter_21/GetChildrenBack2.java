@@ -76,15 +76,37 @@ public class GetChildrenBack2 {
 
 
 /* Output (Sample)
-Child 8 is Coming Back!
-Child 4 is Coming Back!
-Child 5 is Coming Back!
-Child 9 is Coming Back!
-Child 3 is Coming Back!
-Child 2 is Coming Back!
-Child 10 is Coming Back!
-Child 1 is Coming Back!
-Child 7 is Coming Back!
-Child 6 is Coming Back!
-Boat 1 is Coming Back!
+Child 9 is Waiting!
+Child 3 is Waiting!
+Child 7 is Waiting!
+Child 5 is Waiting!
+Child 10 is Waiting!
+Child 2 is Waiting!
+Child 6 is Waiting!
+Child 8 is Waiting!
+Child 1 is Waiting!
+Child 4 is Waiting!
+Boat : DALABA -> ZAOLANGCHI!
+Child 4 is Waiting!
+Child 3 is Waiting!
+Child 9 is Waiting!
+Child 7 is Waiting!
+Child 1 is Waiting!
+Child 10 is Waiting!
+Child 2 is Waiting!
+Child 6 is Waiting!
+Child 8 is Waiting!
+Child 5 is Waiting!
+Boat : ZAOLANGCHI -> PIAOLIU!
+Child 4 is Waiting!
+Child 9 is Waiting!
+Child 1 is Waiting!
+Child 3 is Waiting!
+Child 5 is Waiting!
+Child 2 is Waiting!
+Child 6 is Waiting!
+Child 10 is Waiting!
+Child 8 is Waiting!
+Child 7 is Waiting!
+Boat : Coming Back!
 */

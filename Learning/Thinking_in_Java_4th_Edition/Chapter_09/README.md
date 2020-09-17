@@ -154,7 +154,7 @@ interface InterfaceB{
 }
 
 // 错误: 类型InterfaceB和InterfaceA不兼容;
-// 两者都定义了func(), 但却带有不相关的返回类型
+// 两者都定义了func(), 但却带有不相同的返回类型
 interface InterfaceC extends InterfaceA, InterfaceB{}
 ```
 

@@ -65,7 +65,7 @@ for(init_stmt;judge_stmt;iter_stmt) {stmt;}
 while(judge_stmt) {stmt;}
 
 // do-while stmt
-do{stmt} while(judge_stmt)
+do{stmt;} while(judge_stmt)
 ```
 
 ### 4.3.1 逗号操作符

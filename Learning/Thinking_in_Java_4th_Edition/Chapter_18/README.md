@@ -186,7 +186,7 @@ public boolean renameTo(File dest)
     + `DataOutputStream`
         + `writeByte()/...`
     + `PrintOutputStream`
-        + `ptintln()/print()`
+        + `println()/print()`
         + 未完全国际化
         + 捕获了所有异常，因此需要手动 `checkError()` 找异常
     + `BufferedOutputStream`
@@ -389,7 +389,7 @@ public static void basicFileOutput(
 }
 ```
 
-+ 输出结束需要显示调用 `close()`
++ 输出结束需要显式调用 `close()`
     + 否则可能因为没有及时关闭而导致有些内容还在缓冲区没有没刷出
 
 
@@ -632,7 +632,7 @@ public static void copy2 (String src, String dst) throws Exception {
 + `CharBuffer`
 + 需要注意编码格式
     + 比较好的方式在写入文件时指定编码为 `UTF-16BE`（`Java` 默认编码）
-+ [Buffer2Text](Buffer2Text.java)
++ [BufferToText](BufferToText.java)
     + **这一部分代码还是建议看一看**
 
 
@@ -874,7 +874,7 @@ MappedByteBuffer out =
 
 #### 18.10.6.1 性能
 
-+ 尽管旧的 `io` 在使用 `nio` 重新实现后得到了性能提升，但是映射温江访问往往更加显著的加快速度
++ 尽管旧的 `io` 在使用 `nio` 重新实现后得到了性能提升，但是映射文件访问往往更加显著的加快速度
 + **测试设计模式**
 
 ```java
