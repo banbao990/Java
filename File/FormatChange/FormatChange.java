@@ -10,15 +10,15 @@ import java.io.File;
 /**
  * @author banbao
  * @version 1
- * 1.1 Ã»ÓĞ½øĞĞ²é´í´¦Àí(Î´¼ì²éÊäÈëÎÄ¼ş¸ñÊ½)
- * 1.2 Êä³öÎÄ¼şËùÔÚÄ¿Â¼¿ÉÒÔ²»´æÔÚ
- * 1.3 ½¨ÒéÒÔµ±Ç°Ä¿Â¼Îª¸ù²éÕÒÄ¿Â¼
+ * 1.1 æ²¡æœ‰è¿›è¡ŒæŸ¥é”™å¤„ç†(æœªæ£€æŸ¥è¾“å…¥æ–‡ä»¶æ ¼å¼)
+ * 1.2 è¾“å‡ºæ–‡ä»¶æ‰€åœ¨ç›®å½•å¯ä»¥ä¸å­˜åœ¨
+ * 1.3 å»ºè®®ä»¥å½“å‰ç›®å½•ä¸ºæ ¹æŸ¥æ‰¾ç›®å½•
  */
 
 public class FormatChange{
     final static String newDir = "banbao\\";
     
-    // ´´½¨·ÅÖÃĞÂÎÄ¼şµÄÎÄ¼ş¼Ğ
+    // åˆ›å»ºæ”¾ç½®æ–°æ–‡ä»¶çš„æ–‡ä»¶å¤¹
     static {
         File newFileDir = new File(newDir);
         if(!newFileDir.exists()) {
@@ -26,16 +26,16 @@ public class FormatChange{
         }
     }
     
-    // ½ÓÊÜÃüÁîĞĞ²ÎÊı
+    // æ¥å—å‘½ä»¤è¡Œå‚æ•°
     public static void main(String...args) {
         FormatChange fc = new FormatChange();
         try {
-            // ±ê¼ÇÊäÈëÊÇ·ñÕıÈ·
+            // æ ‡è®°è¾“å…¥æ˜¯å¦æ­£ç¡®
             boolean OK = false;
-            // Êä³öÎÄ¼şÃû
+            // è¾“å‡ºæ–‡ä»¶å
             String outputFileName = null;
             if(args.length == 2 || args.length == 3){
-                // Êä³öÎÄ¼şÃû
+                // è¾“å‡ºæ–‡ä»¶å
                 if(args.length == 3) outputFileName = args[2];
                 // UTF8 to GBK
                 if("U2G".equals(args[0])) {
@@ -47,10 +47,10 @@ public class FormatChange{
                     OK = true;
                     fc.change(args[1], outputFileName, "GBK", "UTF-8");
                 } else {
-                    throw new NotSupportedException("Ö»Ö§³ÖUTF8,GBK");
+                    throw new NotSupportedException("åªæ”¯æŒUTF8,GBK");
                 }
             }
-            // ÊäÈë²»ÕıÈ·
+            // è¾“å…¥ä¸æ­£ç¡®
             if(!OK) {
                 fc.help();
             }
@@ -60,7 +60,7 @@ public class FormatChange{
         }
     }
     
-    // Êä³öÌáÊ¾ĞÅÏ¢
+    // è¾“å‡ºæç¤ºä¿¡æ¯
     public void help(){
         System.err.println(
             "usage:\n"
@@ -72,7 +72,7 @@ public class FormatChange{
         );
     }
     
-    // ¸ñÊ½×ª»»
+    // æ ¼å¼è½¬æ¢
     public void change(
             String inputFileName, String outputFileName, 
             String format1, String format2
@@ -81,7 +81,7 @@ public class FormatChange{
         if(outputFileName == null) {
             outputFileName = inputFileName;
         }
-        // ¼ì²éÊä³öÎÄ¼şËùÔÚÄ¿Â¼ÊÇ·ñ´æÔÚ
+        // æ£€æŸ¥è¾“å‡ºæ–‡ä»¶æ‰€åœ¨ç›®å½•æ˜¯å¦å­˜åœ¨
         outputFileName = check(outputFileName);
         // input
         FileInputStream fis = new FileInputStream(inputFileName); // IOException
@@ -105,7 +105,7 @@ public class FormatChange{
         br.close();
     }
     
-    // ¼ì²éÊä³öÎÄ¼şËùÔÚÄ¿Â¼ÊÇ·ñ´æÔÚ
+    // æ£€æŸ¥è¾“å‡ºæ–‡ä»¶æ‰€åœ¨ç›®å½•æ˜¯å¦å­˜åœ¨
     public String check(String outputFileName)
         throws NotSupportedException{
         // null
@@ -115,21 +115,21 @@ public class FormatChange{
         // deal
         String ret = null;
         int index = outputFileName.indexOf(":");
-        // ¾ø¶ÔÂ·¾¶(J)
-        // (J)case 1:´æÔÚ':', Õı³£ÎÄ¼ş²»´æÔÚ':'
+        // ç»å¯¹è·¯å¾„(J)
+        // (J)case 1:å­˜åœ¨':', æ­£å¸¸æ–‡ä»¶ä¸å­˜åœ¨':'
         if(index != -1) {
             ret = newDir + outputFileName.substring(index + 1);
         }
-        // case 2:ÒÔ'\' ¿ªÍ·²»Ó°Ïì(²»´¦Àí)
-        // Ïà¶ÔÂ·¾¶
+        // case 2:ä»¥'\' å¼€å¤´ä¸å½±å“(ä¸å¤„ç†)
+        // ç›¸å¯¹è·¯å¾„
         else {
-            // ÒÔ"..\" ¿ªÍ·µÄÏà¶ÔÂ·¾¶²»Ö§³Ö
+            // ä»¥"..\" å¼€å¤´çš„ç›¸å¯¹è·¯å¾„ä¸æ”¯æŒ
             if(outputFileName.startsWith("..\\"))
-                throw new NotSupportedException("²»Ö§³Ö\"../\"·½Ê½µÄÏà¶ÔÂ·¾¶");
+                throw new NotSupportedException("ä¸æ”¯æŒ\"../\"æ–¹å¼çš„ç›¸å¯¹è·¯å¾„");
             ret = newDir + outputFileName;
         }
-        // µİ¹éĞÂ½¨ÎÄ¼ş¼Ğ
-        // ¿ªÍ·²»¿ÉÄÜÊÇ "\"
+        // é€’å½’æ–°å»ºæ–‡ä»¶å¤¹
+        // å¼€å¤´ä¸å¯èƒ½æ˜¯ "\"
         index = 0;
         while(true) {
             index = ret.indexOf("\\" , index + 1);

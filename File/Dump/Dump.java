@@ -1,9 +1,9 @@
 /**
  * @author banbao
  * @version 1 
- * 1.0 Êä³öÑùÊ½Ä£·ÂµÄÊÇ notepad++
- * 1.1 ÎÄ¼ş×ª»¯Îª16½øÖÆÊä³ö
- * 1.2 Êä³öµ½±ê×¼Êä³ö(¿ÉÒÔÖØ¶¨Ïòµ½ÎÄ¼ş)
+ * 1.0 è¾“å‡ºæ ·å¼æ¨¡ä»¿çš„æ˜¯ notepad++
+ * 1.1 æ–‡ä»¶è½¬åŒ–ä¸º16è¿›åˆ¶è¾“å‡º
+ * 1.2 è¾“å‡ºåˆ°æ ‡å‡†è¾“å‡º(å¯ä»¥é‡å®šå‘åˆ°æ–‡ä»¶)
  */
 
 import java.io.InputStream;
@@ -23,7 +23,7 @@ public class Dump {
     
     public static void dump(String fileName) throws Exception {
         int line = 0;
-        StringBuilder sb = new StringBuilder(); // ¿É±ä
+        StringBuilder sb = new StringBuilder(); // å¯å˜
         InputStream is = new FileInputStream(fileName); // IOException
         byte[] b = new byte[1024];
         int length;

@@ -29,16 +29,16 @@ public class OSExecute {
     public static void command(String command) {
         boolean err = false;
         try {
-            // ¿ªÒ»¸ö½ø³Ì
+            // å¼€ä¸€ä¸ªè¿›ç¨‹
             Process process =
                 new ProcessBuilder(command.split(" ")).start();
-            // »ñÈ¡ÊäÈë
+            // è·å–è¾“å…¥
             BufferedReader results = new BufferedReader(
                 new InputStreamReader(process.getInputStream()));
             String s;
             while((s = results.readLine())!= null)
                 System.out.println(s);
-            // »ñÈ¡´íÎóĞÅÏ¢
+            // è·å–é”™è¯¯ä¿¡æ¯
             BufferedReader errors = new BufferedReader(
                 new InputStreamReader(process.getErrorStream()));
             while((s = errors.readLine())!= null) {
@@ -54,7 +54,7 @@ public class OSExecute {
                 throw new RuntimeException(e);
             }
         }
-        // Èç¹û³ÌĞòÔËĞĞ²úÉúÁË´íÎó, ±¨´í
+        // å¦‚æœç¨‹åºè¿è¡Œäº§ç”Ÿäº†é”™è¯¯, æŠ¥é”™
         if(err) {
             throw new OSExecuteException("Errors executing " + command);
         }

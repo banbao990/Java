@@ -9,34 +9,34 @@ import java.util.*;
  */
 
 public class FileFilter {
-    static String src;// Ô´ÎÄ¼ş¼Ğ
-    static String dst;// Ä¿µÄÎÄ¼ş¼Ğ
+    static String src;// æºæ–‡ä»¶å¤¹
+    static String dst;// ç›®çš„æ–‡ä»¶å¤¹
     static Path source;
     static Path destination;
     static int random = 0;
     static int count = 0;
     static Scanner sc = new Scanner(System.in);
     public static void main(String args[]){
-        /* »ñÈ¡ÊäÈëÊä³öÎÄ¼ş¼Ğ */
-        System.out.println("ÇëÊäÈëÔ´ÎÄ¼ş¼Ğ:");
+        /* è·å–è¾“å…¥è¾“å‡ºæ–‡ä»¶å¤¹ */
+        System.out.println("è¯·è¾“å…¥æºæ–‡ä»¶å¤¹:");
         while(true) {
             src = sc.next();
             source = Paths.get(src);
             if(Files.exists(source)) break;
-            /* ÈôÔ´ÎÄ¼ş¼Ğ²»´æÔÚ */
-            System.out.println("Ô´ÎÄ¼ş¼Ğ²»´æÔÚ, ÇëÖØĞÂÊäÈë:");
+            /* è‹¥æºæ–‡ä»¶å¤¹ä¸å­˜åœ¨ */
+            System.out.println("æºæ–‡ä»¶å¤¹ä¸å­˜åœ¨, è¯·é‡æ–°è¾“å…¥:");
         }
-        System.out.println("ÇëÊäÈëÄ¿µÄÎÄ¼ş¼Ğ:");
+        System.out.println("è¯·è¾“å…¥ç›®çš„æ–‡ä»¶å¤¹:");
         dst = sc.next();
         destination = Paths.get(dst);
-        /* ÈôÄ¿µÄÎÄ¼ş¼Ğ²»´æÔÚ, ´´½¨Ä¿µÄÎÄ¼ş¼Ğ */
+        /* è‹¥ç›®çš„æ–‡ä»¶å¤¹ä¸å­˜åœ¨, åˆ›å»ºç›®çš„æ–‡ä»¶å¤¹ */
         try {
             if (!Files.exists(destination))
                 Files.createDirectory(destination);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /* µİ¹é´¦ÀíÎÄ¼ş¼Ğ */
+        /* é€’å½’å¤„ç†æ–‡ä»¶å¤¹ */
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(source)) {
             for (Path entry : stream) {
                 move(entry);
@@ -44,8 +44,8 @@ public class FileFilter {
         } catch (IOException e) {
             e.printStackTrace();
         } 
-        /* Êä³öÌáÊ¾ĞÅÏ¢ */
-        System.out.println("Ò»¹²ÒÆ¶¯ÁË" + count + "¸öÎÄ¼ş");
+        /* è¾“å‡ºæç¤ºä¿¡æ¯ */
+        System.out.println("ä¸€å…±ç§»åŠ¨äº†" + count + "ä¸ªæ–‡ä»¶");
     }
     
     public static void move(Path old) throws IOException {
@@ -60,7 +60,7 @@ public class FileFilter {
         }
         else{
             String oldFile = old.getFileName().toString();
-            /* Í¬ÃûÎÄ¼ş´æÔÚ, ¼ÓÉÏËæ»úÂë */
+            /* åŒåæ–‡ä»¶å­˜åœ¨, åŠ ä¸Šéšæœºç  */
             while(Files.exists(Paths.get(dst + '\\' + oldFile)))
                 oldFile = (++random) + '_' + oldFile;
             System.out.println((count++) + ":" + old.toString() + " -> " + dst + '\\' + oldFile);

@@ -8,10 +8,10 @@ import java.io.*;
 import java.util.*;
 
 public class NaiveBayes{
-    // È¥³ı¿Õ°×·û
+    // å»é™¤ç©ºç™½ç¬¦
     static String regex = "[\\s]+";
-    // ÊäÈëÎÄ¼şÁĞ±í²Ù×÷Ïà¹Ø
-    static String inputFileName = "Data.txt";// ÆÓËØ±´Ò¶Ë¹µÄÊı¾İ¼¯
+    // è¾“å…¥æ–‡ä»¶åˆ—è¡¨æ“ä½œç›¸å…³
+    static String inputFileName = "Data.txt";// æœ´ç´ è´å¶æ–¯çš„æ•°æ®é›†
     static File inputFile;
     static BufferedReader in;
     static int totalElement = 0;
@@ -21,23 +21,23 @@ public class NaiveBayes{
     
     // yes:1,no:0
     static int[][] count = new int[2][20];
-    // ¼ÇÂ¼ÊäÈëÔªËØµÄ¶ÔÓ¦±àºÅ
+    // è®°å½•è¾“å…¥å…ƒç´ çš„å¯¹åº”ç¼–å·
     static HashMap<String, String> m = new HashMap<>();
     // scanner
     static Scanner sc = new Scanner(System.in);
     
-    //¶ÁÈëÊı¾İ
+    //è¯»å…¥æ•°æ®
     public static boolean readData(String[] args){
         boolean okRead = true;
-        // ÊäÈëµÄµÚÒ»¸ö²ÎÊı
+        // è¾“å…¥çš„ç¬¬ä¸€ä¸ªå‚æ•°
         if(args.length >= 1){ inputFileName = args[0]; }
         try{
-            // ´ò¿ªÎÄ¼şÁ÷
+            // æ‰“å¼€æ–‡ä»¶æµ
             inputFile = new File(inputFileName);
             in = new BufferedReader(new FileReader(inputFile));
             
-            // ¶ÁÈëÊı¾İ¿ªÊ¼²Ù×÷
-            // È¥µôµÚÒ»ĞĞ±êÌâ
+            // è¯»å…¥æ•°æ®å¼€å§‹æ“ä½œ
+            // å»æ‰ç¬¬ä¸€è¡Œæ ‡é¢˜
             String inputLine = in.readLine();
             inputLine = in.readLine();
             while(inputLine != null){
@@ -47,7 +47,7 @@ public class NaiveBayes{
                 int yes = (("yes").equals(infos[5])) ? 1 : 0;
                 PT += yes;
                 for(int i = 1; i <= aspects; ++i){
-                    // num ±íÊ¾¸Ã¹Ø¼ü×ÖµÄ±àºÅ
+                    // num è¡¨ç¤ºè¯¥å…³é”®å­—çš„ç¼–å·
                     int num;
                     if(m.containsKey(infos[i])){ num = Integer.parseInt(m.get(infos[i])); }
                     else{
@@ -58,7 +58,7 @@ public class NaiveBayes{
                 }
                 inputLine = in.readLine();
             }
-            // ¹Ø±ÕÎÄ¼şÁ÷
+            // å…³é—­æ–‡ä»¶æµ
             in.close();
         }catch (FileNotFoundException e1) {
             System.err.println("File \"" + inputFileName + "\" not found!");
@@ -70,7 +70,7 @@ public class NaiveBayes{
         return okRead;
     }
     
-    // ÌáÊ¾ĞÅÏ¢
+    // æç¤ºä¿¡æ¯
     public static void helpInfo(){
         out.println("Welcome to the Naive Bayes Small Analysis!");
         out.println("The Analysis contains four pamameters:Outlook,Temperature,Humidity,Wind.");
@@ -103,19 +103,19 @@ public class NaiveBayes{
     }
     
     /*
-     * ÆÓËØ±´Ò¶Ë¹Ëã·¨Ê¹ÓÃÑù±¾ÖĞµÄ¸ÅÂÊÖ±½Ó¹À¼ÆÕæÊµ¸ÅÂÊ 
+     * æœ´ç´ è´å¶æ–¯ç®—æ³•ä½¿ç”¨æ ·æœ¬ä¸­çš„æ¦‚ç‡ç›´æ¥ä¼°è®¡çœŸå®æ¦‚ç‡ 
      *     P(c_real) = P(c_sample)
-     * ÆÓËØ±´Ò¶Ë¹Ëã·¨¼ÙÉèÌõ¼ş¶ÀÁ¢
+     * æœ´ç´ è´å¶æ–¯ç®—æ³•å‡è®¾æ¡ä»¶ç‹¬ç«‹
      *     P(a,b,c|d) = P(a|d)*P(b|d)*P(c|d)
-     * ¹ı³Ì:
+     * è¿‡ç¨‹:
      * state = {l, m, n}
      * P(ans|state) = P(ans, state)/P(state)
      * P(ans, state) = P(state|ans) * P(ans)
-     *     P(ans) Ê¹ÓÃÑù±¾¹À¼Æ
+     *     P(ans) ä½¿ç”¨æ ·æœ¬ä¼°è®¡
      * P(state|ans) = P(l|ans)*P(m|ans)*P(n|ans)
-     *     P(l|ans) µÈÊ¹ÓÃÑù±¾¹À¼Æ
+     *     P(l|ans) ç­‰ä½¿ç”¨æ ·æœ¬ä¼°è®¡
      * P(state) = \sum^{ans} P(ans, state)
-     *     P(state) ½«ËùÓĞ¿ÉÄÜÇóºÍ(¹éÒ»»¯)
+     *     P(state) å°†æ‰€æœ‰å¯èƒ½æ±‚å’Œ(å½’ä¸€åŒ–)
     */
     public static void naiveBayes(){
         String inputInfo;
@@ -156,7 +156,7 @@ public class NaiveBayes{
         }
     }
     
-    // Õ·×ªÏà³ı·¨Çó×î´ó¹«ÒòÊı
+    // è¾—è½¬ç›¸é™¤æ³•æ±‚æœ€å¤§å…¬å› æ•°
     public static int gcd(int a, int b){
         int t, c;
         if(a > b){

@@ -3,9 +3,9 @@ import java.io.File;
 /**
  * @author banbao
  * @version 1
- * 1.1 ÅúÁ¿ÎÄ¼ş¸ñÊ½×ª»»
+ * 1.1 æ‰¹é‡æ–‡ä»¶æ ¼å¼è½¬æ¢
  * @version 2
- * 2.1 ¼ÓÈëÕıÔò±í´ïÊ½¹ıÂË
+ * 2.1 åŠ å…¥æ­£åˆ™è¡¨è¾¾å¼è¿‡æ»¤
  */
 
 public class FormatChangeBat{
@@ -13,7 +13,7 @@ public class FormatChangeBat{
     static String format1, format2;
     static int total = 0;
     static String regex = "";
-    // ½ÓÊÜÃüÁîĞĞ²ÎÊı
+    // æ¥å—å‘½ä»¤è¡Œå‚æ•°
     public static void main(String...args) throws Exception{
         if(args.length == 3) {
             regex = args[2];
@@ -33,12 +33,12 @@ public class FormatChangeBat{
         System.out.println("total:" + total);
     }
 
-    // µİ¹é½øĞĞ×ª»¯
+    // é€’å½’è¿›è¡Œè½¬åŒ–
     public static void change(File dir)
         throws Exception {
-        // ÎÄ¼ş»òÕß²»´æÔÚ
+        // æ–‡ä»¶æˆ–è€…ä¸å­˜åœ¨
         if(!dir.exists() || !dir.isDirectory()) return;
-        // ´ò¿ªÎÄ¼ş¼Ğ
+        // æ‰“å¼€æ–‡ä»¶å¤¹
         for(String fileInDir : dir.list()){
             File file = new File(dir, fileInDir);
             if(file.isFile()){
@@ -46,7 +46,7 @@ public class FormatChangeBat{
                 fc.change(dir + "\\" + file.getName(), null, format1, format2);
                 ++total;
             }else{
-                // ¶ÔÓÚ×ÓÄ¿Â¼,½øĞĞµİ¹éµ÷ÓÃ
+                // å¯¹äºå­ç›®å½•,è¿›è¡Œé€’å½’è°ƒç”¨
                 change(file);
             }
         }

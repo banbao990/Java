@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * ÕâÀïµÄÒì³£ÊÇÎªÁËÇø±ðÓÚÆäËûÒì³£
+ * è¿™é‡Œçš„å¼‚å¸¸æ˜¯ä¸ºäº†åŒºåˆ«äºŽå…¶ä»–å¼‚å¸¸
  */
 
 package OSExecute;

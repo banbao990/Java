@@ -31,44 +31,44 @@ public class Game2048 {
     private static String player = "default";
 
     public static void main(String... args) {
-        // ÎÄ¼ş¶ÁĞ´
+        // æ–‡ä»¶è¯»å†™
         Global.writeIn();
-        // »¶Ó­½çÃæ
+        // æ¬¢è¿ç•Œé¢
         new Introduction();
-        // ÓÎÏ·½çÃæ
+        // æ¸¸æˆç•Œé¢
         Global.gjfm = new GameJFrame("2048", player);
-        // ÓÎÏ·½áÊø½çÃæ
+        // æ¸¸æˆç»“æŸç•Œé¢
     }
 }
 
 class GameJFrame extends JFrame {
-    // ·½·¨¶¼ÉèÖÃÎª¾²Ì¬£¬ÒòÎªÖ»ÓĞÕâÃ´Ò»¸ö½çÃæ
+    // æ–¹æ³•éƒ½è®¾ç½®ä¸ºé™æ€ï¼Œå› ä¸ºåªæœ‰è¿™ä¹ˆä¸€ä¸ªç•Œé¢
     private static final int LENGTH = 16;
     private static final int ROW = 4;
     private static final int COL = 4;
     private static final long serialVersionUID = 1L;
-    private static int numbers[] = new int[LENGTH];// ÓÃÓÚ¼ÇÂ¼·½¿éµÄÉÏÃæ¶ÔÓ¦µÄÊı×Ö,0±íÊ¾¿Õ°×
+    private static int numbers[] = new int[LENGTH];// ç”¨äºè®°å½•æ–¹å—çš„ä¸Šé¢å¯¹åº”çš„æ•°å­—,0è¡¨ç¤ºç©ºç™½
     private static Nav nav = new Nav();
     private static JLabel player = new JLabel("", JLabel.CENTER);
     private static Body body = new Body();
     //private static JButton reflesh = new JButton("start");
     private static JLabel showDetails = new JLabel("show details",JLabel.CENTER);
-    private static boolean gameOver = false;// ÓÎÏ·½áÊø
+    private static boolean gameOver = false;// æ¸¸æˆç»“æŸ
     private static int blankNumber = 16;
-    private static boolean changed = false;// ÓÃÀ´¾ÍÃ¿´Î²Ù×÷ÓĞÃ»ÓĞÒÆ¶¯·½¿é£¬ÕâÑù¿ÉÒÔ¾ö¶¨Òª²»ÒªÉú³ÉÒ»¸öĞÂµÄ×©¿é
+    private static boolean changed = false;// ç”¨æ¥å°±æ¯æ¬¡æ“ä½œæœ‰æ²¡æœ‰ç§»åŠ¨æ–¹å—ï¼Œè¿™æ ·å¯ä»¥å†³å®šè¦ä¸è¦ç”Ÿæˆä¸€ä¸ªæ–°çš„ç –å—
     private static int score = 0;
     //private static String playerName;
     private static Detail detail = new Detail();
 
     GameJFrame(String name, String _player) {
-        super(name);// ¹¹Ôìº¯Êı
+        super(name);// æ„é€ å‡½æ•°
         //playerName=_player;
-        setTitle("2048 Game");// ÉèÖÃ±êÌâ
+        setTitle("2048 Game");// è®¾ç½®æ ‡é¢˜
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(500, 800);// ÉèÖÃ´óĞ¡
-        setLocationRelativeTo(null);// ÉèÖÃÎª´°Ìå¾ÓÖĞ
-        setResizable(false);// ÉèÖÃ½çÃæ´óĞ¡²»ÄÜ¹»¸ü¸Ä
-        setLayout(null);// ÉèÖÃ²¼¾ÖÎª×Ô¼ºÊÖ¶¯²¼¾Ö
+        setSize(500, 800);// è®¾ç½®å¤§å°
+        setLocationRelativeTo(null);// è®¾ç½®ä¸ºçª—ä½“å±…ä¸­
+        setResizable(false);// è®¾ç½®ç•Œé¢å¤§å°ä¸èƒ½å¤Ÿæ›´æ”¹
+        setLayout(null);// è®¾ç½®å¸ƒå±€ä¸ºè‡ªå·±æ‰‹åŠ¨å¸ƒå±€
         setVisible(true);
         getContentPane().setBackground(new Color(0xfaf8ef));
         // Nav nav = new Nav();
@@ -84,13 +84,13 @@ class GameJFrame extends JFrame {
         getContentPane().add(player);
         // Body body = new Body();
         getContentPane().add(body);
-        // ²»ÖªµÀÔõÃ´°Ñ½¹µã»¹¸øJFrame
+        // ä¸çŸ¥é“æ€ä¹ˆæŠŠç„¦ç‚¹è¿˜ç»™JFrame
         /*
          * JButton reflesh = new JButton("start");
          * reflesh.setSize(200, 50);
          * reflesh.setLocation(150, 670); reflesh.setFont(new Font("consolas", 0, 40));
          * reflesh.setBackground(new Color(0x8f7a66));
-         * reflesh.setForeground(Color.WHITE); // btnÌí¼ÓÊÂ¼ş¼àÌıÆ÷
+         * reflesh.setForeground(Color.WHITE); // btnæ·»åŠ äº‹ä»¶ç›‘å¬å™¨
          * reflesh.addActionListener((e) -> { newGame(); });
          * getContentPane().add(reflesh);
          */
@@ -98,9 +98,9 @@ class GameJFrame extends JFrame {
         showDetails.setLocation(125, 670);
         showDetails.setFont(new Font("consolas", 0, 30));
         showDetails.setBackground(new Color(0xffc09f));
-        showDetails.setOpaque(true);// ÉèÖÃ³É²»Í¸Ã÷µÄ±³¾°É«²ÅÄÜÓĞĞ§
+        showDetails.setOpaque(true);// è®¾ç½®æˆä¸é€æ˜çš„èƒŒæ™¯è‰²æ‰èƒ½æœ‰æ•ˆ
         showDetails.setForeground(Color.black);
-        // showDetailsÌí¼ÓÊÂ¼ş¼àÌıÆ÷
+        // showDetailsæ·»åŠ äº‹ä»¶ç›‘å¬å™¨
         showDetails.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseEntered(MouseEvent e){
@@ -114,7 +114,7 @@ class GameJFrame extends JFrame {
 
         getContentPane().add(showDetails);
 
-        setFocusable(true);// »ñµÃ½¹µã
+        setFocusable(true);// è·å¾—ç„¦ç‚¹
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -145,7 +145,7 @@ class GameJFrame extends JFrame {
     public JLabel getPlayer() {
         return player;
     }
-    // ÖØĞÂ¿ªÊ¼ÓÎÏ·
+    // é‡æ–°å¼€å§‹æ¸¸æˆ
     public static void newGame() {
         gameOver = false;
         blankNumber = LENGTH - 2;
@@ -176,18 +176,18 @@ class GameJFrame extends JFrame {
         });
     }
 
-    // ¸Ä±äÒ»ÁĞ
+    // æ”¹å˜ä¸€åˆ—
     public static void changeCol(int col, boolean isUp) {
         boolean nowChanged = false;
         int[] temp = { 0, 0, 0, 0 };
-        // È¡³ö²»ÊÇ0µÄ×ÓĞòÁĞ
+        // å–å‡ºä¸æ˜¯0çš„å­åºåˆ—
         for (int i = 0, j = 0; j < ROW; j++) {
             if (numbers[j * COL + col] != 0) {
                 temp[i] = numbers[j * COL + col];
                 i++;
             }
         }
-        // ÏòÏÂÒÆ¶¯,ĞèÒª¸Ä±äÒ»ÏÂtempµÄ´æ´¢
+        // å‘ä¸‹ç§»åŠ¨,éœ€è¦æ”¹å˜ä¸€ä¸‹tempçš„å­˜å‚¨
         if (!isUp) {
             int zeroLocation = 0;
             for (int j = 0; j < ROW; j++) {
@@ -202,17 +202,17 @@ class GameJFrame extends JFrame {
             for (int i = 0; i < ROW; i++)
                 temp[i] = tmp[i];
         }
-        // Ò»·½Ãæ¼ì²éÕâÀïÓĞÃ»ÓĞ½»»»¹ı£¬ÁíÍâÒ»·½Ãæ¸øÈ«¾ÖµÄ¼ì²éÓĞÃ»ÓĞ½»»»¹ı
+        // ä¸€æ–¹é¢æ£€æŸ¥è¿™é‡Œæœ‰æ²¡æœ‰äº¤æ¢è¿‡ï¼Œå¦å¤–ä¸€æ–¹é¢ç»™å…¨å±€çš„æ£€æŸ¥æœ‰æ²¡æœ‰äº¤æ¢è¿‡
         for (int j = 0; j < ROW; j++) {
             if (temp[j] != numbers[j * COL + col]) {
-                changed = true;// ½»»»¹ıÎ»ÖÃ
+                changed = true;// äº¤æ¢è¿‡ä½ç½®
                 nowChanged = true;
                 break;
             }
         }
-        if (!nowChanged)// Ã»ÓĞ½»»»¹ı¾Í·µ»Ø
+        if (!nowChanged)// æ²¡æœ‰äº¤æ¢è¿‡å°±è¿”å›
             return;
-        // ½»»»Î»ÖÃ
+        // äº¤æ¢ä½ç½®
         for (int j = 0; j < ROW; j++) {
             final int location = j * COL + col;
             numbers[location] = temp[j];
@@ -222,20 +222,20 @@ class GameJFrame extends JFrame {
         }
     }
 
-    // ÏàÁÚÁ½ĞĞÏàÍ¬µÄÖØºÏ,×¢ÒâÖ»ºÏ²¢Ò»´Î
+    // ç›¸é‚»ä¸¤è¡Œç›¸åŒçš„é‡åˆ,æ³¨æ„åªåˆå¹¶ä¸€æ¬¡
     public static void mergeSameROW(final int col) {
-        // 1,2ĞĞÏàÍ¬ºÏ²¢
+        // 1,2è¡Œç›¸åŒåˆå¹¶
         if ((numbers[col + COL] != 0) && (numbers[col + COL] <= 2048)
                 && (numbers[col + COL] == numbers[col + COL * 2])) {
             mergeTwo(col + COL, col + COL * 2);
             return;// !important
         }
-        // 0,1ĞĞÏàÍ¬ºÏ²¢
+        // 0,1è¡Œç›¸åŒåˆå¹¶
         if ((numbers[col] != 0) && (numbers[col] <= 2048) && (numbers[col] == numbers[col + COL])) {
             mergeTwo(col, col + COL);
             // return;//!important
         }
-        // 2,3ĞĞÏàÍ¬ºÏ²¢
+        // 2,3è¡Œç›¸åŒåˆå¹¶
         if ((numbers[col + COL * 2] != 0) && (numbers[col + COL * 2] <= 2048)
                 && (numbers[col + COL * 2] == numbers[col + COL * 3])) {
             mergeTwo(col + COL * 2, col + COL * 3);
@@ -243,18 +243,18 @@ class GameJFrame extends JFrame {
         }
     }
 
-    // ¸Ä±äÒ»ĞĞ
+    // æ”¹å˜ä¸€è¡Œ
     public static void changeROW(int row, boolean isLeft) {
         boolean nowChanged = false;
         int[] temp = { 0, 0, 0, 0 };
-        // È¡³ö²»ÊÇ0µÄ×ÓĞòÁĞ
+        // å–å‡ºä¸æ˜¯0çš„å­åºåˆ—
         for (int i = 0, j = 0; j < COL; j++) {
             if (numbers[row * COL + j] != 0) {
                 temp[i] = numbers[row * COL + j];
                 i++;
             }
         }
-        // ÏòÓÒÒÆ¶¯,ĞèÒª¸Ä±äÒ»ÏÂtempµÄ´æ´¢
+        // å‘å³ç§»åŠ¨,éœ€è¦æ”¹å˜ä¸€ä¸‹tempçš„å­˜å‚¨
         if (!isLeft) {
             int zeroLocation = 0;
             for (int j = 0; j < COL; j++) {
@@ -269,17 +269,17 @@ class GameJFrame extends JFrame {
             for (int i = 0; i < COL; i++)
                 temp[i] = tmp[i];
         }
-        // Ò»·½Ãæ¼ì²éÕâÀïÓĞÃ»ÓĞ½»»»¹ı£¬ÁíÍâÒ»·½Ãæ¸øÈ«¾ÖµÄ¼ì²éÓĞÃ»ÓĞ½»»»¹ı
+        // ä¸€æ–¹é¢æ£€æŸ¥è¿™é‡Œæœ‰æ²¡æœ‰äº¤æ¢è¿‡ï¼Œå¦å¤–ä¸€æ–¹é¢ç»™å…¨å±€çš„æ£€æŸ¥æœ‰æ²¡æœ‰äº¤æ¢è¿‡
         for (int j = 0; j < COL; j++) {
             if (temp[j] != numbers[row * COL + j]) {
-                changed = true;// ½»»»¹ıÎ»ÖÃ
+                changed = true;// äº¤æ¢è¿‡ä½ç½®
                 nowChanged = true;
                 break;
             }
         }
-        if (!nowChanged)// Ã»ÓĞ½»»»¹ı¾Í·µ»Ø
+        if (!nowChanged)// æ²¡æœ‰äº¤æ¢è¿‡å°±è¿”å›
             return;
-        // ½»»»Î»ÖÃ
+        // äº¤æ¢ä½ç½®
         for (int j = 0; j < COL; j++) {
             final int location = row * COL + j;
             numbers[location] = temp[j];
@@ -289,22 +289,22 @@ class GameJFrame extends JFrame {
         }
     }
 
-    // ÏàÁÚÁ½ÁĞÏàÍ¬µÄÖØºÏ,×¢ÒâÖ»ºÏ²¢Ò»´Î
+    // ç›¸é‚»ä¸¤åˆ—ç›¸åŒçš„é‡åˆ,æ³¨æ„åªåˆå¹¶ä¸€æ¬¡
     public static void mergeSameCOL(final int row) {
         final int minLocation = row * COL;
-        // 1,2ÁĞÏàÍ¬ºÏ²¢
+        // 1,2åˆ—ç›¸åŒåˆå¹¶
         if ((numbers[minLocation + 1] != 0) && (numbers[minLocation + 1] <= 2048)
                 && (numbers[minLocation + 1] == numbers[minLocation + 2])) {
             mergeTwo(minLocation + 1, minLocation + 2);
             return;// !important
         }
-        // 0,1ÁĞÏàÍ¬ºÏ²¢
+        // 0,1åˆ—ç›¸åŒåˆå¹¶
         if ((numbers[minLocation] != 0) && (numbers[minLocation] <= 2048)
                 && (numbers[minLocation] == numbers[minLocation + 1])) {
             mergeTwo(minLocation, minLocation + 1);
             // return;//!important
         }
-        // 2,3ÁĞÏàÍ¬ºÏ²¢
+        // 2,3åˆ—ç›¸åŒåˆå¹¶
         if ((numbers[minLocation + 2] != 0) && (numbers[minLocation + 2] <= 2048)
                 && (numbers[minLocation + 2] == numbers[minLocation + 3])) {
             mergeTwo(minLocation + 2, minLocation + 3);
@@ -312,21 +312,21 @@ class GameJFrame extends JFrame {
         }
     }
 
-    // Á½¿éÖØºÏµÄº¯Êı
+    // ä¸¤å—é‡åˆçš„å‡½æ•°
     // lc -> location
     public static void mergeTwo(final int lc1, final int lc2) {
-        changed = true;// ½»»»¹ıÎ»ÖÃ
+        changed = true;// äº¤æ¢è¿‡ä½ç½®
         blankNumber++;
         score += numbers[lc1];
-        // ÉèÖÃ·ÖÊı
+        // è®¾ç½®åˆ†æ•°
         SwingUtilities.invokeLater(() -> {
             nav.getScoreDiv(0).getScore().setText("" + score);
         });
-        // ³É¼¨¸ß¹ı×î¸ß·Ö
+        // æˆç»©é«˜è¿‡æœ€é«˜åˆ†
         if (score > Integer.parseInt(nav.getScoreDiv(1).getScore().getText())) {
             SwingUtilities.invokeLater(() -> {
                 nav.getScoreDiv(1).getScore().setText("" + score);
-                Global.bestPlayer = Global.username;//³É¼¨¸ß¹ı×î¸ß·Ö¾Í¸üĞÂ
+                Global.bestPlayer = Global.username;//æˆç»©é«˜è¿‡æœ€é«˜åˆ†å°±æ›´æ–°
                 Global.bestScore = score;
                 Global.gbBest.getlbl().setText(Global.bestPlayer+" : "+Global.bestScore);
             });
@@ -339,7 +339,7 @@ class GameJFrame extends JFrame {
         });
     }
 
-    // ÒÆ¶¯up
+    // ç§»åŠ¨up
     public static void up() {
         changed = false;
         for (int i = 0; i < COL; i++) {
@@ -357,7 +357,7 @@ class GameJFrame extends JFrame {
         clearBlank();
     }
 
-    // ÒÆ¶¯right
+    // ç§»åŠ¨right
     public static void right() {
         changed = false;
         for (int i = 0; i < ROW; i++) {
@@ -375,7 +375,7 @@ class GameJFrame extends JFrame {
         clearBlank();
     }
 
-    // ÒÆ¶¯down
+    // ç§»åŠ¨down
     public static void down() {
         changed = false;
         for (int i = 0; i < COL; i++) {
@@ -393,7 +393,7 @@ class GameJFrame extends JFrame {
         clearBlank();
     }
 
-    // ÒÆ¶¯left
+    // ç§»åŠ¨left
     public static void left() {
         changed = false;
         for (int i = 0; i < ROW; i++) {
@@ -411,7 +411,7 @@ class GameJFrame extends JFrame {
         clearBlank();
     }
 
-    // ÖØĞÂÉèÖÃÒÆ¶¯ºóµÄ½çÃæ
+    // é‡æ–°è®¾ç½®ç§»åŠ¨åçš„ç•Œé¢
     public static void reset() {
         for (int i = 0; i < LENGTH; i++) {
             final int iUse = i;
@@ -421,27 +421,27 @@ class GameJFrame extends JFrame {
         }
     }
 
-    // ²»ÄÜÒÆ¶¯
-    // ĞèÒª¸ü¸ÄÒ»ÏÂ£¬ÓÃÓÚÎÄ¼ş²Ù×÷µÄ×î¸ß·Ö¼ÍÂ¼
+    // ä¸èƒ½ç§»åŠ¨
+    // éœ€è¦æ›´æ”¹ä¸€ä¸‹ï¼Œç”¨äºæ–‡ä»¶æ“ä½œçš„æœ€é«˜åˆ†çºªå½•
     public static boolean canMove() {
-        // ÓĞ¿ÕµØ,ËµÃ÷»¹ÄÜ×ß,ÓÎÏ·Ã»ÓĞ½áÊø
+        // æœ‰ç©ºåœ°,è¯´æ˜è¿˜èƒ½èµ°,æ¸¸æˆæ²¡æœ‰ç»“æŸ
         for (int i = 0; i < LENGTH; i++)
             if (numbers[i] == 0)
                 return true;
-        // ¿´ÊÇ·ñÓĞ×óÓÒÏàÁ¬µÄ¿Õ¸ñÊı×ÖÒ»Ñù
+        // çœ‹æ˜¯å¦æœ‰å·¦å³ç›¸è¿çš„ç©ºæ ¼æ•°å­—ä¸€æ ·
         for (int i = 0; i < ROW; i++)
             for (int j = 0; j < COL - 1; j++)
                 if (numbers[i * COL + j] == numbers[i * COL + j + 1])
                     return true;
-        // ¿´ÊÇ·ñÓĞÉÏÏÂÏàÁ¬µÄ¿Õ¸ñÊı×ÖÒ»Ñù
+        // çœ‹æ˜¯å¦æœ‰ä¸Šä¸‹ç›¸è¿çš„ç©ºæ ¼æ•°å­—ä¸€æ ·
         for (int i = 0; i < COL; i++)
             for (int j = 0; j < ROW - 1; j++)
                 if (numbers[j * COL + i] == numbers[(j + 1) * COL + i])
                     return true;
         int nowBestScore = Integer.parseInt(nav.getScoreDiv(1).getScore().getText());
         if(((nowBestScore >= Global.bestScore)&&(Global.username.equals(Global.bestPlayer)))
-                || nowBestScore > Global.bestScore) {//±ÈÖ®Ç°×î¸ß·Ö¸ß»òÕßÒÑ¾­¸üĞÂ¹ıÁË(bestplayerÄÇÀï)
-            Global.writeOut(nowBestScore);//½áÊøÒ»ÅÌÓÎÏ·¾Í½øĞĞÎÄ¼ş¶ÁĞ´
+                || nowBestScore > Global.bestScore) {//æ¯”ä¹‹å‰æœ€é«˜åˆ†é«˜æˆ–è€…å·²ç»æ›´æ–°è¿‡äº†(bestplayeré‚£é‡Œ)
+            Global.writeOut(nowBestScore);//ç»“æŸä¸€ç›˜æ¸¸æˆå°±è¿›è¡Œæ–‡ä»¶è¯»å†™
             Global.bestScore = nowBestScore;
             Global.bestPlayer = Global.username;
         }
@@ -449,17 +449,17 @@ class GameJFrame extends JFrame {
         return false;
     }
 
-    // Ëæ»úÉú³ÉÊı×Ö
+    // éšæœºç”Ÿæˆæ•°å­—
     public static void clearBlank() {
         int number = (int) Math.floor(Math.random() * blankNumber);
 
-        int randomNumber = 2;// Ëæ»úÉú³ÉµÄÊı×Ö 2:4:8 = 7:2:1
+        int randomNumber = 2;// éšæœºç”Ÿæˆçš„æ•°å­— 2:4:8 = 7:2:1
         double r3 = Math.random();
         if(r3>0.9)
             randomNumber = 8;
         else if(r3>0.7)
             randomNumber = 4;
-        final int randomNumberUse = randomNumber;//ÓÃÓÚinvokeLater
+        final int randomNumberUse = randomNumber;//ç”¨äºinvokeLater
         for (int i = 0; i < LENGTH; i++) {
             if (numbers[i] == 0) {
                 if (number == 0) {
@@ -488,12 +488,12 @@ class Nav extends JPanel {
         setLayout(null);
         setVisible(true);
         setSize(500, 100);
-        setLocation(0, 30);// ÊÖ¶¯µ÷Î»ÖÃ
+        setLocation(0, 30);// æ‰‹åŠ¨è°ƒä½ç½®
         setBackground(new Color(0xfaf8ef));
         JLabel lbl1 = new JLabel("2048", JLabel.CENTER);
         lbl1.setHorizontalAlignment(JLabel.CENTER);
         lbl1.setBackground(new Color(0xffeb8e));
-        lbl1.setOpaque(true);// ÉèÖÃ³É²»Í¸Ã÷µÄ±³¾°É«²ÅÄÜÓĞĞ§
+        lbl1.setOpaque(true);// è®¾ç½®æˆä¸é€æ˜çš„èƒŒæ™¯è‰²æ‰èƒ½æœ‰æ•ˆ
         lbl1.setLocation(10, 5);
         lbl1.setSize(150, 90);
         lbl1.setFont(new Font("consolas", 0, 45));
@@ -505,7 +505,7 @@ class Nav extends JPanel {
         add(sc[1]);
     }
 
-    // º¯ÊıÓĞ¶¾,ÉèÖÃ³É³ÉÔ±±äÁ¿ok
+    // å‡½æ•°æœ‰æ¯’,è®¾ç½®æˆæˆå‘˜å˜é‡ok
     Score getScoreDiv(int index) {
         return sc[index];
     }
@@ -519,7 +519,7 @@ class Body extends JPanel {
         super();
         setVisible(true);
         GridLayout gl = new GridLayout(4, 4);
-        gl.setHgap(5);// ÉèÖÃÉÏÏÂ×óÓÒ¼ä¾à
+        gl.setHgap(5);// è®¾ç½®ä¸Šä¸‹å·¦å³é—´è·
         gl.setVgap(5);
         setLayout(gl);
         setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
@@ -544,18 +544,18 @@ class Div extends JLabel {
     Div(int a) {
         super();
         if (a != 0)
-            setText(a + "");// ÉèÖÃÎÄ×Ö
+            setText(a + "");// è®¾ç½®æ–‡å­—
         else
             setText("");
-        setBackground(getBackground(a));// ÉèÖÃ±³¾°É«
-        setOpaque(true);// ÉèÖÃ³É²»Í¸Ã÷µÄ±³¾°É«²ÅÄÜÓĞĞ§
-        setSize(100, 100);// ÉèÖÃ´óĞ¡
-        setHorizontalAlignment(JLabel.CENTER);// ÉèÖÃÎÄ×Ö¾ÓÖĞ
+        setBackground(getBackground(a));// è®¾ç½®èƒŒæ™¯è‰²
+        setOpaque(true);// è®¾ç½®æˆä¸é€æ˜çš„èƒŒæ™¯è‰²æ‰èƒ½æœ‰æ•ˆ
+        setSize(100, 100);// è®¾ç½®å¤§å°
+        setHorizontalAlignment(JLabel.CENTER);// è®¾ç½®æ–‡å­—å±…ä¸­
         setFont(new Font("consolas", 0, 45));
         setVisible(true);
     }
 
-    // µÃµ½±³¾°É«
+    // å¾—åˆ°èƒŒæ™¯è‰²
     public Color getBackground(int value) {
         switch (value) {
         case 2:
@@ -581,8 +581,8 @@ class Div extends JLabel {
         case 2048:
             return new Color(0xedc22e);
         }
-        return new Color(0xcdc1b4);// Ã»ÓĞÊı×ÖµÄÑÕÉ«
-        // #edc22e ×î¸ß·Ö
+        return new Color(0xcdc1b4);// æ²¡æœ‰æ•°å­—çš„é¢œè‰²
+        // #edc22e æœ€é«˜åˆ†
     }
 
     public void setTextAndColor(int number) {
@@ -628,7 +628,7 @@ class Score extends JPanel {
         add(lbl2);
         setVisible(true);
         setSize(150, 90);
-        int left;// ÉèÖÃÎ»ÖÃ
+        int left;// è®¾ç½®ä½ç½®
         if (score)
             left = 170;
         else
@@ -647,7 +647,7 @@ class Detail extends JFrame{
     Detail(){
         super("details");
         setLayout(new GridLayout(3,1));
-        setVisible(false);//ÉèÖÃÎª²»¿É¼û
+        setVisible(false);//è®¾ç½®ä¸ºä¸å¯è§
         jlb[0] = new JLabel("1.default username:default",JLabel.CENTER);
         jlb[1] = new JLabel("2.strat game:ESC",JLabel.CENTER);
         jlb[2] = new JLabel("3.move:arrows",JLabel.CENTER);
@@ -658,8 +658,8 @@ class Detail extends JFrame{
         }
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(500,400);
-        setLocationRelativeTo(null);// ÉèÖÃÎª´°Ìå¾ÓÖĞ
-        setResizable(false);// ÉèÖÃ½çÃæ´óĞ¡²»ÄÜ¹»¸ü¸Ä
+        setLocationRelativeTo(null);// è®¾ç½®ä¸ºçª—ä½“å±…ä¸­
+        setResizable(false);// è®¾ç½®ç•Œé¢å¤§å°ä¸èƒ½å¤Ÿæ›´æ”¹
     }
 }
 
@@ -679,8 +679,8 @@ class Fail extends JFrame{
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(500,200);
-        setLocationRelativeTo(null);// ÉèÖÃÎª´°Ìå¾ÓÖĞ
-        setResizable(false);// ÉèÖÃ½çÃæ´óĞ¡²»ÄÜ¹»¸ü¸Ä
+        setLocationRelativeTo(null);// è®¾ç½®ä¸ºçª—ä½“å±…ä¸­
+        setResizable(false);// è®¾ç½®ç•Œé¢å¤§å°ä¸èƒ½å¤Ÿæ›´æ”¹
     }
 }
 
@@ -693,9 +693,9 @@ class Introduction extends JFrame{
         setLayout(new GridLayout(2,1));
         setVisible(true);
         setSize(400,200);
-        setLocationRelativeTo(null);// ÉèÖÃÎª´°Ìå¾ÓÖĞ
-        setResizable(false);// ÉèÖÃ½çÃæ´óĞ¡²»ÄÜ¹»¸ü¸Ä
-        setAlwaysOnTop(true);//Ê¼ÖÕÖÃ¶¥
+        setLocationRelativeTo(null);// è®¾ç½®ä¸ºçª—ä½“å±…ä¸­
+        setResizable(false);// è®¾ç½®ç•Œé¢å¤§å°ä¸èƒ½å¤Ÿæ›´æ”¹
+        setAlwaysOnTop(true);//å§‹ç»ˆç½®é¡¶
         jbl = new JLabel("input your name",JLabel.CENTER);
         jbl.setFont(new Font("consolas",0,30));
         tf = new TextField();
@@ -722,9 +722,9 @@ class Best extends JFrame{
         super("best player");
         setLayout(null);
         setSize(410,210);
-        setLocationRelativeTo(null);// ÉèÖÃÎª´°Ìå¾ÓÖĞ
-        setResizable(false);//ÉèÖÃ½çÃæ´óĞ¡²»ÄÜ¹»¸ü¸Ä
-        setVisible(false);//ÉèÖÃÎª²»¿É¼û
+        setLocationRelativeTo(null);// è®¾ç½®ä¸ºçª—ä½“å±…ä¸­
+        setResizable(false);//è®¾ç½®ç•Œé¢å¤§å°ä¸èƒ½å¤Ÿæ›´æ”¹
+        setVisible(false);//è®¾ç½®ä¸ºä¸å¯è§
         lbl = new JLabel(Global.bestPlayer+" : "+Global.bestScore,JLabel.CENTER);
         lbl.setSize(400,200);
         lbl.setLocation(5,5);
@@ -759,7 +759,7 @@ class Global{
             PrintWriter out = new PrintWriter(new FileWriter(fout));
             out.println(Global.username);
             out.println(_score);
-            out.close();                            // ¹Ø±Õ»º³å¶ÁÈëÁ÷¼°ÎÄ¼ş¶ÁÈëÁ÷µÄÁ¬½Ó.
+            out.close();                            // å…³é—­ç¼“å†²è¯»å…¥æµåŠæ–‡ä»¶è¯»å…¥æµçš„è¿æ¥.
         } catch (FileNotFoundException e1) {
             System.err.println("File not found!");
         } catch (IOException e2) {
@@ -788,12 +788,12 @@ class Global{
             }else {
                 System.out.println("the file is empty!");
             }
-            in.close();// ¹Ø±Õ»º³å¶ÁÈëÁ÷¼°ÎÄ¼ş¶ÁÈëÁ÷µÄÁ¬½Ó.
+            in.close();// å…³é—­ç¼“å†²è¯»å…¥æµåŠæ–‡ä»¶è¯»å…¥æµçš„è¿æ¥.
         } catch (FileNotFoundException e1) {
             System.err.println("File not found!");
         } catch (IOException e2) {
             e2.printStackTrace();
         }
-        Global.gbBest.getlbl().setText(Global.bestPlayer+" : "+Global.bestScore);//ÎÄ¼ş¶ÁĞ´Íê³ÉÖ®ºóÔÙ´Î¸üĞÂ½çÃæ
+        Global.gbBest.getlbl().setText(Global.bestPlayer+" : "+Global.bestScore);//æ–‡ä»¶è¯»å†™å®Œæˆä¹‹åå†æ¬¡æ›´æ–°ç•Œé¢
     }
 }

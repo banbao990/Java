@@ -5,10 +5,10 @@ import java.io.*;
  * @encode:ANSI
 */
 
-// ÏÖÔÚ½öÖ§³ÖÍ¬Ä¿Â¼ÏÂÎÄ¼şµÄÖØÃüÃû
+// ç°åœ¨ä»…æ”¯æŒåŒç›®å½•ä¸‹æ–‡ä»¶çš„é‡å‘½å
 
 public class Rename{
-    // bbq: ÎªÊ²Ã´ "  a.txt b.txt" Æ¥Åä³¤¶È»áÊÇ3?
+    // bbq: ä¸ºä»€ä¹ˆ "  a.txt b.txt" åŒ¹é…é•¿åº¦ä¼šæ˜¯3?
     static final String regex = "[\\s]+";
     static int lineCount = 0;
 
@@ -39,21 +39,21 @@ public class Rename{
                 }
                 ++ lineCount;
                 String fileNameBefore, fileNameAfter;
-                s = s.trim();// È¥³ıÁ½±ß¿Õ¸ñ
+                s = s.trim();// å»é™¤ä¸¤è¾¹ç©ºæ ¼
                 String[] infos = s.split(regex);
 
-                // ÊÇ×¢ÊÍ
+                // æ˜¯æ³¨é‡Š
                 if(s.startsWith("#")){
                     continue;
                 }
 
-                // ²ÎÊı²»Îª 2
+                // å‚æ•°ä¸ä¸º 2
                 if(infos.length != 2){
                     errorPrinter("Need two paramaters!");
                     continue;
                 }
 
-                // »ñÈ¡ĞÂ¾ÉÎÄ¼şÃû
+                // è·å–æ–°æ—§æ–‡ä»¶å
                 fileNameBefore = infos[0].trim();
                 fileNameAfter = infos[1].trim();
                 if("".equals(fileNameBefore) || "".equals(fileNameAfter)){
@@ -61,29 +61,29 @@ public class Rename{
                     continue;
                 }
 
-                // ĞÂ¾ÉÎÄ¼şÖØÃû
+                // æ–°æ—§æ–‡ä»¶é‡å
                 if(fileNameBefore.equals(fileNameAfter)){
                     errorPrinter("The new file name is equals to the old one!");
                     continue;
                 }
 
-                // »ñÈ¡ĞÂ¾ÉÎÄ¼ş¶ÔÏó
+                // è·å–æ–°æ—§æ–‡ä»¶å¯¹è±¡
                 File oldfile = new File(fileNameBefore);
                 File newfile = new File(fileNameAfter);
 
-                // ¾ÉÎÄ¼ş²»´æÔÚ
+                // æ—§æ–‡ä»¶ä¸å­˜åœ¨
                 if(!oldfile.exists()){
                     errorPrinter("File \"" + fileNameBefore +  "\" is not exsited!");
                     continue;
                 }
 
-                // ĞÂÎÄ¼şÃûÒÑ¾­´æÔÚ
+                // æ–°æ–‡ä»¶åå·²ç»å­˜åœ¨
                 if(newfile.exists()){
                     errorPrinter(fileNameAfter + " is already exsited!");
                     continue;
                 }
 
-                // ÖÕÓÚ¿ÉÒÔÖØÃüÃûÁË
+                // ç»ˆäºå¯ä»¥é‡å‘½åäº†
                 oldfile.renameTo(newfile);
             }
             br.close();
@@ -93,9 +93,9 @@ public class Rename{
     }
 
     public static void main(String...arg){
-        // ÌáÊ¾ĞÅÏ¢
+        // æç¤ºä¿¡æ¯
         helpInfo();
-        // ÖØÃüÃû
+        // é‡å‘½å
         work();
     }
 }
