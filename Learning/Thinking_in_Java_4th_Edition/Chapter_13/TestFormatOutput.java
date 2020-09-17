@@ -5,7 +5,7 @@
 import java.util.Formatter;
 import java.io.PrintStream;
 public class TestFormatOutput {
-    // Éè¼Æ¼¼ÇÉ
+    // è®¾è®¡æŠ€å·§
     private Formatter format;
     
     public static void main(String...args){
@@ -26,8 +26,8 @@ public class TestFormatOutput {
 }
 
 /* output
-¦² 10 1.0
-¦² 10 1.0
-¦² 10 1.0
-¦² 10 1.0
+Î£ 10 1.0
+Î£ 10 1.0
+Î£ 10 1.0
+Î£ 10 1.0
 */

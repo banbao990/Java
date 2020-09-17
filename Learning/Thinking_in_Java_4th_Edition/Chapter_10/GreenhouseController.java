@@ -1,5 +1,5 @@
-// Ê¾Àı´úÂë
-// Ò»¸ö¿ØÖÆ
+// ç¤ºä¾‹ä»£ç 
+// ä¸€ä¸ªæ§åˆ¶
 
 public class GreenhouseController {
     public static void main(String[] args) {
@@ -14,8 +14,8 @@ public class GreenhouseController {
             gc.new ThermostatDay(1400)
         };
         gc.addEvent(gc.new Restart(2000, eventList));
-        // Í£Ö¹µÄÊ±¼äÓÉÃüÁîĞĞ²ÎÊı¸ø³ö
-        // Ä¬ÈÏÎª 5000
+        // åœæ­¢çš„æ—¶é—´ç”±å‘½ä»¤è¡Œå‚æ•°ç»™å‡º
+        // é»˜è®¤ä¸º 5000
         long terminalTime = 5000;
         if(args.length == 1)
             terminalTime = new Long(args[0]);

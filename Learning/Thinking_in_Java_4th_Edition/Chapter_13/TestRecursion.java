@@ -5,7 +5,7 @@
 public class TestRecursion {
     @Override
     public String toString(){
-        // this »áµ÷ÓÃ toString() ·½·¨µ¼ÖÂµÝ¹é
+        // this ä¼šè°ƒç”¨ toString() æ–¹æ³•å¯¼è‡´é€’å½’
         // return "Addr:" + this;
         return "Addr:" + super.toString();
     }

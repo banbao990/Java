@@ -43,7 +43,7 @@ public class TestIterator{
         while(iterator.hasNext()){
             FE fe = iterator.next();
             if(fe.equals("FE3")){
-                // remove µÄÔªËØÊÇÉÏÒ»¸ö next ·µ»ØµÄÔªËØ
+                // remove çš„å…ƒç´ æ˜¯ä¸Šä¸€ä¸ª next è¿”å›žçš„å…ƒç´ 
                 iterator.remove(); // remove
             }
         }

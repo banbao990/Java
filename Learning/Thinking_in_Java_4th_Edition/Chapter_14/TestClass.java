@@ -31,7 +31,7 @@ public class TestClass {
         print("~~~~");
         print("Is enum:" + cl.isEnum());
         print("Is interface:" + cl.isInterface());
-        //  局部类是指那些被定义在块中的类
+        //  灞�閮ㄧ被鏄寚閭ｄ簺琚畾涔夊湪鍧椾腑鐨勭被
         print("Is localClass:" + cl.isLocalClass()); 
         print("Superclass:" + cl.getSuperclass()); 
         print("getCanonicalName():" + cl.getCanonicalName());

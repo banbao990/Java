@@ -5,35 +5,35 @@
 public class TestStatic{
     public static void main(String[] args){
         System.out.println("-----1");
-        // A.c = 0; // ×¢ÊÍÓï¾ä(1)
-        // ×¢ÊÍÓï¾ä(1)ÑéÖ¤¶ÔÓÚ static ±äÁ¿µÄÒıÓÃ»òÕßÀà¶ÔÏóµÄÉú³É¶¼»á´¥·¢ÀàµÄ¼ÓÔØ
+        // A.c = 0; // æ³¨é‡Šè¯­å¥(1)
+        // æ³¨é‡Šè¯­å¥(1)éªŒè¯å¯¹äº static å˜é‡çš„å¼•ç”¨æˆ–è€…ç±»å¯¹è±¡çš„ç”Ÿæˆéƒ½ä¼šè§¦å‘ç±»çš„åŠ è½½
         System.out.println("-----2");
-        new A(); // »áÏÈ¼ì²é»ùÀàµÄ static ´úÂë
+        new A(); // ä¼šå…ˆæ£€æŸ¥åŸºç±»çš„ static ä»£ç 
         System.out.println("-----3");
-        new A(); // Ã»ÓĞÊä³ö, static ´úÂë¿éÖ»»áÖ´ĞĞ³õÊ¼»¯Ò»´Î
+        new A(); // æ²¡æœ‰è¾“å‡º, static ä»£ç å—åªä¼šæ‰§è¡Œåˆå§‹åŒ–ä¸€æ¬¡
     }
 }
 
 class B{
     static{
-        System.out.println("B:static test!"); // Êä³öË³Ğò: 1
+        System.out.println("B:static test!"); // è¾“å‡ºé¡ºåº: 1
     }
 }
 
 class A extends B{
     static{
-        System.out.println("A:static test 1!"); // Êä³öË³Ğò: 2
+        System.out.println("A:static test 1!"); // è¾“å‡ºé¡ºåº: 2
     }
     static{
-        System.out.println("A:static test 2!"); // Êä³öË³Ğò: 3(Ë³ĞòÊä³ö)
+        System.out.println("A:static test 2!"); // è¾“å‡ºé¡ºåº: 3(é¡ºåºè¾“å‡º)
     }
     static int c = 0;
     static {
         int d = c + 1;
-        // int b = a + 1; // ´íÎó: ·Ç·¨Ç°ÏòÒıÓÃ
+        // int b = a + 1; // é”™è¯¯: éæ³•å‰å‘å¼•ç”¨
     }
     static int a = 0;
-    static int d = func(); // static ·½·¨µÄ¼ÓÔØÔçÓÚ static ×Ö¶Î
+    static int d = func(); // static æ–¹æ³•çš„åŠ è½½æ—©äº static å­—æ®µ
     static int func(){
         return 0;
     }
@@ -43,7 +43,7 @@ class A extends B{
  * output:
  *
  *
- * ½« "×¢ÊÍÓï¾ä(1)" ×¢ÊÍ
+ * å°† "æ³¨é‡Šè¯­å¥(1)" æ³¨é‡Š
  * -----1
  * -----2
  * B:static test!
@@ -52,7 +52,7 @@ class A extends B{
  * -----3
  *
  *
- * ²»½« "×¢ÊÍÓï¾ä(1)" ×¢ÊÍ
+ * ä¸å°† "æ³¨é‡Šè¯­å¥(1)" æ³¨é‡Š
  * -----1
  * B:static test!
  * A:static test 1!

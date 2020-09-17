@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.Arrays;
@@ -23,7 +23,7 @@ public class TestArrayAndGeneric {
     public static void main(String...args) {
         MakeArray<String> str = new MakeArray<String>(10);
         str.set("test", 0);
-        // str.set(1, 0); // ´íÎó: ²»¼æÈİµÄÀàĞÍ: intÎŞ·¨×ª»»ÎªString
+        // str.set(1, 0); // é”™è¯¯: ä¸å…¼å®¹çš„ç±»å‹: intæ— æ³•è½¬æ¢ä¸ºString
         System.out.println(Arrays.deepToString(str.getArray()));
     }
 }

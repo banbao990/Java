@@ -1,5 +1,5 @@
-// Ê¾Àı´úÂë
-// ÊÂ¼ş½Ó¿Ú
+// ç¤ºä¾‹ä»£ç 
+// äº‹ä»¶æ¥å£
 
 public abstract class Event{
     private long eventTime;
@@ -8,15 +8,15 @@ public abstract class Event{
         this.delayTime = delayTime;
         start();
     }
-    // ºÍ¹¹ÔìÆ÷¶ÀÁ¢,¿ÉÒÔÔÚÊ±¼äÔËĞĞÖ®ºóÖØĞÂÆô¶¯¼ÆÊ±Æ÷
-    // ÖØ¸´Ò»¸öÍ¬ÑùµÄÊÂ¼ş
+    // å’Œæ„é€ å™¨ç‹¬ç«‹,å¯ä»¥åœ¨æ—¶é—´è¿è¡Œä¹‹åé‡æ–°å¯åŠ¨è®¡æ—¶å™¨
+    // é‡å¤ä¸€ä¸ªåŒæ ·çš„äº‹ä»¶
     public void start(){
         eventTime = System.currentTimeMillis() + delayTime;
     }
-    // ºÎÊ±¿ÉÒÔ¿ªÊ¼ÔËĞĞ¸ÃÊÂ¼ş( action ·½·¨)
+    // ä½•æ—¶å¯ä»¥å¼€å§‹è¿è¡Œè¯¥äº‹ä»¶( action æ–¹æ³•)
     public boolean ready(){
         return System.currentTimeMillis() >= eventTime;
     }
-    // ÓÃÓÚ¼Ì³ĞÊµÏÖµÄ action ·½·¨
+    // ç”¨äºç»§æ‰¿å®ç°çš„ action æ–¹æ³•
     public abstract void action();
 }

@@ -3,12 +3,12 @@
  */
 
 class PriClass {
-    // 私有构造器
+    // 绉佹湁鏋勯�犲櫒
     private PriClass(){}
 }
 
 class NoDefaultClass {
-    // 没有默认构造器
+    // 娌℃湁榛樿鏋勯�犲櫒
     NoDefaultClass(int noUse) {}
 }
 

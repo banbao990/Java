@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 
 import java.io.*;
 import java.util.*;
@@ -11,9 +11,9 @@ public class NeedCasting {
         ObjectInputStream in = new ObjectInputStream(
             new FileInputStream(args[0]));
         List<Apple> fruit = (List<Apple>)in.readObject();
-        // readObject ²»ÖªµÀËü¶ÁµÄÊÇÊ²Ã´,Òò´Ë±ØĞë×ªĞÍ
-        // µ«ÊÇ×ªĞÍÁËÓÖ»á±¨¾¯¸æ
-        // ¾¯¸æ: [unchecked] Î´¾­¼ì²éµÄ×ª»»
+        // readObject ä¸çŸ¥é“å®ƒè¯»çš„æ˜¯ä»€ä¹ˆ,å› æ­¤å¿…é¡»è½¬å‹
+        // ä½†æ˜¯è½¬å‹äº†åˆä¼šæŠ¥è­¦å‘Š
+        // è­¦å‘Š: [unchecked] æœªç»æ£€æŸ¥çš„è½¬æ¢
         
         // 2 warning
         List<Apple> fruit2 = List.class.cast(in.readObject());

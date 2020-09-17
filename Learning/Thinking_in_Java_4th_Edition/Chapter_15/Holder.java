@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public class Holder<T> {
@@ -18,11 +18,11 @@ public class Holder<T> {
         Apple.set(d);
         // Holder<Fruit> Fruit = Apple; // Cannot upcast
         Holder<? extends Fruit> fruit = Apple; // OK
-        // Holder<Apple> fruit2 = fruit; // ²»ÄÜ×ª»»
+        // Holder<Apple> fruit2 = fruit; // ä¸èƒ½è½¬æ¢
         Fruit p = fruit.get();
         d = (Apple)fruit.get(); // Returns 'Object'
         try {
-            Orange c = (Orange)fruit.get(); // No warning(·µ»ØFruit)
+            Orange c = (Orange)fruit.get(); // No warning(è¿”å›Fruit)
         } catch(Exception e) { System.out.println(e); }
         // fruit.set(new Apple()); // Cannot call set()
         // fruit.set(new Fruit()); // Cannot call set()

@@ -1,7 +1,7 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
- * ÒÀÀµ¿â: nu.xom.*(http://www.xom.nu)
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
+ * ä¾èµ–åº“: nu.xom.*(http://www.xom.nu)
  */
 import nu.xom.*;
 import java.util.*;

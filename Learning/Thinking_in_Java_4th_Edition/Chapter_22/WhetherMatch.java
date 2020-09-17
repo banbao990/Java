@@ -11,10 +11,10 @@ import java.awt.event.*;
 
 public class WhetherMatch extends JFrame {
     private JTextField 
-        tf1 = new JTextField("请在此输入字符串", 20),
-        tf2 = new JTextField("请在此输入正则表达式", 20);
+        tf1 = new JTextField("璇峰湪姝よ緭鍏ュ瓧绗︿覆", 20),
+        tf2 = new JTextField("璇峰湪姝よ緭鍏ユ鍒欒〃杈惧紡", 20);
     private JButton
-        b1 = new JButton("测试!"),
+        b1 = new JButton("娴嬭瘯!"),
         b2 = new JButton("Ready!");
         
    public WhetherMatch() {
@@ -39,7 +39,7 @@ public class WhetherMatch extends JFrame {
         );
         add(b1);
         add(b2);
-        setTitle("匹配");
+        setTitle("鍖归厤");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 300);
         setVisible(true);

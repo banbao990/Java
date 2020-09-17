@@ -25,12 +25,12 @@ public class GridBagEx1 extends JFrame {
     }
 
     public void init() {
-        // ²¼¾Ö¹ÜÀíÆ÷
+        // å¸ƒå±€ç®¡ç†å™¨
         GridBagLayout gridbag = new GridBagLayout();
-        // Ô¼Êø(Ã¿Ò»¸ö¹¹¼ş¶¼ĞèÒªÓĞÒ»¸öÔ¼Êø)
+        // çº¦æŸ(æ¯ä¸€ä¸ªæ„ä»¶éƒ½éœ€è¦æœ‰ä¸€ä¸ªçº¦æŸ)
         GridBagConstraints c = new GridBagConstraints();
         
-        // ÉèÖÃ×ÖÌåÒÔ¼°²¼¾Ö¹ÜÀíÆ÷
+        // è®¾ç½®å­—ä½“ä»¥åŠå¸ƒå±€ç®¡ç†å™¨
         setFont(new Font("SansSerif", Font.PLAIN, 14));
         setLayout(gridbag);
 

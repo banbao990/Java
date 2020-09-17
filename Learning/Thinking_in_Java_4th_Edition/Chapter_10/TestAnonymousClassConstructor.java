@@ -1,15 +1,15 @@
-// ÄäÃûÀà
+// åŒ¿åç±»
 
 abstract class Base{
-    // ÎŞ²Î¹¹Ôìº¯Êı
+    // æ— å‚æ„é€ å‡½æ•°
     Base(){ 
         System.out.println("No args!");
     }
-    // º¬²Î¹¹Ôìº¯Êı
+    // å«å‚æ„é€ å‡½æ•°
     Base(int x){
         System.out.println("One arg!");
     }
-    // ²âÊÔº¯Êı
+    // æµ‹è¯•å‡½æ•°
     void func(){
         System.out.println("Blank!");
     }
@@ -17,8 +17,8 @@ abstract class Base{
 
 class Outer{
     public Base func(){
-        // ÄäÃûÀà
-        // ÎŞ²Î¹¹Ôìº¯Êı
+        // åŒ¿åç±»
+        // æ— å‚æ„é€ å‡½æ•°
         return new Base(){
             @Override
             public void func(){
@@ -28,12 +28,12 @@ class Outer{
     }
     
     public Base func(int x){
-        // ÄäÃûÀà
-        // º¬²Î¹¹Ôìº¯Êı
+        // åŒ¿åç±»
+        // å«å‚æ„é€ å‡½æ•°
         return new Base(x){
             public void func(){
                 // x = x + 1;
-                // ´íÎó: ´ÓÄÚ²¿ÀàÒıÓÃµÄ±¾µØ±äÁ¿±ØĞëÊÇ×îÖÕ±äÁ¿»òÊµ¼ÊÉÏµÄ×îÖÕ±äÁ¿
+                // é”™è¯¯: ä»å†…éƒ¨ç±»å¼•ç”¨çš„æœ¬åœ°å˜é‡å¿…é¡»æ˜¯æœ€ç»ˆå˜é‡æˆ–å®é™…ä¸Šçš„æœ€ç»ˆå˜é‡
                 System.out.println("Func, one arg!");
             }
         };

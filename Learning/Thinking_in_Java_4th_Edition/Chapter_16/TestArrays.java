@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.Arrays;
@@ -36,10 +36,10 @@ public class TestArrays {
         seg("Arrays.sort()");
         for(int i = 0;i < c.length; ++i) { c[i] = i + 1; };
         System.out.println(Arrays.toString(c));
-        // Ä¬ÈÏÉıĞò(IntegerÊµÏÖ)
+        // é»˜è®¤å‡åº(Integerå®ç°)
         Arrays.sort(c); 
         System.out.println(Arrays.toString(c));
-        // ÄäÃûÀà
+        // åŒ¿åç±»
         Arrays.sort(c, new Comparator<Integer>(){
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -47,7 +47,7 @@ public class TestArrays {
             }
         });
         System.out.println(Arrays.toString(c));
-        // lambda ±í´ïÊ½(Å¼Êı>ÆæÊı,ÆäÓà°´ÕÕË³Ğò)
+        // lambda è¡¨è¾¾å¼(å¶æ•°>å¥‡æ•°,å…¶ä½™æŒ‰ç…§é¡ºåº)
         Arrays.sort(c, (o1,o2)-> {
             if(((o1&1)^(o2&1)) != 0) {
                 return (o1&1)==0 ? 1 : -1;

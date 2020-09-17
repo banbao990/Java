@@ -1,19 +1,19 @@
-// Ê¾Àı´úÂë
-// ¿ØÖÆ¿ò¼Ü
+// ç¤ºä¾‹ä»£ç 
+// æ§åˆ¶æ¡†æ¶
 
 import java.util.*;
 
 public class Controller{
-    // ±£´æÊÂ¼şµÄÁĞ±í
+    // ä¿å­˜äº‹ä»¶çš„åˆ—è¡¨
     private List<Event> eventList = new ArrayList<Event>();
     public void addEvent(Event e){
         this.eventList.add(e);
     }
-    // ×èÈû,¼ì²éÒÑ¾­×¼±¸ºÃµÄÊÂ¼ş,Öğ¸öÖ´ĞĞ
+    // é˜»å¡,æ£€æŸ¥å·²ç»å‡†å¤‡å¥½çš„äº‹ä»¶,é€ä¸ªæ‰§è¡Œ
     public void run(){
         while(this.eventList.size() > 0){
-            // ½øĞĞÒ»¸ö¿½±´, ÎªÁË·ÀÖ¹ÔÚµü´úµÄÊ±ºòÓÉÓÚ remove µ¼ÖÂµÄÎÊÌâ
-            // Í¬Ñù»¹ÓĞÊÂ¼şµÄ¸ÉÈÅ
+            // è¿›è¡Œä¸€ä¸ªæ‹·è´, ä¸ºäº†é˜²æ­¢åœ¨è¿­ä»£çš„æ—¶å€™ç”±äº remove å¯¼è‡´çš„é—®é¢˜
+            // åŒæ ·è¿˜æœ‰äº‹ä»¶çš„å¹²æ‰°
             for(Event e : new ArrayList<Event>(eventList)){
                 if(e.ready()){
                     System.out.println(e);

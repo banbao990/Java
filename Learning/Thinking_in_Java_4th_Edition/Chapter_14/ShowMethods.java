@@ -1,7 +1,7 @@
 /**
  * @author banbao
- * @comment ÐÞ¸Ä×Ô"Thinking in Java"Ê¾Àý´úÂë
- * ÀûÓÃ·´ÉäÕ¹Ê¾ÀàµÄ¸÷ÖÖ·½·¨(°üÀ¨¼Ì³Ð×Ô¸¸ÀàµÄ·½·¨)
+ * @comment ä¿®æ”¹è‡ª"Thinking in Java"ç¤ºä¾‹ä»£ç 
+ * åˆ©ç”¨åå°„å±•ç¤ºç±»çš„å„ç§æ–¹æ³•(åŒ…æ‹¬ç»§æ‰¿è‡ªçˆ¶ç±»çš„æ–¹æ³•)
  */
 
 import java.lang.reflect.*;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class ShowMethods {
-    // ÌáÊ¾ÐÅÏ¢
+    // æç¤ºä¿¡æ¯
     private static String usage =
         "usage:(FULL NAME)\n"
         + "(1)java ShowMethods ClassName"
@@ -35,7 +35,7 @@ public class ShowMethods {
             Method[] methods = c.getMethods();
             Constructor[] ctors = c.getConstructors();
             for(Method method : methods) {
-                    // ½«Æ¥ÅäÉÏµÄ¶¼Ìæ»»Îª "", È¥³ýÐÞÊÎ·û(java.lang.String -> String)
+                    // å°†åŒ¹é…ä¸Šçš„éƒ½æ›¿æ¢ä¸º "", åŽ»é™¤ä¿®é¥°ç¬¦(java.lang.String -> String)
                 String m = p.matcher(method.toString()).replaceAll("");
                 if(m.indexOf("static") != -1) {
                     staticMethods.add(m);

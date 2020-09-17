@@ -30,61 +30,61 @@ public class PhoneModel extends JFrame {
     }
 
     private void init() {
-        // ²¼¾Ö¹ÜÀíÆ÷
+        // å¸ƒå±€ç®¡ç†å™¨
         GridBagLayout gbl = new GridBagLayout();
-        // Ô¼Êø(Ã¿Ò»¸ö¹¹¼ş¶¼ĞèÒªÓĞÒ»¸öÔ¼Êø)
-        // ²»ĞèÒªÃ¿´Î¸üĞÂ,ÒòÎªÔÚ setConstraints() ÄÚ²¿µ÷ÓÃÁË clone()
+        // çº¦æŸ(æ¯ä¸€ä¸ªæ„ä»¶éƒ½éœ€è¦æœ‰ä¸€ä¸ªçº¦æŸ)
+        // ä¸éœ€è¦æ¯æ¬¡æ›´æ–°,å› ä¸ºåœ¨ setConstraints() å†…éƒ¨è°ƒç”¨äº† clone()
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.fill = GridBagConstraints.BOTH; // Ì«´óÁËÏòËÄÖÜÀ©Õ¹
-        // ÉèÖÃ²¼¾Ö
+        gbc.fill = GridBagConstraints.BOTH; // å¤ªå¤§äº†å‘å››å‘¨æ‰©å±•
+        // è®¾ç½®å¸ƒå±€
         setLayout(gbl);
         // panel = new JPanel(gbl);
-        // ÆÁÄ»
+        // å±å¹•
         gbc.weightx = gbc.weighty = 1.0;
-        gbc.ipady = 150; // ±ä¸ß
+        gbc.ipady = 150; // å˜é«˜
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 3;
         gbc.gridheight = 4;
-        gbc.insets = new Insets(10, 10, 10, 10); // ÉèÖÃÍâ±ß¿ò
+        gbc.insets = new Insets(10, 10, 10, 10); // è®¾ç½®å¤–è¾¹æ¡†
         // makeButton("Screen", gbl, gbc);
         JTextArea jta = new JTextArea();
         jta.setEditable(false);
         gbl.setConstraints(jta, gbc);
         add(jta);
         
-        gbc.ipady = 0; // »Ö¸´Ô­À´¸ß¶È
-        gbc.weighty = 0; // ÊúÖ±²»À©Õ¹
-        gbc.insets = new Insets(5, 5, 5, 5); // ÉèÖÃÍâ±ß¿ò
-        // ¹¦ÄÜ°´¼ü×é
-        // ×ó¹¦ÄÜ¼ü
+        gbc.ipady = 0; // æ¢å¤åŸæ¥é«˜åº¦
+        gbc.weighty = 0; // ç«–ç›´ä¸æ‰©å±•
+        gbc.insets = new Insets(5, 5, 5, 5); // è®¾ç½®å¤–è¾¹æ¡†
+        // åŠŸèƒ½æŒ‰é”®ç»„
+        // å·¦åŠŸèƒ½é”®
         gbc.gridy = 4;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
-        makeButton("¡¤¡¤¡¤", gbl, gbc);
+        makeButton("Â·Â·Â·", gbl, gbc);
 
-        // ÖĞ¼ä¹¦ÄÜ¼ü
+        // ä¸­é—´åŠŸèƒ½é”®
         gbc.gridx = 1;
         gbc.gridheight = 2;
         makeButton("<^>", gbl, gbc);
 
-        // ÓÒ¹¦ÄÜ¼ü
+        // å³åŠŸèƒ½é”®
         gbc.gridx = 2;
         gbc.gridheight = 1;
-        makeButton("¡¤¡¤¡¤", gbl, gbc);
+        makeButton("Â·Â·Â·", gbl, gbc);
 
-        // ²¦ºÅ¼ü
+        // æ‹¨å·é”®
         gbc.gridx = 0;
         gbc.gridy = 5;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         makeButton("G", gbl, gbc);
 
-        // ¹Ò»ú¼ü
+        // æŒ‚æœºé”®
         gbc.gridx = 2;
         makeButton("R", gbl, gbc);
 
-        // Êı×Ö°´¼ü×é
+        // æ•°å­—æŒ‰é”®ç»„
         for(int i = 1;i <= 12; ++i) {
             gbc.gridx = (i - 1)%3;
             gbc.gridy = 6 + (i - 1)/3;

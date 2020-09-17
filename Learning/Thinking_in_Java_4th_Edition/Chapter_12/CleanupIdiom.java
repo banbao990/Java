@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 
 class NeedsCleanup { // Construction can't fail
     private static long counter = 1;

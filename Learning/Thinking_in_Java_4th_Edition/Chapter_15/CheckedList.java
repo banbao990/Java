@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.List;
@@ -22,15 +22,15 @@ public class CheckedList {
     }
     
     public static void main(String...args) {
-        test1(); // ¿ÉÒÔ±àÒë,µ«ÊÇÔËĞĞÅ×³öÒì³£
-        test2(); // ¿ÉÒÔ±àÒë,µ«ÊÇÔËĞĞÅ×³öÒì³£
+        test1(); // å¯ä»¥ç¼–è¯‘,ä½†æ˜¯è¿è¡ŒæŠ›å‡ºå¼‚å¸¸
+        test2(); // å¯ä»¥ç¼–è¯‘,ä½†æ˜¯è¿è¡ŒæŠ›å‡ºå¼‚å¸¸
     }
     
     public static void test2() {
         List<Dog> dogs = Collections.checkedList(
             new ArrayList<>(), Dog.class);
         oldStyleMethod(dogs);
-        // ÉÏÒ»ĞĞÅ×³öÒì³£
+        // ä¸Šä¸€è¡ŒæŠ›å‡ºå¼‚å¸¸
         // ClassCastException: Attempt to insert class Cat 
         //     element into collection with element type class Dog
         for(Dog d : dogs) { 
@@ -40,10 +40,10 @@ public class CheckedList {
     
     public static void test1() {
         List<Dog> dogs = new ArrayList<>();
-        // dogs.add(new Cat()); // ´íÎó: ¶ÔÓÚadd(Cat), ÕÒ²»µ½ºÏÊÊµÄ·½·¨
+        // dogs.add(new Cat()); // é”™è¯¯: å¯¹äºadd(Cat), æ‰¾ä¸åˆ°åˆé€‚çš„æ–¹æ³•
         oldStyleMethod(dogs);
         // ClassCastException: Cat cannot be cast to Dog
-        // ÏÂÒ»ĞĞÅ×³öÒì³£
+        // ä¸‹ä¸€è¡ŒæŠ›å‡ºå¼‚å¸¸
         for(Dog d : dogs) { 
             d.bark();
         }

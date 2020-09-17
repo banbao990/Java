@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë(¼òµ¥´¦ÀíÒì³£)
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç (ç®€å•å¤„ç†å¼‚å¸¸)
  */
 
 import java.io.*;
@@ -18,7 +18,7 @@ public class InputSample {
         formattedMemoryInput2(fileName);
     }
 
-    // 18.6.1 »º³åÊäÈëÎÄ¼ş
+    // 18.6.1 ç¼“å†²è¾“å…¥æ–‡ä»¶
     public static String bufferedInputFile (String fileName)
         throws Exception {
         BufferedReader in = new BufferedReader(
@@ -34,7 +34,7 @@ public class InputSample {
         return sb.toString();
     }
 
-    // 18.6.2 ´ÓÄÚ´æÊäÈë
+    // 18.6.2 ä»å†…å­˜è¾“å…¥
     public static void memoryInput(String fileName)
         throws Exception {
         StringReader in = new StringReader(
@@ -47,7 +47,7 @@ public class InputSample {
         }
     }
 
-    // 18.6.3 ¸ñÊ½»¯µÄÄÚ´æÊäÈë
+    // 18.6.3 æ ¼å¼åŒ–çš„å†…å­˜è¾“å…¥
     public static void formattedMemoryInput(String fileName)
         throws Exception {
         try {
@@ -57,7 +57,7 @@ public class InputSample {
                 )
             );
             while(true) {
-                // ÖĞÎÄ»á³öÎÊÌâ unicode
+                // ä¸­æ–‡ä¼šå‡ºé—®é¢˜ unicode
                 System.out.print((char)in.readByte());
             }
         } catch (EOFException e) {

@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.concurrent.*;
@@ -51,7 +51,7 @@ class TNARun2 implements Runnable {
         synchronized(run) {
             try{
                 if(shouldNotify) {
-                    run.wait(1000); // ±íÊ¾ÈÃÕâ¸ö»½ĞÑÑÓ³ÙÔÚËùÓĞÈÎÎñ¿ªÊ¼Ö´ĞĞÖ®ºó
+                    run.wait(1000); // è¡¨ç¤ºè®©è¿™ä¸ªå”¤é†’å»¶è¿Ÿåœ¨æ‰€æœ‰ä»»åŠ¡å¼€å§‹æ‰§è¡Œä¹‹å
                     run.notifyAll(); // notifyAll()
                 } else {
                     run.wait();
@@ -70,8 +70,8 @@ class TNARun2 implements Runnable {
 
 public class TestNotifyAll {
     public static void main(String...args) {
-        // test1(); // notifyAll ²âÊÔÖ»ÓĞºÍµ±Ç°ËøÏà¹ØÁªµÄÈÎÎñ»á±»»½ĞÑ
-        test2(); // notify Ã¿´ÎÖ»»½ĞÑÒ»¸öÈÎÎñ
+        // test1(); // notifyAll æµ‹è¯•åªæœ‰å’Œå½“å‰é”ç›¸å…³è”çš„ä»»åŠ¡ä¼šè¢«å”¤é†’
+        test2(); // notify æ¯æ¬¡åªå”¤é†’ä¸€ä¸ªä»»åŠ¡
     }
     private static void test1() {
         ExecutorService exec = Executors.newCachedThreadPool();

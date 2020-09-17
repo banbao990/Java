@@ -1,22 +1,22 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.lang.annotation.*;
-@Target(ElementType.METHOD) // Ò»¸ö»òÕß¶à¸ö,Ä¬ÈÏÊÇÈ«²¿ÔªËØ
+@Target(ElementType.METHOD) // ä¸€ä¸ªæˆ–è€…å¤šä¸ª,é»˜è®¤æ˜¯å…¨éƒ¨å…ƒç´ 
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AnnotationType {
     public static final String nullStr = ""; // OK
     public int id1() default -1;
     public String id2() default nullStr;
-    // public String id2() default nullStr; // µÈ¼ÛÓÚ ""
+    // public String id2() default nullStr; // ç­‰ä»·äº ""
     public Class id3() default Null.class;
     public CanUseEnum id4() default CanUseEnum.NULL;
-    // public CanUseClass id5(); // ´íÎó: ×¢ÊÍÀàĞÍÔªËØ {0} µÄÀàĞÍÎŞĞ§
+    // public CanUseClass id5(); // é”™è¯¯: æ³¨é‡Šç±»å‹å…ƒç´  {0} çš„ç±»å‹æ— æ•ˆ
     public CanUseAnnotation id6() default @CanUseAnnotation();
     public int[] id7() default {-1};
-    // public Integer id8(); // ´íÎó: ×¢ÊÍÀàĞÍÔªËØ {0} µÄÀàĞÍÎŞĞ§
+    // public Integer id8(); // é”™è¯¯: æ³¨é‡Šç±»å‹å…ƒç´  {0} çš„ç±»å‹æ— æ•ˆ
 }
 class Null {}
 enum NullEnum {}

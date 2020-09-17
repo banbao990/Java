@@ -7,22 +7,22 @@ class Derived extends Base {}
 
 public class TestGenericClassNewInstance {
     public static void main(String...args) throws Exception {
-        // ·ºĞÍ
+        // æ³›å‹
         Class<Derived> cl1 = Derived.class;
         Derived instance1 = cl1.newInstance();
         
-        // ²»Ê¹ÓÃ·ºĞÍ
+        // ä¸ä½¿ç”¨æ³›å‹
         Class cl2 = Derived.class;
         // Derived instance2 = cl2.newInstance();
-        // ´íÎó: ²»¼æÈİµÄÀàĞÍ: ObjectÎŞ·¨×ª»»ÎªDerived
+        // é”™è¯¯: ä¸å…¼å®¹çš„ç±»å‹: Objectæ— æ³•è½¬æ¢ä¸ºDerived
         
-        // Ä£ºıµÄÀàĞÍ,¶ø²»ÊÇ¾ßÌåµÄ
+        // æ¨¡ç³Šçš„ç±»å‹,è€Œä¸æ˜¯å…·ä½“çš„
         Class<? super Derived> cl3 = cl1.getSuperclass();
         // Class<Base> cl4 = cl1.getSuperclass();
-        /* ´íÎó: ²»¼æÈİµÄÀàĞÍ: Class<CAP#1>ÎŞ·¨×ª»»ÎªClass<Base>
+        /* é”™è¯¯: ä¸å…¼å®¹çš„ç±»å‹: Class<CAP#1>æ— æ³•è½¬æ¢ä¸ºClass<Base>
          * Class<Base> cl4 = cl1.getSuperclass();
-         * ÆäÖĞ, CAP#1ÊÇĞÂÀàĞÍ±äÁ¿:
-         * CAP#1´Ó? super DerivedµÄ²¶»ñÀ©Õ¹Object ³¬ Derived
+         * å…¶ä¸­, CAP#1æ˜¯æ–°ç±»å‹å˜é‡:
+         * CAP#1ä»? super Derivedçš„æ•è·æ‰©å±•Object è¶… Derived
          */
     }
 }

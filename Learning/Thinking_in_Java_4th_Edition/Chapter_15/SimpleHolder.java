@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 
 public class SimpleHolder {
     private Object obj;

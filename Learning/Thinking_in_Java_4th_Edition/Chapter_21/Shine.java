@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public class Shine implements Runnable {
@@ -8,7 +8,7 @@ public class Shine implements Runnable {
     static final int N = 10000;
     @Override
     public void run() {
-        ++cnt; // Ïß³Ì²»°²È«µÄ
+        ++cnt; // çº¿ç¨‹ä¸å®‰å…¨çš„
         if(cnt == N) {
             System.out.format("reach \'N\'(%d)\n", N);
         }

@@ -30,7 +30,7 @@ class OuterA implements TestPriInterface {
             }
         };
     }
-    // ²âÊÔË½ÓĞÓò
+    // æµ‹è¯•ç§æœ‰åŸŸ
     private int a = 0;
     private static int b = 0;
     private final int c = 0;
@@ -42,9 +42,9 @@ class OuterA implements TestPriInterface {
 
 public class TestPri2 extends A {
     public static void main(String...args) {
-        // Ë½ÓĞÄÚ²¿Àà
+        // ç§æœ‰å†…éƒ¨ç±»
         TestPriInterface a = OuterA.make();
-        // a.f(); // ´íÎó: f() ÔÚ A ÖĞÊÇ private ·ÃÎÊ¿ØÖÆ
+        // a.f(); // é”™è¯¯: f() åœ¨ A ä¸­æ˜¯ private è®¿é—®æ§åˆ¶
         try {
             Method m = a.getClass().getDeclaredMethod("f");
             m.setAccessible(true);
@@ -53,9 +53,9 @@ public class TestPri2 extends A {
             e.printStackTrace();
         }
         
-        // ÄäÃûÀà
+        // åŒ¿åç±»
         a = OuterA.make2();
-        // a.f(); // ´íÎó: f() ÔÚ A ÖĞÊÇ private ·ÃÎÊ¿ØÖÆ
+        // a.f(); // é”™è¯¯: f() åœ¨ A ä¸­æ˜¯ private è®¿é—®æ§åˆ¶
         try {
             Method m = a.getClass().getDeclaredMethod("f");
             m.setAccessible(true);
@@ -64,7 +64,7 @@ public class TestPri2 extends A {
             e.printStackTrace();
         }
         
-        // Ë½ÓĞÓò
+        // ç§æœ‰åŸŸ
         a = new OuterA();
         String[] modifier = {
             "private",

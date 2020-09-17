@@ -11,7 +11,7 @@ class Derived extends Base {
 
 public class TestCast {
     public static void main(String...args) throws Exception {
-        // traditional cast 传统方法
+        // traditional cast 浼犵粺鏂规硶
         Base b1 = new Derived();
         Derived d1 = (Derived) b1;
         d1.run();

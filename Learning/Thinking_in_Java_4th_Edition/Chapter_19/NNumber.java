@@ -1,10 +1,10 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public class NNumber {
-    // ÎªÁË·ÀÖ¹µİ¹é
+    // ä¸ºäº†é˜²æ­¢é€’å½’
     public void reverseTest(NNumber other) {
         System.out.println("reverse reverse");
         other.test(this);

@@ -15,12 +15,12 @@ public class MyLinkedStack<T> {
             this.next = next;
         }
         boolean isEnd() {
-            return item == null && next == null; // ÉÚ±ø
+            return item == null && next == null; // å“¨å…µ
         }
     }
-    private Node top; // Á´±íÍ·
+    private Node top; // é“¾è¡¨å¤´
     MyLinkedStack() {
-        this.top = new Node(); // ÉÚ±ø
+        this.top = new Node(); // å“¨å…µ
     }
     // top
     public T top() {

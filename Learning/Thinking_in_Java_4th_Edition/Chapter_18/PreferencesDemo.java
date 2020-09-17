@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.prefs.*;
@@ -13,7 +13,7 @@ public class PreferencesDemo {
         // prefs.put("Footwear", "Ruby Slippers");
         // prefs.putInt("Companions", 4);
         // prefs.putBoolean("Are there witches?", true);
-        // int usageCount = prefs.getInt("UsageCount", 0); // 0 ÎªÄ¬ÈÏÖµ
+        // int usageCount = prefs.getInt("UsageCount", 0); // 0 ä¸ºé»˜è®¤å€¼
         // usageCount++;
         // prefs.putInt("UsageCount", usageCount);
         print(prefs);

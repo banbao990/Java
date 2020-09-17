@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ¹ØÓÚ static ³õÊ¼»¯ºÍ final
+ * @comment å…³äº static åˆå§‹åŒ–å’Œ final
  */
 
 class Init1 {
@@ -38,10 +38,10 @@ class Init5 {
 public class TestStaticInitialization {
     public static void seg() { System.out.println("~~~~~"); }
     public static void main(String...args) {
-        seg(); System.out.println("Init1:" + Init1.ii); // ´¥·¢³õÊ¼»¯
-        seg(); System.out.println("Init2:" + Init2.ii); // ´¥·¢³õÊ¼»¯
-        seg(); System.out.println("Init3:" + Init3.ii); // ´¥·¢³õÊ¼»¯
-        seg(); System.out.println("Init4:" + Init4.ii); // Ã»ÓĞ´¥·¢³õÊ¼»¯
-        seg(); System.out.println("Init5:" + Init5.ii); // ´¥·¢³õÊ¼»¯
+        seg(); System.out.println("Init1:" + Init1.ii); // è§¦å‘åˆå§‹åŒ–
+        seg(); System.out.println("Init2:" + Init2.ii); // è§¦å‘åˆå§‹åŒ–
+        seg(); System.out.println("Init3:" + Init3.ii); // è§¦å‘åˆå§‹åŒ–
+        seg(); System.out.println("Init4:" + Init4.ii); // æ²¡æœ‰è§¦å‘åˆå§‹åŒ–
+        seg(); System.out.println("Init5:" + Init5.ii); // è§¦å‘åˆå§‹åŒ–
     }
 }

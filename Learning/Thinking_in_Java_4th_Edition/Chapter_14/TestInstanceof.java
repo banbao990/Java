@@ -57,7 +57,7 @@ public class TestInstanceof {
         }
     }
 }
-/* Output(random) Í¬ÑùµÄÖÖ×Ó¿ÉÒÔ¸´ÏÖ(47)
+/* Output(random) åŒæ ·çš„ç§å­å¯ä»¥å¤ç°(47)
 instanceof
 0:(2)C
 1:(1)B

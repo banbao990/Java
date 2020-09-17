@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -13,7 +13,7 @@ public class ImCallable implements Callable<String> {
     private int id = ++cnt;
     @Override
     public String call() {
-        Thread.yield(); // ÎªÁËÈÃÏß³ÌµÄµ÷¶È¸üÃ÷ÏÔ
+        Thread.yield(); // ä¸ºäº†è®©çº¿ç¨‹çš„è°ƒåº¦æ›´æ˜æ˜¾
         String ret = String.format("%d@run()", id);
         System.out.println(ret);
         return ret;
@@ -28,7 +28,7 @@ public class ImCallable implements Callable<String> {
         for(Future<String> fs : result) {
             try {
                 /**
-                 * get() ×èÈû
+                 * get() é˜»å¡
                  *
                  * Waits if necessary for the computation to complete, and then
                  * retrieves its result.

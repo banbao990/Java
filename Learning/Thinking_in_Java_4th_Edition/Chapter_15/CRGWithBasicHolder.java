@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 
 class BasicHolder<T> {
     T element;

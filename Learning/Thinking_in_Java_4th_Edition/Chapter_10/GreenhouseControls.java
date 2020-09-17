@@ -1,51 +1,51 @@
-// Ê¾Àı´úÂë
-// Í¨¹ıÄÚ²¿ÀàÊµÏÖ¸÷ÖÖÊÂ¼ş
+// ç¤ºä¾‹ä»£ç 
+// é€šè¿‡å†…éƒ¨ç±»å®ç°å„ç§äº‹ä»¶
 
 public class GreenhouseControls extends Controller {
 
-    // µÆ¹â×´Ì¬
+    // ç¯å…‰çŠ¶æ€
     private boolean light = false;
-    // ¿ªµÆÊÂ¼ş
+    // å¼€ç¯äº‹ä»¶
     public class LightOn extends Event {
         public LightOn(long delayTime) { super(delayTime); }
         public void action() {
-            // ¿ªµÆ
-            // ¼ÓÈëÓ²¼ş¿ØÖÆ²Ù×÷
+            // å¼€ç¯
+            // åŠ å…¥ç¡¬ä»¶æ§åˆ¶æ“ä½œ
             light = true;
         }
         public String toString() { return "Light is on"; }
     }
-    // ¹ØµÆÊÂ¼ş
+    // å…³ç¯äº‹ä»¶
     public class LightOff extends Event {
         public LightOff(long delayTime) { super(delayTime); }
         public void action() {
-            // ¹ØµÆ
-            // ¼ÓÈëÓ²¼ş¿ØÖÆ²Ù×÷
+            // å…³ç¯
+            // åŠ å…¥ç¡¬ä»¶æ§åˆ¶æ“ä½œ
             light = false;
         }
         public String toString() { return "Light is off"; }
     }
     
-    // Ë®µÄ×´Ì¬
+    // æ°´çš„çŠ¶æ€
     private boolean water = false;
-    // ¿ªË®ÊÂ¼ş
+    // å¼€æ°´äº‹ä»¶
     public class WaterOn extends Event {
         public WaterOn(long delayTime) { super(delayTime); }
         public void action() {
-            // ¿ªË®
-            // ¼ÓÈëÓ²¼ş¿ØÖÆ²Ù×÷
+            // å¼€æ°´
+            // åŠ å…¥ç¡¬ä»¶æ§åˆ¶æ“ä½œ
             water = true;
         }
         public String toString() {
             return "Greenhouse water is on";
         }
     }
-    // ¹ØË®ÊÂ¼ş
+    // å…³æ°´äº‹ä»¶
     public class WaterOff extends Event {
         public WaterOff(long delayTime) { super(delayTime); }
         public void action() {
-            // ¹ØË®
-            // ¼ÓÈëÓ²¼ş¿ØÖÆ²Ù×÷
+            // å…³æ°´
+            // åŠ å…¥ç¡¬ä»¶æ§åˆ¶æ“ä½œ
             water = false;
         }
         public String toString() {
@@ -53,30 +53,30 @@ public class GreenhouseControls extends Controller {
         }
     }
     
-    // ºãÎÂ×´Ì¬
+    // æ’æ¸©çŠ¶æ€
     private String thermostat = "Day";
-    // ºãÎÂ×´Ì¬µ÷ÕûÎªÒ¹Íí
+    // æ’æ¸©çŠ¶æ€è°ƒæ•´ä¸ºå¤œæ™š
     public class ThermostatNight extends Event {
         public ThermostatNight(long delayTime) {
             super(delayTime);
         }
         public void action() {
-            // µ÷ÕûÎªÒ¹Íí
-            // ¼ÓÈëÓ²¼ş¿ØÖÆ²Ù×÷
+            // è°ƒæ•´ä¸ºå¤œæ™š
+            // åŠ å…¥ç¡¬ä»¶æ§åˆ¶æ“ä½œ
             thermostat = "Night";
         }
         public String toString() {
             return "Thermostat on night setting";
         }
     }
-    // ºãÎÂ×´Ì¬µ÷ÕûÎª°×Ìì
+    // æ’æ¸©çŠ¶æ€è°ƒæ•´ä¸ºç™½å¤©
     public class ThermostatDay extends Event {
         public ThermostatDay(long delayTime) {
             super(delayTime);
         }
         public void action() {
-            // µ÷ÕûÎª°×Ìì
-            // ¼ÓÈëÓ²¼ş¿ØÖÆ²Ù×÷
+            // è°ƒæ•´ä¸ºç™½å¤©
+            // åŠ å…¥ç¡¬ä»¶æ§åˆ¶æ“ä½œ
             thermostat = "Day";
         }
         public String toString() {
@@ -84,19 +84,19 @@ public class GreenhouseControls extends Controller {
         }
     }
     
-    // ÏìÁå¿ØÖÆ
+    // å“é“ƒæ§åˆ¶
     public class Bell extends Event {
         public Bell(long delayTime) { super(delayTime); }
         public void action() {
-            // Ôö¼ÓÒ»¸öÏìÁåÃüÁî
-            // Ğ§¹ûÏàµ±ÓÚÃ¿¸ôÒ»¶¨½×¶ÎÖ´ĞĞÏìÁåÃüÁî
-            // ¼ÓÈëÓ²¼ş¿ØÖÆ²Ù×÷
+            // å¢åŠ ä¸€ä¸ªå“é“ƒå‘½ä»¤
+            // æ•ˆæœç›¸å½“äºæ¯éš”ä¸€å®šé˜¶æ®µæ‰§è¡Œå“é“ƒå‘½ä»¤
+            // åŠ å…¥ç¡¬ä»¶æ§åˆ¶æ“ä½œ
             addEvent(new Bell(delayTime));
         }
         public String toString() { return "Bing!"; }
     }
     
-    // ÖØÆôÃüÁî
+    // é‡å¯å‘½ä»¤
     public class Restart extends Event {
         private Event[] eventList;
         public Restart(long delayTime, Event[] eventList) {
@@ -107,11 +107,11 @@ public class GreenhouseControls extends Controller {
         }
         public void action() {
             for(Event e : eventList) {
-                // ½«×÷Îª²ÎÊı´«ÈëµÄËùÓĞÊÂ¼ş½øĞĞÖØÖÃ
+                // å°†ä½œä¸ºå‚æ•°ä¼ å…¥çš„æ‰€æœ‰äº‹ä»¶è¿›è¡Œé‡ç½®
                 e.start();
                 addEvent(e);
             }
-            // ½«¸ÃÊÂ¼şÖØÖÃ
+            // å°†è¯¥äº‹ä»¶é‡ç½®
             start();
             addEvent(this);
         }
@@ -120,7 +120,7 @@ public class GreenhouseControls extends Controller {
         }
     }
     
-    // ÖÕÖ¹ÃüÁî,Í£Ö¹ËùÓĞÊÂ¼şµÄÖ´ĞĞ
+    // ç»ˆæ­¢å‘½ä»¤,åœæ­¢æ‰€æœ‰äº‹ä»¶çš„æ‰§è¡Œ
     public static class Terminate extends Event {
         public Terminate(long delayTime) { super(delayTime); }
         public void action() { System.exit(0); }

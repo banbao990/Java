@@ -10,19 +10,19 @@ class Base {
     public void func() throws E1 {}
 }
 class Derived1 extends Base {
-    // ¹¹ÔìÆ÷¿ÉÒÔÅ×³ö»ùÀà¹¹ÔìÆ÷Ã»ÓĞµÄÒì³£
+    // æ„é€ å™¨å¯ä»¥æŠ›å‡ºåŸºç±»æ„é€ å™¨æ²¡æœ‰çš„å¼‚å¸¸
     Derived1() throws E1, Exception {}
     @Override
     public void func() throws E2 {}
 }
 
 class Derived2 extends Base {
-    // Ä¬ÈÏ¹¹ÔìÆ÷ÖĞÎ´±¨¸æµÄÒì³£´íÎóE1
+    // é»˜è®¤æ„é€ å™¨ä¸­æœªæŠ¥å‘Šçš„å¼‚å¸¸é”™è¯¯E1
     // Derived2() {}
     Derived2() throws E1 {}
     // @Override
-    // ´íÎó: Derived2ÖĞµÄfunc()ÎŞ·¨¸²¸ÇBaseÖĞµÄfunc()
-    // ±»¸²¸ÇµÄ·½·¨Î´Å×³öException
+    // é”™è¯¯: Derived2ä¸­çš„func()æ— æ³•è¦†ç›–Baseä¸­çš„func()
+    // è¢«è¦†ç›–çš„æ–¹æ³•æœªæŠ›å‡ºException
     // public void func() throws Exception {}
 }
 

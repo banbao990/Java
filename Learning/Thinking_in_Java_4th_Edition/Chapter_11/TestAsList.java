@@ -11,19 +11,19 @@ class Myrmidon extends Swordsman{}
 public class TestAsList{
     public static void main(String...args){
         String[] strings = {"d", "e"};
-        // Ìí¼Ó·½Ê½ 1
+        // æ·»åŠ æ–¹å¼ 1
         Collection<String> collection1 = 
             new ArrayList<>(Arrays.asList(strings));
-        // Ìí¼Ó·½Ê½ 2
+        // æ·»åŠ æ–¹å¼ 2
         Collection<String> collection2 = new ArrayList<>();
         collection2.addAll(Arrays.asList(strings));
-        // ¹¹Ôì·½Ê½ 3
+        // æ„é€ æ–¹å¼ 3
         Collection<String> collection3 = Arrays.asList(strings);
         collection1.add("f");
         collection2.add("f");
         // collection3.add("f");
         // Exception in thread "main" java.lang.UnsupportedOperationException
-        // ·½Ê½ 3 µÄµ×²ãÊÇÊı×é,²»ÔÊĞíĞŞ¸Ä´óĞ¡
+        // æ–¹å¼ 3 çš„åº•å±‚æ˜¯æ•°ç»„,ä¸å…è®¸ä¿®æ”¹å¤§å°
         print(collection1);
         print(collection2);
         print(collection3);

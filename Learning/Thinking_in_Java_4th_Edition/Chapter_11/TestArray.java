@@ -15,7 +15,7 @@ public class TestArray{
             System.out.println(n);
         }
         // testIterable(test);
-        // ´íÎó: ÎŞ·¨½«Àà TestÖĞµÄ·½·¨ testIterableÓ¦ÓÃµ½¸ø¶¨ÀàĞÍ
+        // é”™è¯¯: æ— æ³•å°†ç±» Testä¸­çš„æ–¹æ³• testIterableåº”ç”¨åˆ°ç»™å®šç±»å‹
         testIterable(Arrays.asList(test));
     }
 }

@@ -29,12 +29,12 @@ public class TestPrivateInnerClass{
         Outer outer = new Outer();
         
         // Outer.Inner1 inner1 = outer.new Inner1();
-        // ´íÎó: Outer.Inner1 ÔÚ Outer ÖĞÊÇ private ·ÃÎÊ¿ØÖÆ
+        // é”™è¯¯: Outer.Inner1 åœ¨ Outer ä¸­æ˜¯ private è®¿é—®æ§åˆ¶
         
         Outer.Inner2 inner2 = outer.new Inner2();
         
         // Base inner3 = outer.new Inner1();
-        // ´íÎó: Outer.Inner1 ÔÚ Outer ÖĞÊÇ private ·ÃÎÊ¿ØÖÆ
+        // é”™è¯¯: Outer.Inner1 åœ¨ Outer ä¸­æ˜¯ private è®¿é—®æ§åˆ¶
         
         Base inner4 = outer.new Inner2();
         print();

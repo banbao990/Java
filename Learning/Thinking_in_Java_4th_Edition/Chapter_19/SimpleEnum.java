@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 import number.Number;
 public class SimpleEnum {
@@ -17,13 +17,13 @@ public class SimpleEnum {
                 + seg
             );
         }
-        // ´Ó×Ö·û´®ÖĞÉú³É
+        // ä»å­—ç¬¦ä¸²ä¸­ç”Ÿæˆ
         for(String s : "ZERO ONE TWO".split(" ")) {
             Number num = Enum.valueOf(Number.class, s);
             System.out.println(num);
         }
         System.out.println(seg);
-        // Ö±½ÓÓÃÃû³Æ
+        // ç›´æ¥ç”¨åç§°
         System.out.println(Number.ZERO);
     }
 }

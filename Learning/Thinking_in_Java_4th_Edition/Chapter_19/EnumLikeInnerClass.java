@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 import java.util.EnumSet;
 public class EnumLikeInnerClass {
@@ -28,7 +28,7 @@ public class EnumLikeInnerClass {
         EnumSet<Func> es = EnumSet.of(Func.FLY);
         es.add(Func.SWIM);
         es.add(Func.SWIM); // ignore
-        es.add(Func.RUN); // Ìí¼ÓË³ĞòÎŞ¹Ø
+        es.add(Func.RUN); // æ·»åŠ é¡ºåºæ— å…³
         System.out.println(es);
     }
 }

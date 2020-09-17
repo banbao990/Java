@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.io.File;
@@ -18,9 +18,9 @@ public class Directory {
     }
     
     public static void walk(File dir) {
-        // ²»¼ÓÈëÎÄ¼ş¼Ğ
+        // ä¸åŠ å…¥æ–‡ä»¶å¤¹
         File[] files = dir.listFiles();
-        if(files == null) return; // ¿ÕÎÄ¼ş¼Ğ
+        if(files == null) return; // ç©ºæ–‡ä»¶å¤¹
         int length = files.length;
         for(int i = 0;i < length; ++i) {
             File now = files[i];

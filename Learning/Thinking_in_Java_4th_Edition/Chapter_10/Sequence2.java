@@ -2,23 +2,23 @@
  * @author banbao
  */ 
 
-// µü´úÆ÷Éè¼ÆÄ£Ê½
+// è¿­ä»£å™¨è®¾è®¡æ¨¡å¼
 
-// Selector ½Ó¿Ú
+// Selector æ¥å£
 interface Selector{
     boolean end();
     Object current();
     void next();
 }
 
-// ReverseSelector ½Ó¿Ú
+// ReverseSelector æ¥å£
 interface ReverseSelector{
     boolean begin();
     Object current();
     void next();
 }
 
-// ÊÔÍ¼Ê¹ÓÃµü´úÆ÷ Selector
+// è¯•å›¾ä½¿ç”¨è¿­ä»£å™¨ Selector
 public class Sequence2{
     private Object[] items;
     private int next = 0;
@@ -26,17 +26,17 @@ public class Sequence2{
         items = new Object[size];
     }
 
-    // Ìí¼ÓÔªËØ
+    // æ·»åŠ å…ƒç´ 
     public void add(Object x){
         if (next < items.length){
             items[next++] = x;
         }
     }
 
-    // ÄÚ²¿Àà
+    // å†…éƒ¨ç±»
     private class SequenceSelector implements Selector{
         private int i = 0;
-        // ÊµÏÖ½Ó¿ÚÖĞµÄ 3 ¸öº¯Êı
+        // å®ç°æ¥å£ä¸­çš„ 3 ä¸ªå‡½æ•°
         public boolean end(){
             return i == items.length;
         }
@@ -50,9 +50,9 @@ public class Sequence2{
         }
     }
     
-    // »ñÈ¡·´Ïòµü´úÆ÷
+    // è·å–åå‘è¿­ä»£å™¨
     public ReverseSelector reverseSelector(){
-        // ÄäÃûÀà
+        // åŒ¿åç±»
         return new ReverseSelector(){
             private int i = items.length - 1;
             public boolean begin(){
@@ -69,7 +69,7 @@ public class Sequence2{
         };
     }
     
-    // »ñÈ¡µü´úÆ÷
+    // è·å–è¿­ä»£å™¨
     public Selector selector(){
         return new SequenceSelector();
     }
@@ -77,19 +77,19 @@ public class Sequence2{
     // main
     public static void main(String...args){
         Sequence2 sequence = new Sequence2(5);
-        // Ìí¼ÓÔªËØ
+        // æ·»åŠ å…ƒç´ 
         for(int i = 0;i < 5; ++i){
             sequence.add(i);
         }
         System.out.println("selector");
-        // »ñÈ¡µü´úÆ÷
+        // è·å–è¿­ä»£å™¨
         Selector selector = sequence.selector();
         while(!selector.end()){
             System.out.println(selector.current());
             selector.next();
         }
         System.out.println("reverse selector");
-        // »ñÈ¡·´Ïòµü´úÆ÷
+        // è·å–åå‘è¿­ä»£å™¨
         ReverseSelector reverseSelector = sequence.reverseSelector();
         while(!reverseSelector.begin()){
             System.out.println(reverseSelector.current());

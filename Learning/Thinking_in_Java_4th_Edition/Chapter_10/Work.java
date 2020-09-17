@@ -3,10 +3,10 @@
  */
 
 /** 
- * # windows ÏÂµÄ±àÒëÓëÔËĞĞÃüÁî
- * # ±àÒë Work Àà
+ * # windows ä¸‹çš„ç¼–è¯‘ä¸è¿è¡Œå‘½ä»¤
+ * # ç¼–è¯‘ Work ç±»
  * javac Work.java
- * # ÔËĞĞ²âÊÔº¯Êı
+ * # è¿è¡Œæµ‹è¯•å‡½æ•°
  * java Work$Tester
 */
 public class Work{

@@ -1,6 +1,6 @@
 /**
  * @author banabo
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 class WithInner{
@@ -12,17 +12,17 @@ class WithInner{
 
 public class InheritInner extends WithInner.Inner{
     // InheritInner(){}
-    // ´íÎó: ĞèÒª°üº¬WithInner.InnerµÄ·â±ÕÊµÀı
+    // é”™è¯¯: éœ€è¦åŒ…å«WithInner.Innerçš„å°é—­å®ä¾‹
     InheritInner(WithInner wi){
-        wi.super(); // ĞèÒªÕâÃ´Ê¹ÓÃ²ÅÄÜ¹»ÊµÏÖ¼Ì³ĞÄÚ²¿Àà
+        wi.super(); // éœ€è¦è¿™ä¹ˆä½¿ç”¨æ‰èƒ½å¤Ÿå®ç°ç»§æ‰¿å†…éƒ¨ç±»
     }
     public static void main(String...args){
         WithInner wi = new WithInner();
         InheritInner ii = new InheritInner(wi);
         // System.out.println(ii.testOuter);
-        // ´íÎó: ÕÒ²»µ½·ûºÅ
+        // é”™è¯¯: æ‰¾ä¸åˆ°ç¬¦å·
         // System.out.println(((WithInner.Inner)ii).testOuter);
-        // ´íÎó: ÕÒ²»µ½·ûºÅ
+        // é”™è¯¯: æ‰¾ä¸åˆ°ç¬¦å·
         System.out.println(ii.testInner);
     }
 }

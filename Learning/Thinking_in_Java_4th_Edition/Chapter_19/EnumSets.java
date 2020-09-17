@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.*;
@@ -25,9 +25,9 @@ public class EnumSets {
         animals = EnumSet.allOf(Animal.class); // FULL
         animals.removeAll(EnumSet.of(DEER, GOOSE));
         print();
-        animals.removeAll(EnumSet.range(HORSE, COW)); // ×óÓÒ¶¼È¡µ½
+        animals.removeAll(EnumSet.range(HORSE, COW)); // å·¦å³éƒ½å–åˆ°
         print();
-        animals = EnumSet.complementOf(animals); // È¡²¹¼¯
+        animals = EnumSet.complementOf(animals); // å–è¡¥é›†
         print();
         // animals.add(DUCK); // CE
     }

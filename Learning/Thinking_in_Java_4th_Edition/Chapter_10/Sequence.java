@@ -1,18 +1,18 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */ 
 
-// µü´úÆ÷Éè¼ÆÄ£Ê½
+// è¿­ä»£å™¨è®¾è®¡æ¨¡å¼
 
-// Selector ½Ó¿Ú
+// Selector æ¥å£
 interface Selector{
     boolean end();
     Object current();
     void next();
 }
 
-// ÊÔÍ¼Ê¹ÓÃµü´úÆ÷ Selector
+// è¯•å›¾ä½¿ç”¨è¿­ä»£å™¨ Selector
 public class Sequence{
     private Object[] items;
     private int next = 0;
@@ -20,17 +20,17 @@ public class Sequence{
         items = new Object[size];
     }
 
-    // Ìí¼ÓÔªËØ
+    // æ·»åŠ å…ƒç´ 
     public void add(Object x){
         if (next < items.length){
             items[next++] = x;
         }
     }
 
-    // ÄÚ²¿Àà
+    // å†…éƒ¨ç±»
     private class SequenceSelector implements Selector{
         private int i = 0;
-        // ÊµÏÖ½Ó¿ÚÖĞµÄ 3 ¸öº¯Êı
+        // å®ç°æ¥å£ä¸­çš„ 3 ä¸ªå‡½æ•°
         public boolean end(){
             return i == items.length;
         }
@@ -43,20 +43,20 @@ public class Sequence{
             }
         }
     }
-    // »ñÈ¡µü´úÆ÷
+    // è·å–è¿­ä»£å™¨
     public Selector selector(){
         return new SequenceSelector();
     }
     // main
     public static void main(String...args){
         Sequence sequence = new Sequence(5);
-        // Ìí¼ÓÔªËØ
+        // æ·»åŠ å…ƒç´ 
         for(int i = 0;i < 5; ++i){
             sequence.add(i);
         }
-        // »ñÈ¡µü´úÆ÷
+        // è·å–è¿­ä»£å™¨
         Selector selector = sequence.selector();
-        // Ê¹ÓÃµü´úÆ÷
+        // ä½¿ç”¨è¿­ä»£å™¨
         while(!selector.end()){
             System.out.println(selector.current());
             selector.next();

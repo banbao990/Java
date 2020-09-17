@@ -11,34 +11,34 @@ class Print{
 
 public class ManyNestedClass{
     private class O1{
-        // 同名字段
+        // 鍚屽悕瀛楁
         private int o = 1;
-        // 同名方法
+        // 鍚屽悕鏂规硶
         private void f(){ Print.p("O1.f"); }
         private void f1(){ Print.p("f1"); }
         class O2{
-            // 同名字段
+            // 鍚屽悕瀛楁
             int o = 2;
-            // 同名方法
+            // 鍚屽悕鏂规硶
             void f(){ Print.p("O2.f"); }
             void f2(){ Print.p("f2"); }
             public class O3{
-                // 同名字段
+                // 鍚屽悕瀛楁
                 public int o = 3;
-                // 同名方法
+                // 鍚屽悕鏂规硶
                 void f(){ Print.p("O3.f"); }
                 public void f3(){
-                    // 访问外部字段(从外到里)
+                    // 璁块棶澶栭儴瀛楁(浠庡鍒伴噷)
                     Print.p("-----");
                     Print.p(O1.this.o);
                     Print.p(O2.this.o);
                     Print.p(this.o);
                     Print.p("-----");
-                    // 访问外部方法
+                    // 璁块棶澶栭儴鏂规硶
                     f1();
                     f2();
                     Print.p("-----");
-                    // 同名方法(从外到里)
+                    // 鍚屽悕鏂规硶(浠庡鍒伴噷)
                     O1.this.f();
                     O2.this.f();
                     this.f();

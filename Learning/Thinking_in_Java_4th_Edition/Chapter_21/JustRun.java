@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public class JustRun implements Runnable {
@@ -8,8 +8,8 @@ public class JustRun implements Runnable {
     private int id = ++cnt;
     @Override
     public void run() {
-        // Ö»ÊÇÖ´ĞĞÒ»¸öÊä³ö
-        Thread.yield(); // ÎªÁËÈÃÏß³ÌµÄµ÷¶È¸üÃ÷ÏÔ
+        // åªæ˜¯æ‰§è¡Œä¸€ä¸ªè¾“å‡º
+        Thread.yield(); // ä¸ºäº†è®©çº¿ç¨‹çš„è°ƒåº¦æ›´æ˜æ˜¾
         System.out.format("%d@run()\n", id);
     }
     public static void main(String...args) {

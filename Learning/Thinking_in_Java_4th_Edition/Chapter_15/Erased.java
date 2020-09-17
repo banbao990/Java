@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public class Erased<T> {
@@ -9,28 +9,28 @@ public class Erased<T> {
 
         // if(arg instanceof T) {}
         /*
-         * ´íÎó: instanceof µÄ·ºĞÍÀàĞÍ²»ºÏ·¨
+         * é”™è¯¯: instanceof çš„æ³›å‹ç±»å‹ä¸åˆæ³•
          *     if(arg instanceof T) {}
          *                       ^
         */
 
         // T var = new T();
         /*
-         * ´íÎó: ÒâÍâµÄÀàĞÍ
+         * é”™è¯¯: æ„å¤–çš„ç±»å‹
          * T var = new T();
          *             ^
         */
 
         // T[] array1 = new T[SIZE];
         /*
-         * ´íÎó: ´´½¨·ºĞÍÊı×é
+         * é”™è¯¯: åˆ›å»ºæ³›å‹æ•°ç»„
          * T[] array1 = new T[SIZE];
          *              ^
         */
 
 
         T[] array2 = (T[])new Object[SIZE];
-        //  ¾¯¸æ: [unchecked] Î´¾­¼ì²éµÄ×ª»»
+        //  è­¦å‘Š: [unchecked] æœªç»æ£€æŸ¥çš„è½¬æ¢
 
     }
     public static void main(String...args) {

@@ -1,3 +1,3 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 package roShamBo;
 public enum Outcome { WIN, LOSE, DRAW }

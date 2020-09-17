@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.concurrent.*;
@@ -39,12 +39,12 @@ public class TestDefaultUncaughtExceptionHandler {
         // set deault
         Thread.setDefaultUncaughtExceptionHandler(
             new MyUncaughtExceptionHandler1());
-        // ÓĞ×¨ÓĞµÄ Exception Handler
+        // æœ‰ä¸“æœ‰çš„ Exception Handler
         Thread t1 = new Thread(new TDUEH1());
         t1.setUncaughtExceptionHandler(
             new MyUncaughtExceptionHandler2());
         t1.start();
-        // Ã»ÓĞ×¨ÓĞµÄ Exception Handler
+        // æ²¡æœ‰ä¸“æœ‰çš„ Exception Handler
         new Thread(new TDUEH2()).start();
     }
 }

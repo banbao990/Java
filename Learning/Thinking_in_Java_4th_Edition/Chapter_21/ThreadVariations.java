@@ -1,10 +1,10 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 import java.util.concurrent.*;
 public class ThreadVariations {
-    // ÄÚ²¿Àà
+    // å†…éƒ¨ç±»
     private class InnerThread implements Runnable {
         @Override
         public void run() {
@@ -13,14 +13,14 @@ public class ThreadVariations {
     }
     public static void main(String[] args) {
         ExecutorService exec = Executors.newCachedThreadPool();
-        // ÄäÃûÀàÊµÏÖ Runnable
+        // åŒ¿åç±»å®ç° Runnable
         exec.execute(new Runnable(){
             @Override
             public void run() {
                 System.out.println("Anonymous Runnable: " + Thread.currentThread());
             }
         });
-        // ÄÚ²¿ÀàÊµÏÖ
+        // å†…éƒ¨ç±»å®ç°
         exec.execute((new ThreadVariations()).new InnerThread());
         // shutdown
         exec.shutdown();

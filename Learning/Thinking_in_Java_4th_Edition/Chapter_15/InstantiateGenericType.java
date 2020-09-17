@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 class ClassAsFactory<T> {
@@ -22,8 +22,8 @@ public class InstantiateGenericType {
             new ClassAsFactory<Employee>(Employee.class);
         System.out.println("ClassAsFactory<Employee> succeeded");
         try {
-            // Ê§°Ü,ÒòÎª Integer Ã»ÓĞÄ¬ÈÏ¹¹Ôìº¯Êı
-            // ±àÒëÍ¨¹ı,ÒòÎªÕâ¸ö²»ÔÚ±àÒëÆ÷¼ì²é
+            // å¤±è´¥,å› ä¸º Integer æ²¡æœ‰é»˜è®¤æ„é€ å‡½æ•°
+            // ç¼–è¯‘é€šè¿‡,å› ä¸ºè¿™ä¸ªä¸åœ¨ç¼–è¯‘å™¨æ£€æŸ¥
             ClassAsFactory<Integer> fi =
                 new ClassAsFactory<Integer>(Integer.class);
         } catch(Exception e) {

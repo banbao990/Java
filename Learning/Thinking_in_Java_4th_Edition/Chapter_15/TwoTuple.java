@@ -1,10 +1,10 @@
 /**
  * @author banbao
- * ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public class TwoTuple<T1, T2> {
-    public final T1 first; // final ²»ÔÊĞíĞŞ¸Ä, Ã»±ØÒªÉèÖÃÎª private
+    public final T1 first; // final ä¸å…è®¸ä¿®æ”¹, æ²¡å¿…è¦è®¾ç½®ä¸º private
     public final T2 second;
     public TwoTuple(T1 first, T2 second) {
         this.first = first; 

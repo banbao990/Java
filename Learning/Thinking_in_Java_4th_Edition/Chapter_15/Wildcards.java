@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 class Holder<T> {
     private T value;
     public Holder() {}

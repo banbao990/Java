@@ -11,13 +11,13 @@ public class TestGenericClass {
         // cl2 = double.class; // ERROR
         
         // Class<Number> cl3 = int.class; // ERROR 
-        // Integer ÊÇ Number µÄ×ÓÀà
-        // µ«ÊÇ Class<Integer> ²»ÊÇ Class<Number>µÄ×ÓÀà
+        // Integer æ˜¯ Number çš„å­ç±»
+        // ä½†æ˜¯ Class<Integer> ä¸æ˜¯ Class<Number>çš„å­ç±»
         
-        Class<?> cl3 = int.class; // Í¨Åä·û(ºÍ Class µÈ¼Û, µ«ÊÇ¸üÓÅ, ¶ÔÎ¬»¤¶øÑÔ)
+        Class<?> cl3 = int.class; // é€šé…ç¬¦(å’Œ Class ç­‰ä»·, ä½†æ˜¯æ›´ä¼˜, å¯¹ç»´æŠ¤è€Œè¨€)
         cl3 = double.class;
         
-        Class<? extends Number> cl4 = int.class; // ÏŞ¶¨·¶Î§(¶Ô±Ècl3)
+        Class<? extends Number> cl4 = int.class; // é™å®šèŒƒå›´(å¯¹æ¯”cl3)
         cl4 = double.class;
     }
 }

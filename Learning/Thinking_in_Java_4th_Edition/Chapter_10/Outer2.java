@@ -1,11 +1,11 @@
 /**
  * @author banbao
- * @comment ×ÓÀàµÄÄÚ²¿ÀàºÍ¸¸ÀàµÄÄÚ²¿ÀàÎ»ÓÚ²»Í¬µÄÃüÃû¿Õ¼ä
- *          ¸¸ÀàµÄÄÚ²¿Àà²»ÄÜ±»¸²¸Ç
+ * @comment å­ç±»çš„å†…éƒ¨ç±»å’Œçˆ¶ç±»çš„å†…éƒ¨ç±»ä½äºä¸åŒçš„å‘½åç©ºé—´
+ *          çˆ¶ç±»çš„å†…éƒ¨ç±»ä¸èƒ½è¢«è¦†ç›–
  */
 
 class Outer{
-    // ÓÃÓÚ²âÊÔµÄÄÚ²¿Àà
+    // ç”¨äºæµ‹è¯•çš„å†…éƒ¨ç±»
     private Inner inner;
     Outer(){}
     public Outer(int nouse){
@@ -22,11 +22,11 @@ class Outer{
         }
     }
     
-    // ²âÊÔ¶àÌ¬
+    // æµ‹è¯•å¤šæ€
     public void test(){
         a();
     }
-    // ¶àÌ¬
+    // å¤šæ€
     public void a(){
         System.out.println("Outer:a");
     }
@@ -47,20 +47,20 @@ public class Outer2 extends Outer{
         }
     }
     
-    // ¸²¸Ç
+    // è¦†ç›–
     @Override
     public void a(){
         System.out.println("Outer2:a");
     }
     public static void main(String...args){
         Outer2 o2 = new Outer2();
-        // ¶àÌ¬²âÊÔ
+        // å¤šæ€æµ‹è¯•
         System.out.println("-----");
         o2.test();
-        // ²»ÄÜ¸²¸ÇÄÚ²¿Àà²âÊÔ
+        // ä¸èƒ½è¦†ç›–å†…éƒ¨ç±»æµ‹è¯•
         System.out.println("-----");
         new Outer2(0);
-        // ÓµÓĞ¶ÀÁ¢ÃüÃû¿Õ¼ä²âÊÔ
+        // æ‹¥æœ‰ç‹¬ç«‹å‘½åç©ºé—´æµ‹è¯•
         System.out.println("-----");
         Outer o1 = new Outer();
         Outer.Inner i1 = o1.new Inner();

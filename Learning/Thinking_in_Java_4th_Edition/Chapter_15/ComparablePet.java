@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public class ComparablePet implements Comparable<ComparablePet>{
@@ -12,7 +12,7 @@ public class ComparablePet implements Comparable<ComparablePet>{
 }
 
 
-//  ´íÎó: ÎŞ·¨Ê¹ÓÃÒÔÏÂ²»Í¬µÄ²ÎÊı¼Ì³ĞComparable: <Cat> ºÍ <ComparablePet>
+//  é”™è¯¯: æ— æ³•ä½¿ç”¨ä»¥ä¸‹ä¸åŒçš„å‚æ•°ç»§æ‰¿Comparable: <Cat> å’Œ <ComparablePet>
 // class Cat extends ComparablePet implements Comparable<Cat> {
     // @Override
     // public int compareTo(Cat cat) {

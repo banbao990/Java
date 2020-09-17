@@ -1,12 +1,12 @@
 /**
  * @author banbao
- * ¶àÎ¬Êı×é
+ * å¤šç»´æ•°ç»„
  */
 import java.util.Arrays;
 
 public class MultiLength {
     public static void main(String...args) {
-        // ·½±ãµÄ´´½¨·½Ê½
+        // æ–¹ä¾¿çš„åˆ›å»ºæ–¹å¼
         SerialA[][] sa = {
             {new SerialA()},
             {new SerialA(), new SerialA() },
@@ -14,7 +14,7 @@ public class MultiLength {
         };
         System.out.println(Arrays.deepToString(sa));
         
-        // ÆäËû·½Ê½
+        // å…¶ä»–æ–¹å¼
         int[][] a = new int[10][10];
         // int[][] b = new int[][10]; // ERROR
         int[][] c = new int[10][];

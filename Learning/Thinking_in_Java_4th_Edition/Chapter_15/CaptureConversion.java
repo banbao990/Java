@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 // javac -Xlint:unchecked CaptureConversion.java
 public class CaptureConversion {
     static <T> void f1(Holder<T> holder) {

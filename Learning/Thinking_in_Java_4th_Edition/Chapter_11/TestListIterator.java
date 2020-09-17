@@ -30,7 +30,7 @@ public class TestListIterator{
         // 1
         System.out.println("Iterator!");
         ListIterator<FE> iterator = set.listIterator(); // iterator
-        // ListIterator<FE> iterator = set.listIterator(0); // µÈ¼Û
+        // ListIterator<FE> iterator = set.listIterator(0); // ç­‰ä»·
         while(iterator.hasNext()){ // hasNext
             System.out.print(iterator.next() + " "); // next
         }
@@ -40,7 +40,7 @@ public class TestListIterator{
         while(iterator.hasNext()){
             FE fe = iterator.next();
             if(fe.equals("FE3")){
-                // ÒÆ³ı×îºóÒ»¸ö·ÃÎÊµÄÔªËØ
+                // ç§»é™¤æœ€åä¸€ä¸ªè®¿é—®çš„å…ƒç´ 
                 iterator.remove(); // remove
             }
         }
@@ -52,8 +52,8 @@ public class TestListIterator{
         }
         System.out.println();
         // 4
-        iterator = set.listIterator(2); // ÉèÖÃÆğÊ¼Î»ÖÃÎª 2
-        int count = 0; // Ö¤Ã÷ÉèÖÃÎª 2 ÉúĞ§
+        iterator = set.listIterator(2); // è®¾ç½®èµ·å§‹ä½ç½®ä¸º 2
+        int count = 0; // è¯æ˜è®¾ç½®ä¸º 2 ç”Ÿæ•ˆ
         while(iterator.hasNext()){
             FE fe = iterator.next();
             if(fe.equals(set.get(2).name)){
@@ -61,7 +61,7 @@ public class TestListIterator{
             }
             ++ count;
             if(fe.equals("FE6")){
-                // ÉèÖÃ×îºóÒ»¸ö·ÃÎÊµÄÔªËØ
+                // è®¾ç½®æœ€åä¸€ä¸ªè®¿é—®çš„å…ƒç´ 
                 System.out.println("count:" + count);
                 iterator.set(new FE("FE66")); // set
                 break;
@@ -72,11 +72,11 @@ public class TestListIterator{
         while(iterator.hasPrevious()){
             FE fe = iterator.previous();
             if(fe.equals("FE2")){
-                // ÒÆ³ı×îºóÒ»¸ö·ÃÎÊµÄÔªËØ
+                // ç§»é™¤æœ€åä¸€ä¸ªè®¿é—®çš„å…ƒç´ 
                 iterator.remove(); // remove
             }
             if(fe.equals("FE1")){
-                // ÉèÖÃ×îºóÒ»¸ö·ÃÎÊµÄÔªËØ
+                // è®¾ç½®æœ€åä¸€ä¸ªè®¿é—®çš„å…ƒç´ 
                 iterator.set(new FE("FE11")); // set
                 break;
             }

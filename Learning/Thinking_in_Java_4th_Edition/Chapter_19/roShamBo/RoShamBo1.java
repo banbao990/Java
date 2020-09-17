@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 package roShamBo;
 import java.util.*;
 import static roShamBo.Outcome.*;

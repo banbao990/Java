@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.concurrent.*;
@@ -12,7 +12,7 @@ class TDOB1 implements Runnable {
     public void run() {
         // synchronized(this) {
         while(cnt < upper) {
-            Thread.yield();// ÕâÀïÖ´ĞĞÈ¨±»ÇÀÕ¼
+            Thread.yield();// è¿™é‡Œæ‰§è¡Œæƒè¢«æŠ¢å 
             ++cnt;
         }
         System.out.println(cnt);
@@ -23,8 +23,8 @@ class TDOB1 implements Runnable {
 public class TestDependingOnBound {
     public static void main(String...args) {
         TDOB1 td = new TDOB1(); 
-        // ×¢ÒâÕâÀïĞèÒªÊÇÍ¬Ò»¸ö¶ÔÏó
-        // ·ñÔò²»Í¬¶ÔÏó»á»ñµÃ²»Í¬Ëø
+        // æ³¨æ„è¿™é‡Œéœ€è¦æ˜¯åŒä¸€ä¸ªå¯¹è±¡
+        // å¦åˆ™ä¸åŒå¯¹è±¡ä¼šè·å¾—ä¸åŒé”
         for(int i = 0;i < 2; ++i) {
             new Thread(td).start();
         }

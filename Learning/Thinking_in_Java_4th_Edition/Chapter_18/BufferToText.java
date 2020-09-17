@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.nio.*;
@@ -11,7 +11,7 @@ import java.io.*;
 public class BufferToText {
     private static final int BSIZE = 1024;
     public static void main(String[] args) throws Exception {
-        // 1. Ö±½ÓÊ¹ÓÃ×î¼òµ¥µÄ·½·¨(ÓĞ±àÂëÎÊÌâ)
+        // 1. ç›´æ¥ä½¿ç”¨æœ€ç®€å•çš„æ–¹æ³•(æœ‰ç¼–ç é—®é¢˜)
         FileChannel fc = new FileOutputStream("data2.txt").getChannel();
         fc.write(ByteBuffer.wrap("Some text".getBytes()));
         fc.close();
@@ -19,16 +19,16 @@ public class BufferToText {
         ByteBuffer buff = ByteBuffer.allocate(BSIZE);
         fc.read(buff);
         buff.flip();
-        // ±àÂëÎÊÌâ
+        // ç¼–ç é—®é¢˜
         System.out.println(buff.asCharBuffer());
         
-        // 2. Ê¹ÓÃÏµÍ³Ä¬ÈÏµÄ±àÂë·½Ê½
-        buff.rewind(); // ½«Ö¸ÕëÖÃÓÚ¿ªÍ·,ÉáÆú±ê¼Ç
+        // 2. ä½¿ç”¨ç³»ç»Ÿé»˜è®¤çš„ç¼–ç æ–¹å¼
+        buff.rewind(); // å°†æŒ‡é’ˆç½®äºå¼€å¤´,èˆå¼ƒæ ‡è®°
         String encoding = System.getProperty("file.encoding");
         System.out.println("Decoded using " + encoding + ": "
             + Charset.forName(encoding).decode(buff));
 
-        // 3. ÔÚ´æ´¢Ê±¾Í¸ø¶¨±àÂë·½Ê½Îª UTF-16BE(JavaÄ¬ÈÏ±àÂë·½Ê½)
+        // 3. åœ¨å­˜å‚¨æ—¶å°±ç»™å®šç¼–ç æ–¹å¼ä¸º UTF-16BE(Javaé»˜è®¤ç¼–ç æ–¹å¼)
         fc = new FileOutputStream("data2_sure.txt").getChannel();
         fc.write(ByteBuffer.wrap("Some text".getBytes("UTF-16BE")));
         fc.close();
@@ -38,16 +38,16 @@ public class BufferToText {
         buff.flip();
         System.out.println(buff.asCharBuffer());
         
-        // 4. Ğ´ÈëµÄÊ±ºòÊ¹ÓÃ CharBuffer (°Ñ CharBuffer Ê£ÓàµÄnull¶¼Ğ´½øÈ¥ÁË)
+        // 4. å†™å…¥çš„æ—¶å€™ä½¿ç”¨ CharBuffer (æŠŠ CharBuffer å‰©ä½™çš„nulléƒ½å†™è¿›å»äº†)
         fc = new FileOutputStream("data2_cb.txt").getChannel();
         buff = ByteBuffer.allocate(24); // More than needed
         String putStr = "Some text";
         CharBuffer cb = buff.asCharBuffer();
-        cb.put(putStr); // ×¢ÒâÕâÀïÖ»»á¸Ä±ä cb µÄ position, buff µÄ²»±ä
+        cb.put(putStr); // æ³¨æ„è¿™é‡Œåªä¼šæ”¹å˜ cb çš„ position, buff çš„ä¸å˜
         buff.limit(cb.position()*2); 
-        // ÎªÊ²Ã´*2,¿´Ô´ÂëÔÚ put(char) µÄÊ±ºò position ¼ÇÂ¼µÄ¶¼ÊÇÒ»°ë
-        // ÁíÒ»·½Ãæ 1 char = 2 byte
-        // ĞèÒªÊÖ¶¯ÉèÖÃ `limit`, ·ñÔò»áÊä³ö¿Õ°×(Some text???)
+        // ä¸ºä»€ä¹ˆ*2,çœ‹æºç åœ¨ put(char) çš„æ—¶å€™ position è®°å½•çš„éƒ½æ˜¯ä¸€åŠ
+        // å¦ä¸€æ–¹é¢ 1 char = 2 byte
+        // éœ€è¦æ‰‹åŠ¨è®¾ç½® `limit`, å¦åˆ™ä¼šè¾“å‡ºç©ºç™½(Some text???)
         // CharBuffer : Creates a view of this byte buffer as a char buffer.
         fc.write(buff);
         fc.close();
@@ -60,7 +60,7 @@ public class BufferToText {
     }
 } 
 /* Output:
-Ã®›Å?”µ
+å¯æµ¥?æ•¸
 Decoded using GBK: Some text
 Some text
 Some text

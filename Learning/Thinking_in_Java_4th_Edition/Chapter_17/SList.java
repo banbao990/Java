@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * 单向链表(练习8),空头结点
+ * 鍗曞悜閾捐〃(缁冧範8),绌哄ご缁撶偣
  */
 import java.util.*;
  
@@ -43,13 +43,13 @@ public class SList<T> implements Iterable<T>{
     @Override
     public SListIterator<T> iterator(){
         return new SListIterator<T>(){
-            private Node now = head; // now.next 表示当前位置
+            private Node now = head; // now.next 琛ㄧず褰撳墠浣嶇疆
             @Override
             public boolean hasNext(){
                 return now.next != null && now.next.next != null;
             }
             
-            // 返回当前位置(now.next)
+            // 杩斿洖褰撳墠浣嶇疆(now.next)
             @Override
             public T next(){
                 T ret = null;

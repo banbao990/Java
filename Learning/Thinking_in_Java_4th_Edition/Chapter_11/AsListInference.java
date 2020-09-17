@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 
 import java.util.*;
 
@@ -16,18 +16,18 @@ public class AsListInference {
             new Crusty(), new Slush(), new Powder());
 
         // case 2: OK
-        // ±àÒëÆ÷ÄÜ¹»Ê¶±ğ³öÀ´(1.8)
-        // ÊéÉÏ 1.6 ºÃÏñ²»Ì«ĞĞ(Ã»ÓĞ²âÊÔ)
+        // ç¼–è¯‘å™¨èƒ½å¤Ÿè¯†åˆ«å‡ºæ¥(1.8)
+        // ä¹¦ä¸Š 1.6 å¥½åƒä¸å¤ªè¡Œ(æ²¡æœ‰æµ‹è¯•)
         List<Snow> snow2 = Arrays.asList(
             new Light(), new Heavy());
 
         // case 3: OK
-        // Collections ¶¼ OK
+        // Collections éƒ½ OK
         List<Snow> snow3 = new ArrayList<Snow>();
         Collections.addAll(snow3, new Light(), new Heavy());
 
         // case 4: OK
-        // ¼ÓÉÏÌáÊ¾ĞÅÏ¢
+        // åŠ ä¸Šæç¤ºä¿¡æ¯
         List<Snow> snow4 = Arrays.<Snow>asList(
              new Light(), new Heavy());
     }

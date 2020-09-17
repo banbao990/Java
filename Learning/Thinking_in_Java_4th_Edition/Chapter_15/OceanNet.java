@@ -50,8 +50,8 @@ class BigFish extends Fish {
     private BigFish(){
         super(++ BigFish.count);
     }
-    // ÄäÃûÀà·ºĞÍ
-    // ¶¨ÒåÎª static, ÒòÎªÖ»ĞèÒªÒ»¸ö¾Í×ã¹»ÁË
+    // åŒ¿åç±»æ³›å‹
+    // å®šä¹‰ä¸º static, å› ä¸ºåªéœ€è¦ä¸€ä¸ªå°±è¶³å¤Ÿäº†
     public static Generator<BigFish> generator = 
         new Generator<BigFish>() {
             public BigFish next() {
@@ -69,7 +69,7 @@ class SmallFish extends Fish {
         super(++ SmallFish.count);
     }
     public static Generator<SmallFish> generator = 
-        // ÕâÀï±ØĞëÒªÉùÃ÷<SmallFish>,·ñÔò±¨´í
+        // è¿™é‡Œå¿…é¡»è¦å£°æ˜<SmallFish>,å¦åˆ™æŠ¥é”™
         new Generator<SmallFish>() { 
             public SmallFish next() {
                 return new SmallFish();

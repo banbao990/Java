@@ -1,41 +1,41 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */ 
 
-// ¶¨Òå·şÎñ¹¤³§½Ó¿Ú
+// å®šä¹‰æœåŠ¡å·¥å‚æ¥å£
 interface Service {
     void method1();
     void method2();
 }
 
-// ¶¨Òå¹¤³§½Ó¿Ú
+// å®šä¹‰å·¥å‚æ¥å£
 interface ServiceFactory {
     Service getService();
 }
 
-// ·şÎñ¹¤³§½Ó¿ÚÊµÏÖ 1
+// æœåŠ¡å·¥å‚æ¥å£å®ç° 1
 class Implementation1 implements Service {
     Implementation1() {} // Package access
     public void method1() {System.out.println("Implementation1 method1");}
     public void method2() {System.out.println("Implementation1 method2");}
 }
 
-// ¹¤³§½Ó¿ÚÊµÏÖ 1
+// å·¥å‚æ¥å£å®ç° 1
 class Implementation1Factory implements ServiceFactory {
     public Service getService() {
         return new Implementation1();
     }
 }
 
-// ·şÎñ¹¤³§½Ó¿ÚÊµÏÖ 2
+// æœåŠ¡å·¥å‚æ¥å£å®ç° 2
 class Implementation2 implements Service {
     Implementation2() {} // Package access
     public void method1() {System.out.println("Implementation2 method1");}
     public void method2() {System.out.println("Implementation2 method2");}
 }
 
-// ¹¤³§½Ó¿ÚÊµÏÖ 2
+// å·¥å‚æ¥å£å®ç° 2
 class Implementation2Factory implements ServiceFactory {
     public Service getService() {
         return new Implementation2();
@@ -43,10 +43,10 @@ class Implementation2Factory implements ServiceFactory {
 }
 
 public class Factories {
-    // Ò»¸öº¯Êı½ÓÊÜ½Ó¿Ú×÷Îª²ÎÊı, ¿ÉÒÔÊµÏÖÌá¹©²»Í¬µÄ·şÎñ
-    // Èç´Ë±ã¿ÉÒÔÊµÏÖ,²»ĞŞ¸ÄÕâ¸öº¯Êı¾ÍÄÜÌá¹©¸ü¶àµÄ·şÎñ¹¦ÄÜ
-    //     1. Ôö¼Ó·şÎñ¹¤³§ºÍÌá¹©µÄ·şÎñ(Àà)
-    //     2. ¶ø²»ĞŞ¸ÄÕâ¸öº¯Êı
+    // ä¸€ä¸ªå‡½æ•°æ¥å—æ¥å£ä½œä¸ºå‚æ•°, å¯ä»¥å®ç°æä¾›ä¸åŒçš„æœåŠ¡
+    // å¦‚æ­¤ä¾¿å¯ä»¥å®ç°,ä¸ä¿®æ”¹è¿™ä¸ªå‡½æ•°å°±èƒ½æä¾›æ›´å¤šçš„æœåŠ¡åŠŸèƒ½
+    //     1. å¢åŠ æœåŠ¡å·¥å‚å’Œæä¾›çš„æœåŠ¡(ç±»)
+    //     2. è€Œä¸ä¿®æ”¹è¿™ä¸ªå‡½æ•°
     public static void serviceConsumer(ServiceFactory fact) {
         Service s = fact.getService();
         s.method1();

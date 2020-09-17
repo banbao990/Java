@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.io.File;
@@ -9,19 +9,19 @@ import java.util.Arrays;
 public class TestFile {
     public static void main(String...args) {
         File path;
-        // ·Ö¸ô·û : Windows:\, Unix:/
+        // åˆ†éš”ç¬¦ : Windows:\, Unix:/
         System.out.println("separatorChar" + File.separatorChar);
-        // Ô­Ê¼
+        // åŸå§‹
         path = new File(".");
         // test(path, "new File(\".\")");
         // getAbsoluteFile()
         path = new File(".").getAbsoluteFile();
         // test(path, "new File(\".\").getAbsoluteFile()");
         
-        // mkdir() Ö»ÄÜ´´½¨Ò»¼¶Ä¿Â¼,ĞèÒªÓĞ¸¸Ä¿Â¼
+        // mkdir() åªèƒ½åˆ›å»ºä¸€çº§ç›®å½•,éœ€è¦æœ‰çˆ¶ç›®å½•
         // System.out.println(new File("./a/b/c/d/e").mkdir());
         
-        // mkdirs() ¿ÉÒÔ´´½¨¶à¼¶Ä¿Â¼,²»ĞèÒªÓĞ¸¸Ä¿Â¼
+        // mkdirs() å¯ä»¥åˆ›å»ºå¤šçº§ç›®å½•,ä¸éœ€è¦æœ‰çˆ¶ç›®å½•
         // System.out.println(new File("./a/b/c/d/e").mkdirs());
 
         System.out.println(Arrays.deepToString(File.listRoots()));
@@ -45,7 +45,7 @@ public class TestFile {
         print("getAbsolutePath", path.getAbsolutePath());
         print("isDirectory", path.isDirectory());
         print("isFile", path.isFile());
-        // public boolean delete() // Ö»ÄÜÉ¾³ı¿ÕÎÄ¼ş¼Ğ
+        // public boolean delete() // åªèƒ½åˆ é™¤ç©ºæ–‡ä»¶å¤¹
         // public boolean exists()
         // public boolean mkdir()
         // public boolean mkdirs()

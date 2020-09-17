@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.*;
@@ -9,7 +9,7 @@ public class GenericWriting {
     static List<Apple> apples = new ArrayList<Apple>();
     static List<Fruit> fruit = new ArrayList<Fruit>();
     
-    // ·ºĞÍ
+    // æ³›å‹
     static <T> void writeExact(List<T> list, T item) {
         list.add(item);
     }
@@ -17,17 +17,17 @@ public class GenericWriting {
         writeExact(apples, new Apple());
         // writeExact(apples, new Fruit()); // ERROR
         /* 
-         * ĞèÒª: List<T>,T
-         * ÕÒµ½: List<Apple>,Fruit
-         * Ô­Òò: ÍÆÂÛ±äÁ¿T¾ßÓĞ²»¼æÈİµÄÏŞÖÆ·¶Î§
-         *   µÈÊ½Ô¼ÊøÌõ¼ş: Apple
-         *   ÏÂÏŞ: Fruit
+         * éœ€è¦: List<T>,T
+         * æ‰¾åˆ°: List<Apple>,Fruit
+         * åŸå› : æ¨è®ºå˜é‡Tå…·æœ‰ä¸å…¼å®¹çš„é™åˆ¶èŒƒå›´
+         *   ç­‰å¼çº¦æŸæ¡ä»¶: Apple
+         *   ä¸‹é™: Fruit
          */
         writeExact(fruit, new Apple()); // Java8 OK
         writeExact(fruit, new Fruit());
     }
     
-    // ³¬ÀàĞÍÍ¨Åä·û
+    // è¶…ç±»å‹é€šé…ç¬¦
     static <T> void writeWithWildcard(
         List<? super T> list, T item) {
         list.add(item);
@@ -36,11 +36,11 @@ public class GenericWriting {
         writeWithWildcard(apples, new Apple());
         // writeWithWildcard(apples, new Fruit()); // ERROR
         /*
-         * ĞèÒª: List<? super T>,T
-         * ÕÒµ½: List<Apple>,Fruit
-         * Ô­Òò: ÍÆ¶ÏÀàĞÍ²»·ûºÏÉÏÏŞ
-         *   ÍÆ¶Ï: Fruit
-         *   ÉÏÏŞ: Apple,Object
+         * éœ€è¦: List<? super T>,T
+         * æ‰¾åˆ°: List<Apple>,Fruit
+         * åŸå› : æ¨æ–­ç±»å‹ä¸ç¬¦åˆä¸Šé™
+         *   æ¨æ–­: Fruit
+         *   ä¸Šé™: Apple,Object
          */
         writeWithWildcard(fruit, new Apple());
         writeWithWildcard(fruit, new Fruit());

@@ -1,4 +1,4 @@
-// 示例代码
+// 绀轰緥浠ｇ爜
 
 class Generic<T> {}
 public class ArrayOfGeneric {
@@ -11,7 +11,7 @@ public class ArrayOfGeneric {
         // Runtime type is the raw (erased) type:
         gia = (Generic<Integer>[])new Generic[SIZE];
         //! gia = new Generic<Integer>[SIZE];
-        // 错误: 创建泛型数组
+        // 閿欒: 鍒涘缓娉涘瀷鏁扮粍
         System.out.println(gia.getClass().getSimpleName());
         gia[0] = new Generic<Integer>();
         //! gia[1] = new Object(); // Compile-time error

@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ¸ñÊ½¿ØÖÆ
+ * @comment æ ¼å¼æ§åˆ¶
  */
 
 import java.io.PrintStream;
@@ -11,16 +11,16 @@ public class TestFormatOutput2 {
     }
     
     public void run(){
-        // ±ğÃû
+        // åˆ«å
         PrintStream p = System.out;
-        // Ò»Ğ©²ÎÊı
+        // ä¸€äº›å‚æ•°
         int a = 10086;
         float b = 4.44f;
         // "%[argument_index$][flags][width][.precision]coversion"
-        // Ä¬ÈÏÓÒ¶ÔÆë,'-'×ó¶ÔÆë
+        // é»˜è®¤å³å¯¹é½,'-'å·¦å¯¹é½
         p.printf("\"%10.6f\"\n", b);
         p.printf("\"%-10.6f\"\n", b);
-        // È±Ê§²¹ 0
+        // ç¼ºå¤±è¡¥ 0
         p.printf("\"%010.6f\"\n", b);
         // %%
         p.printf("%%\n", b);

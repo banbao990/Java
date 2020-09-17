@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ÄäÃûÀà
+ * @comment åŒ¿åç±»
  */
 
 interface Base{
@@ -9,9 +9,9 @@ interface Base{
 
 class Outer{
     public Base func(){
-        // ÄäÃûÀà
-        // ×Ô¶¯´´½¨Ò»¸ö¼Ì³Ğ×ÔBase(ÊµÏÖBase½Ó¿Ú)µÄÀà
-        // ²¢ÇÒÏòÉÏ×ªĞÍÖÁBase
+        // åŒ¿åç±»
+        // è‡ªåŠ¨åˆ›å»ºä¸€ä¸ªç»§æ‰¿è‡ªBase(å®ç°Baseæ¥å£)çš„ç±»
+        // å¹¶ä¸”å‘ä¸Šè½¬å‹è‡³Base
         return new Base(){
             public void func(){
                 System.out.println("Inner1:func");

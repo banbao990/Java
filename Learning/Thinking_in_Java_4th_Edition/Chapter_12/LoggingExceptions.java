@@ -1,18 +1,18 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 
 import java.util.logging.*;
 import java.io.*;
 
 class LoggingException extends Exception {
-    // ´´½¨Ò»¸ö String ²ÎÊıÏà¹ØÁªµÄ logger
+    // åˆ›å»ºä¸€ä¸ª String å‚æ•°ç›¸å…³è”çš„ logger
     private static Logger logger =
         Logger.getLogger("LoggingException");
-    // ¹¹Ôìº¯Êı
+    // æ„é€ å‡½æ•°
     public LoggingException() {
-        // ÎªÁË½«Õ»¹ì¼£Êä³öµ½×Ö·û´®ÖĞ
+        // ä¸ºäº†å°†æ ˆè½¨è¿¹è¾“å‡ºåˆ°å­—ç¬¦ä¸²ä¸­
         StringWriter trace = new StringWriter();
         printStackTrace(new PrintWriter(trace));
-        // severe ÑÏÖØ¼¶±ğµÄÒì³£
+        // severe ä¸¥é‡çº§åˆ«çš„å¼‚å¸¸
         logger.severe(trace.toString());
     }
 }
@@ -33,13 +33,13 @@ public class LoggingExceptions {
 }
 /*
 
-ÆßÔÂ 13, 2020 11:22:36 ÉÏÎç LoggingException <init>
-ÑÏÖØ: LoggingException
+ä¸ƒæœˆ 13, 2020 11:22:36 ä¸Šåˆ LoggingException <init>
+ä¸¥é‡: LoggingException
     at LoggingExceptions.main(LoggingExceptions.java:19)
 
 Caught LoggingException
-ÆßÔÂ 13, 2020 11:22:36 ÉÏÎç LoggingException <init>
-ÑÏÖØ: LoggingException
+ä¸ƒæœˆ 13, 2020 11:22:36 ä¸Šåˆ LoggingException <init>
+ä¸¥é‡: LoggingException
     at LoggingExceptions.main(LoggingExceptions.java:24)
 
 Caught LoggingException

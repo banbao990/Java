@@ -12,7 +12,7 @@ class A {
 public class TestPri extends A {
     public static void main(String...args) {
         A a = new A();
-        // a.f(); // ´íÎó: f() ÔÚ A ÖĞÊÇ private ·ÃÎÊ¿ØÖÆ
+        // a.f(); // é”™è¯¯: f() åœ¨ A ä¸­æ˜¯ private è®¿é—®æ§åˆ¶
         try {
             Method m = a.getClass().getDeclaredMethod("f");
             m.setAccessible(true);

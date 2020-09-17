@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 import java.util.Random;
 import java.util.concurrent.*;
@@ -12,7 +12,7 @@ public class UsePriority implements Runnable {
     }
     private final int priority;
     private int cnt = 5;
-    private volatile double d; // ±£Ö¤Ã»ÓĞ±àÒëÆ÷ÓÅ»¯
+    private volatile double d; // ä¿è¯æ²¡æœ‰ç¼–è¯‘å™¨ä¼˜åŒ–
     public UsePriority(int priority) {
         this.priority = priority;
     }
@@ -25,8 +25,8 @@ public class UsePriority implements Runnable {
         Thread.currentThread().setPriority(priority);
         Thread.yield();
         while(true) {
-            // ¸´ÔÓµÄÔËËã
-            // ÔËËãÊ±¼ä×ã¹»³¤²ÅÄÜÌåÏÖ³öÏß³Ìµ÷¶ÈÆ÷µÄ½éÈë
+            // å¤æ‚çš„è¿ç®—
+            // è¿ç®—æ—¶é—´è¶³å¤Ÿé•¿æ‰èƒ½ä½“ç°å‡ºçº¿ç¨‹è°ƒåº¦å™¨çš„ä»‹å…¥
             for(int i = 1; i < 10000000; i++) {
                 d += (Math.PI + Math.E) / ((double)i) + 0.1;
                 if(i % 1000 == 0)
@@ -39,12 +39,12 @@ public class UsePriority implements Runnable {
         }
     }
     public static void main(String...args) {
-        // »ñÈ¡µ±Ç°Ïß³ÌÓÅÏÈ¼¶
+        // è·å–å½“å‰çº¿ç¨‹ä¼˜å…ˆçº§
         // Thread.currentThread().getPriority();
         System.out.println(Thread.currentThread());
         ExecutorService exec = Executors.newCachedThreadPool();
         for(int i = 0;i < 5; ++i) {
-            // Ëæ»úÉèÖÃÓÅÏÈ¼¶
+            // éšæœºè®¾ç½®ä¼˜å…ˆçº§
             exec.execute(new UsePriority((i==4)?10:1));
             // exec.execute(new UsePriority(1));
         }

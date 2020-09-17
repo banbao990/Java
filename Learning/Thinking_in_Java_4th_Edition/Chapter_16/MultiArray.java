@@ -1,12 +1,12 @@
 /**
  * @author banbao
- * ¶àÎ¬Êı×é
+ * å¤šç»´æ•°ç»„
  */
 import java.util.Arrays;
 
 public class MultiArray {
     public static void main(String...args) {
-        // ·½±ãµÄ´´½¨·½Ê½
+        // æ–¹ä¾¿çš„åˆ›å»ºæ–¹å¼
         SerialA[][] a = {
             {new SerialA()},
             {new SerialA()},

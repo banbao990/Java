@@ -8,7 +8,7 @@ interface Base{
 
 class Outer{
     public Base func(){
-        // ²»ÔÊĞíÔö¼Ó·ÃÎÊÈ¨ÏŞÏŞ¶¨´Ê( public,private ¶¼²»ĞĞ)
+        // ä¸å…è®¸å¢åŠ è®¿é—®æƒé™é™å®šè¯( public,private éƒ½ä¸è¡Œ)
         class Inner implements Base{
             public void func(){
                 System.out.println("Inner1:func");
@@ -19,7 +19,7 @@ class Outer{
     
     public void test(){
         // new Inner().func();
-        // ´íÎó: ÕÒ²»µ½·ûºÅ
+        // é”™è¯¯: æ‰¾ä¸åˆ°ç¬¦å·
     }
 }
 

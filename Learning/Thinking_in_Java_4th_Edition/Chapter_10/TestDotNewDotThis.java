@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment .this/.new/Ç¶Ì×Àà
+ * @comment .this/.new/åµŒå¥—ç±»
  */
 
 class Outer{
@@ -13,7 +13,7 @@ class Outer{
         }
     }
     
-    // ¾²Ì¬ÄÚ²¿Àà(Ç¶Ì×Àà)
+    // é™æ€å†…éƒ¨ç±»(åµŒå¥—ç±»)
     public static class StaticInner{
         private int value = 11;
         public void print(){
@@ -33,11 +33,11 @@ public class TestDotNewDotThis{
         System.out.println("-----");
         // .new 
         Outer outer = new Outer();
-        Outer.Inner inner = outer.new Inner(); // private Inner ÔòÎŞ·¨Ê¹ÓÃ
+        Outer.Inner inner = outer.new Inner(); // private Inner åˆ™æ— æ³•ä½¿ç”¨
         inner.print();
         System.out.println("-----");
         // Outer.Inner inner2 = new Outer.Inner(); 
-        // ´íÎó: ĞèÒª°üº¬Outer.InnerµÄ·â±ÕÊµÀı
+        // é”™è¯¯: éœ€è¦åŒ…å«Outer.Innerçš„å°é—­å®ä¾‹
         // static
         System.out.println("-----");
         Outer.StaticInner staticInner = new Outer.StaticInner();

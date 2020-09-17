@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 import java.util.*;
 
 class Mail {
@@ -103,7 +103,7 @@ public class PostOffice {
         abstract boolean handle(Mail m);
     }
     static void handle(Mail m) {
-        // Ö°ÔğÁ´Éè¼ÆÄ£Ê½
+        // èŒè´£é“¾è®¾è®¡æ¨¡å¼
         for(MailHandler handler : MailHandler.values())
             if(handler.handle(m))
                 return;

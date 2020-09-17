@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
  
 import java.util.*;
@@ -12,16 +12,16 @@ public class TestCollectionAddition{
     
     public static void main(String...args){
        Collection<String> collection = new ArrayList<>();
-        // Ìí¼Ó·½Ê½ 1
+        // æ·»åŠ æ–¹å¼ 1
         collection.add("a");
-        // Ìí¼Ó·½Ê½ 2
+        // æ·»åŠ æ–¹å¼ 2
         Collections.addAll(collection, "b", "c");
-        // Ìí¼Ó·½Ê½ 3
+        // æ·»åŠ æ–¹å¼ 3
         String[] strings = {"d", "e"};
         collection.addAll(Arrays.asList(strings));
-        // Ìí¼Ó·½Ê½ 4
+        // æ·»åŠ æ–¹å¼ 4
         collection.addAll(collection);
-        // ´òÓ¡
+        // æ‰“å°
         print(collection);
     }
 }

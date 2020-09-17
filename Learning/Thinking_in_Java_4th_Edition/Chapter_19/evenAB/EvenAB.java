@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ½ÓÊÜÅ¼Êı¸öa, Å¼Êı¸öbµÄĞòÁĞ
+ * @comment æ¥å—å¶æ•°ä¸ªa, å¶æ•°ä¸ªbçš„åºåˆ—
  */
 
 package evenAB;

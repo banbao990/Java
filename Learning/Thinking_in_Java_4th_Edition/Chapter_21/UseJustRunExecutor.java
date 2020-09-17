@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 import java.util.concurrent.*;
 public class UseJustRunExecutor {
@@ -11,7 +11,7 @@ public class UseJustRunExecutor {
         for(int i = 0;i < 5; ++i) {
             exec.execute(new JustRun());
         }
-        exec.shutdown(); // ¾Ü¾øÖ®ºóÌ¨Ìí¼ÓĞÂµÄÈÎÎñµ½Ïß³Ì³ØÖĞ
+        exec.shutdown(); // æ‹’ç»ä¹‹åå°æ·»åŠ æ–°çš„ä»»åŠ¡åˆ°çº¿ç¨‹æ± ä¸­
         // exec.execute(new JustRun()); 
         // java.util.concurrent.RejectedExecutionException
     }

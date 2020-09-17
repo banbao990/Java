@@ -1,13 +1,13 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public class TrafficLight {
     Signal color = Signal.RED;
     public void change() {
         switch(color) {
-        // ²»ÄÜÉùÃ÷Îª Signal.RED
+        // ä¸èƒ½å£°æ˜ä¸º Signal.RED
         case RED:        
             color = Signal.GREEN;
             break;

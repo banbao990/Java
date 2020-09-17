@@ -1,12 +1,12 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.concurrent.*;
 public class PriorityInConstructor implements Runnable {
     public PriorityInConstructor(int priority) {
-        // ÔÚ¹¹Ôìº¯ÊıÖĞÉèÖÃÓÅÏÈ¼¶
+        // åœ¨æ„é€ å‡½æ•°ä¸­è®¾ç½®ä¼˜å…ˆçº§
         Thread.currentThread().setPriority(priority);
     }
     @Override

@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.List;
@@ -11,23 +11,23 @@ class Fruit {}
 class Apple extends Fruit {}
 public class Fruits {
     public static void main(String...args) {
-        // 1. Êı×é
+        // 1. æ•°ç»„
         Fruit[] f = new Apple[10]; // OK
-        // ÔËĞĞÊ±¿ÌÀàĞÍ¾ÍÊÇ¾ßÌåµÄ Apple
+        // è¿è¡Œæ—¶åˆ»ç±»å‹å°±æ˜¯å…·ä½“çš„ Apple
         
-        // 2. ·ºĞÍ
+        // 2. æ³›å‹
         // List<Fruit> list = new ArrayList<Apple>();
-        // ´íÎó: ²»¼æÈİµÄÀàĞÍ: ArrayList<Apple>ÎŞ·¨×ª»»ÎªList<Fruit>
+        // é”™è¯¯: ä¸å…¼å®¹çš„ç±»å‹: ArrayList<Apple>æ— æ³•è½¬æ¢ä¸ºList<Fruit>
         
-        // 3. Í¨Åä·û
+        // 3. é€šé…ç¬¦
         List<? extends Fruit> list = new ArrayList<Apple>();
         // ??? CE
-        // list.add(new Apple()); // ²ÎÊıÀàĞÍÎª E(·ºĞÍÕ¼Î»·û)
+        // list.add(new Apple()); // å‚æ•°ç±»å‹ä¸º E(æ³›å‹å ä½ç¬¦)
         // list.add(new Fruit());
         // list.add(new Object());
-        list.add(null); // Ã»ÓÃ
+        list.add(null); // æ²¡ç”¨
         
-        // 4. ²ÎÊıÎª Object
+        // 4. å‚æ•°ä¸º Object
         List<? extends Fruit> flist =
             Arrays.asList(new Apple());
         Apple a = (Apple)flist.get(0);  // No warning

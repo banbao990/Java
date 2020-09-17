@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ÕıÔò±í´ïÊ½
+ * @comment æ­£åˆ™è¡¨è¾¾å¼
  */
 import java.io.PrintStream;
 import java.util.regex.Pattern;
@@ -41,48 +41,48 @@ public class TestRegex{
             p.println(text.matches(s)); // T,T,F
         }
         
-        // Ê¹ÓÃ Pattern Matcher ²âÊÔÆ¥ÅäÇé¿ö
+        // ä½¿ç”¨ Pattern Matcher æµ‹è¯•åŒ¹é…æƒ…å†µ
         p.println("~~~~~test 3~~~~~");
         for(String s : patterns){
             matchAndPrint(s, text, false);
         }
         
-        // ½«¶à¸ö¿Õ¸ñÌæ»»³ÉÒ»¸ö¿Õ¸ñ
+        // å°†å¤šä¸ªç©ºæ ¼æ›¿æ¢æˆä¸€ä¸ªç©ºæ ¼
         p.println("~~~~~test 4~~~~~");
         text = "\"1 2  3   4    5     6\"";
         p.println(text.replaceAll(" {2,}", " "));  // "1 2 3 4 5 6"
         
-        // ²âÊÔ·Ç²¶»ñ×éÌØÊâ½á¹¹
+        // æµ‹è¯•éæ•è·ç»„ç‰¹æ®Šç»“æ„
         p.println("~~~~~test 5~~~~~");
         patterns = new String[] {
-            "100(?=z)",   // Æ¥Åä100,ÒªÇóºóÃæ½ô¸úz
-            "100(?!z)",   // Æ¥Åä100,ÒªÇóºóÃæ²»ÄÜ½ô¸úz
-            "(?<=z)100",  // Æ¥Åä100,ÒªÇóÇ°Ãæ½ô¸úz
-            "(?<!z)100"   // Æ¥Åä100,ÒªÇóÇ°Ãæ²»ÄÜ½ô¸úz
+            "100(?=z)",   // åŒ¹é…100,è¦æ±‚åé¢ç´§è·Ÿz
+            "100(?!z)",   // åŒ¹é…100,è¦æ±‚åé¢ä¸èƒ½ç´§è·Ÿz
+            "(?<=z)100",  // åŒ¹é…100,è¦æ±‚å‰é¢ç´§è·Ÿz
+            "(?<!z)100"   // åŒ¹é…100,è¦æ±‚å‰é¢ä¸èƒ½ç´§è·Ÿz
         };
         text = "a100z100a";
         for(String s : patterns){
             matchAndPrint(s, text, false);
         }
         
-        // ²¶»ñ×é vs ·Ç²¶»ñ×é
-        // group(0) ±íÊ¾Õû¸öÆ¥Åä
+        // æ•è·ç»„ vs éæ•è·ç»„
+        // group(0) è¡¨ç¤ºæ•´ä¸ªåŒ¹é…
         p.println("~~~~~test 6~~~~~");
         patterns = new String[] {
-            "(z)100",         // ²¶»ñz(ÄÜ¹»Í¨¹ıĞòºÅË÷Òı)
-            "(?<z>z)100",     // ²¶»ñz(ÄÜ¹»Í¨¹ıĞòºÅ/Ãû³ÆË÷Òı)
-            "(?:z)100",       // ²»²¶»ñz
+            "(z)100",         // æ•è·z(èƒ½å¤Ÿé€šè¿‡åºå·ç´¢å¼•)
+            "(?<z>z)100",     // æ•è·z(èƒ½å¤Ÿé€šè¿‡åºå·/åç§°ç´¢å¼•)
+            "(?:z)100",       // ä¸æ•è·z
         };
         text = "a100z100a";
         for(String s : patterns){
             matchAndPrint(s, text, true);
         }
         
-        // Matcher ·½·¨
+        // Matcher æ–¹æ³•
         p.println("~~~~~test 6~~~~~");
         testMatcherMethod();
         
-        // Pattern ±ê¼Ç
+        // Pattern æ ‡è®°
         p.println("~~~~~test 7~~~~~");
         testPatternflag();
         
@@ -141,11 +141,11 @@ public class TestRegex{
          * entering the Spanish word for "equal" and see if they are considered equal by
          * the RE-matching engine.
          *
-         * ¨¦gal matches input ¨¦gal
-         * ¨¦gal matches input e?gal
-         * ¨¦gal does not match input e¨@gal
-         * ¨¦gal does not match input e'gal
-         * ¨¦gal does not match input e?gal
+         * Ã©gal matches input Ã©gal
+         * Ã©gal matches input e?gal
+         * Ã©gal does not match input eËŠgal
+         * Ã©gal does not match input e'gal
+         * Ã©gal does not match input e?gal
          */
         String pattStr = "\u00e9gal"; // gal
         String[] input = { 
@@ -157,7 +157,7 @@ public class TestRegex{
         };
         boolean[] t = {true, false};
         for(boolean tt : t){
-            // Ä¬ÈÏ flag = 0
+            // é»˜è®¤ flag = 0
             Pattern pattern = Pattern.compile(pattStr, tt ? Pattern.CANON_EQ : 0);
             for (int i = 0; i < input.length; i++) {
                 if (pattern.matcher(input[i]).matches()) {
@@ -172,7 +172,7 @@ public class TestRegex{
         pattStr = "^a"; 
         String inputStr = "aaa\naaa";
         for(boolean tt : t){
-            // Ä¬ÈÏ flag = 0
+            // é»˜è®¤ flag = 0
             Pattern pattern = Pattern.compile(pattStr, tt ? Pattern.MULTILINE : 0);
             Matcher m = pattern.matcher(inputStr);
             p.println(tt?"Pattern.MULTILINE":"NO FLAGS!");
@@ -198,13 +198,13 @@ public class TestRegex{
                 );
             } else { p.println("false"); }
         }
-        // ¿´¿ªÍ·Ò»¶ÎÄÜ·ñÆ¥ÅäÉÏ
+        // çœ‹å¼€å¤´ä¸€æ®µèƒ½å¦åŒ¹é…ä¸Š
         p.println("m.lookingAt():"); 
         if(m.lookingAt()){
             p.println(m.group() + ":start(" + m.start() 
                 + "),end(" + m.end() + ")");
         } else { p.println("false"); }
-        // ¿´Õû¸öÄÜ·ñÆ¥ÅäÉÏ
+        // çœ‹æ•´ä¸ªèƒ½å¦åŒ¹é…ä¸Š
         p.println("m.matches():");
         if(m.matches()){
             p.println(m.group() + ":start(" + m.start() 
@@ -217,7 +217,7 @@ public class TestRegex{
 
         Pattern pattern = Pattern.compile(regex); // static
         Matcher m = pattern.matcher(matcher);
-        // m.find(int start),´ÓµÚ¼¸¸ö×Ö·û¿ªÊ¼Æ¥Åä
+        // m.find(int start),ä»ç¬¬å‡ ä¸ªå­—ç¬¦å¼€å§‹åŒ¹é…
         while(m.find()){
             // start(),end()
             p.println(
@@ -225,17 +225,17 @@ public class TestRegex{
                 ":start(" + m.start() + 
                 "),end(" + m.end() + ")"
             );
-            // ÃüÃû×é²¶»ñ
+            // å‘½åç»„æ•è·
             try {
                 if(more) p.println(m.group("z"));
             } catch (Exception e) {
-                p.println("ÃüÃû²¶»ñÊ§°Ü!");
+                p.println("å‘½åæ•è·å¤±è´¥!");
             }
-            // ĞòºÅ²¶»ñ
+            // åºå·æ•è·
             try {
                 if(more) p.println(m.group(1));
             } catch (Exception e) {
-                p.println("ĞòºÅ²¶»ñÊ§°Ü!");
+                p.println("åºå·æ•è·å¤±è´¥!");
             }
         }
         p.println("~~~~~~"); // end
@@ -274,7 +274,7 @@ xxxxxxfoo:start(4),end(13)
 ~~~~~~
 ~~~~~test 6~~~~~
 z100:start(4),end(8)
-ÃüÃû²¶»ñÊ§°Ü!
+å‘½åæ•è·å¤±è´¥!
 z
 ~~~~~~
 z100:start(4),end(8)
@@ -282,8 +282,8 @@ z
 z
 ~~~~~~
 z100:start(4),end(8)
-ÃüÃû²¶»ñÊ§°Ü!
-ĞòºÅ²¶»ñÊ§°Ü!
+å‘½åæ•è·å¤±è´¥!
+åºå·æ•è·å¤±è´¥!
 ~~~~~~
 ~~~~~test 6~~~~~
 abc:start(0),end(3)
@@ -293,16 +293,16 @@ abc:start(0),end(3)
 m.matches():
 false
 ~~~~~test 7~~~~~
-¨¦gal matches input ¨¦gal
-¨¦gal matches input e?gal
-¨¦gal does not match input e¨@gal
-¨¦gal does not match input e'gal
-¨¦gal does not match input e?gal
-¨¦gal matches input ¨¦gal
-¨¦gal does not match input e?gal
-¨¦gal does not match input e¨@gal
-¨¦gal does not match input e'gal
-¨¦gal does not match input e?gal
+Ã©gal matches input Ã©gal
+Ã©gal matches input e?gal
+Ã©gal does not match input eËŠgal
+Ã©gal does not match input e'gal
+Ã©gal does not match input e?gal
+Ã©gal matches input Ã©gal
+Ã©gal does not match input e?gal
+Ã©gal does not match input eËŠgal
+Ã©gal does not match input e'gal
+Ã©gal does not match input e?gal
 ~~~~~~~~~~
 Pattern.MULTILINE
 a:start(0),end(1)

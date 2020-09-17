@@ -1,7 +1,7 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë(¼òµ¥´¦ÀíÒì³£)
- * ÒÀÀµÓÚ InputSample.java
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç (ç®€å•å¤„ç†å¼‚å¸¸)
+ * ä¾èµ–äº InputSample.java
  */
 
 import java.io.*;

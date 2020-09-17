@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 class Base {
@@ -13,7 +13,7 @@ class Derived extends Base {
     @Override
     public Derived test(){ return new Derived(); }
     // @Override
-    // ºÍ»ùÀàÊÇÁ½¸ö·½·¨,Ö»ÊÇÖØÔØ(Overload)
+    // å’ŒåŸºç±»æ˜¯ä¸¤ä¸ªæ–¹æ³•,åªæ˜¯é‡è½½(Overload)
     public void test2(Derived d){ 
         System.out.println("Derived:test2:Derived");
     }
@@ -30,7 +30,7 @@ class Derived2 extends Base2<Base> {
         System.out.println("Derived2:test2:Base");
     }
     // @Override
-    // ÖØÔØ
+    // é‡è½½
     public void test2(Derived b){ 
         System.out.println("Derived2:test2:Derived");
     }
@@ -51,13 +51,13 @@ class Derived3 extends SelfBounded<Derived3> {
 
 public class TestBaseDerived {
     public static void main(String...args) {
-        // 1. Õı³£µÄ
+        // 1. æ­£å¸¸çš„
         new Derived().test2(new Base());
         new Derived().test2(new Derived());
-        // 2. ·ºĞÍ
+        // 2. æ³›å‹
         new Derived2().test2(new Base());
         new Derived2().test2(new Derived());
-        // 3. ×ÔÏŞ¶¨
+        // 3. è‡ªé™å®š
         new Derived3().test2(new Derived3());
     }
 }

@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.*;
@@ -34,11 +34,11 @@ public enum ConstantSpecificMethod {
         }
     }
     // public void f1(ConstantSpecificMethod.NOTHING instance) {}
-    // ´íÎó: ÕÒ²»µ½·ûºÅ
+    // é”™è¯¯: æ‰¾ä¸åˆ°ç¬¦å·
     // public void f1(ConstantSpecificMethod.NOTHING instance) {}
     //                                      ^
-    // ·ûºÅ:   Àà NOTHING
-    // Î»ÖÃ: Àà ConstantSpecificMethod
+    // ç¬¦å·:   ç±» NOTHING
+    // ä½ç½®: ç±» ConstantSpecificMethod
 }
 /* Output
 DATE_TIME : 2020-8-12

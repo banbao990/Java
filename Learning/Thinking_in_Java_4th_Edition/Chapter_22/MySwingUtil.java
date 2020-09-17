@@ -9,28 +9,28 @@ import javax.swing.JFrame;
 public class MySwingUtil {
     // https://blog.csdn.net/weixin_30617737/article/details/95740965
     public static void setSize(JFrame frame, int width, int height) {
-        // Ò»¶¨ÒªÔÚJFrameÏÔÊ¾Ö®Ç°µ÷ÓÃ
+        // ä¸€å®šè¦åœ¨JFrameæ˜¾ç¤ºä¹‹å‰è°ƒç”¨
         frame.pack();
-        // ÔÚÄ¬ÈÏµÄ setResizable(true); Çé¿öÏÂ,titleDefaultHeight = 27,
-        // µ«Èç¹û setResizable(false); titleDefaultHeight = 25
-        // Ä¬ÈÏ¿ª·¢½×¶ÎÊ¹ÓÃwindows ¾­µäÖ÷Ìâ,±êÌâÀ¸¸ß¶È= 27
+        // åœ¨é»˜è®¤çš„ setResizable(true); æƒ…å†µä¸‹,titleDefaultHeight = 27,
+        // ä½†å¦‚æžœ setResizable(false); titleDefaultHeight = 25
+        // é»˜è®¤å¼€å‘é˜¶æ®µä½¿ç”¨windows ç»å…¸ä¸»é¢˜,æ ‡é¢˜æ é«˜åº¦= 27
         int titleDefaultHeight = frame.isResizable() ? 27 : 25; 
         int containerHeight = frame.getContentPane().getHeight();
-        // windows ¾­µäÖ÷Ìâ»òxpÖ÷ÌâÏÂ = 1
+        // windows ç»å…¸ä¸»é¢˜æˆ–xpä¸»é¢˜ä¸‹ = 1
         // System.out.println("containerHeight:" + containerHeight); 
-        // È¡µÃµÄ¸ß¶ÈºÍcontainerµÄ¸ß¶ÈÊÇÒ»ÑùµÄ
+        // å–å¾—çš„é«˜åº¦å’Œcontainerçš„é«˜åº¦æ˜¯ä¸€æ ·çš„
         // int rootPaneHeight = frame.getRootPane().getHeight(); 
 
         int frameHeight = frame.getHeight();
-        // windows¾­µäÖ÷ÌâÏÂ= 28, windows xp Ö÷ÌâÏÂ = 33
+        // windowsç»å…¸ä¸»é¢˜ä¸‹= 28, windows xp ä¸»é¢˜ä¸‹ = 33
         // System.out.println("frameHeight:" + frameHeight); 
 
-        // ÕâÀï¾Í¿ÉÒÔµÃµ½µ±Ç°±êÌâÀ¸µÄÊµ¼Ê¸ß¶È
+        // è¿™é‡Œå°±å¯ä»¥å¾—åˆ°å½“å‰æ ‡é¢˜æ çš„å®žé™…é«˜åº¦
         int titleHeight = frameHeight - containerHeight; 
         if (titleHeight > titleDefaultHeight) {
-            //µÃµ½µ±Ç°Ê¹ÓÃµÄÖ÷Ìâ,±êÌâÀ¸ - ¾­µäÖ÷ÌâÏÂµÄ±êÌâÀ¸¸ß¶È = ²îÖµ
+            //å¾—åˆ°å½“å‰ä½¿ç”¨çš„ä¸»é¢˜,æ ‡é¢˜æ  - ç»å…¸ä¸»é¢˜ä¸‹çš„æ ‡é¢˜æ é«˜åº¦ = å·®å€¼
             int h = titleHeight - titleDefaultHeight; 
-            //×îÖÕÈ·¶¨´°¿ÚµÄ¸ß¶È
+            //æœ€ç»ˆç¡®å®šçª—å£çš„é«˜åº¦
             frame.setSize(width, height + h); 
         } else {
             frame.setSize(width, height);
@@ -41,7 +41,7 @@ public class MySwingUtil {
         final JFrame f, final int width, final int height) {
         SwingUtilities.invokeLater(
         () -> {
-            f.setLocationRelativeTo(null); // ÉèÖÃÎª´°Ìå¾ÓÖÐ
+            f.setLocationRelativeTo(null); // è®¾ç½®ä¸ºçª—ä½“å±…ä¸­
             f.setTitle(f.getClass().getSimpleName());
             f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             if((width > 0) && (height > 0)) {

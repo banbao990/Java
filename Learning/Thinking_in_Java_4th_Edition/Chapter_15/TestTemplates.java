@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 import java.util.Arrays;
 class Templates<T> {
@@ -8,7 +8,7 @@ class Templates<T> {
     public Templates(T obj) { this.obj = obj; }
     public void test() { 
         // obj.f(); 
-        // ´íÎó: ÕÒ²»µ½·ûºÅ
+        // é”™è¯¯: æ‰¾ä¸åˆ°ç¬¦å·
     }
 }
 
@@ -47,7 +47,7 @@ public class TestTemplates {
         // HasF
         Templates3 hasF3 = new Templates3(new HasF());
         hasF3.test();
-        // ²âÊÔ
+        // æµ‹è¯•
         System.out.println(Arrays.toString(
             hasF.getClass().getTypeParameters()));
         System.out.println(Arrays.toString(

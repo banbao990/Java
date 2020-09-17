@@ -21,17 +21,17 @@ public class VarArgs {
     }
 }
 /* Compile(javac VarArgs.java)
-×¢: VarArgs.javaÊ¹ÓÃÁËÎ´¾­¼ì²é»ò²»°²È«µÄ²Ù×÷¡£
-×¢: ÓĞ¹ØÏêÏ¸ĞÅÏ¢, ÇëÊ¹ÓÃ -Xlint:unchecked ÖØĞÂ±àÒë¡£
+æ³¨: VarArgs.javaä½¿ç”¨äº†æœªç»æ£€æŸ¥æˆ–ä¸å®‰å…¨çš„æ“ä½œã€‚
+æ³¨: æœ‰å…³è¯¦ç»†ä¿¡æ¯, è¯·ä½¿ç”¨ -Xlint:unchecked é‡æ–°ç¼–è¯‘ã€‚
 */
 
 /* Compile(>javac -Xlint:unchecked VarArgs.java)
-VarArgs.java:8: ¾¯¸æ: [unchecked] ²ÎÊı»¯ vararg ÀàĞÍTµÄ¶Ñ¿ÉÄÜÒÑÊÜÎÛÈ¾
+VarArgs.java:8: è­¦å‘Š: [unchecked] å‚æ•°åŒ– vararg ç±»å‹Tçš„å †å¯èƒ½å·²å—æ±¡æŸ“
     public static <T> List makeList(T...args) {
                                         ^
-  ÆäÖĞ, TÊÇÀàĞÍ±äÁ¿:
-    TÀ©Õ¹ÒÑÔÚ·½·¨ <T>makeList(T...)ÖĞÉùÃ÷µÄObject
-1 ¸ö¾¯¸æ
+  å…¶ä¸­, Tæ˜¯ç±»å‹å˜é‡:
+    Tæ‰©å±•å·²åœ¨æ–¹æ³• <T>makeList(T...)ä¸­å£°æ˜çš„Object
+1 ä¸ªè­¦å‘Š
 */
 
 /* Output

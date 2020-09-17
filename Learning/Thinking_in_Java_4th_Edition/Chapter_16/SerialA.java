@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * ¶àÎ¬Êý×é
+ * å¤šç»´æ•°ç»„
  */
 
 public class SerialA {

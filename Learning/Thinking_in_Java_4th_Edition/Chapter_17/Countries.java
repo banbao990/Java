@@ -1,4 +1,4 @@
-// Ê¾Àı´úÂë
+// ç¤ºä¾‹ä»£ç 
 //: net/mindview/util/Countries.java
 // "Flyweight" Maps and Lists of sample data.
 

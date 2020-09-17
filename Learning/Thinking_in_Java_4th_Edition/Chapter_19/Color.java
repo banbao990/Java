@@ -1,24 +1,24 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 public interface Color {
     public enum Red implements Color {
         RED,
         PINK,
-        MAROON, // ÀõÉ«
-        SCARLET, // ç³ºì, ĞÉºì
-        ROSYBROWN, // ºìºÖÉ«
+        MAROON, // æ —è‰²
+        SCARLET, // ç»¯çº¢, çŒ©çº¢
+        ROSYBROWN, // çº¢è¤è‰²
     }
     public enum Blue implements Color {
         BLUE,
         SKYBLUE,
-        SLATEBLUE, // Ê¯À¶É«
+        SLATEBLUE, // çŸ³è“è‰²
     }
     public enum Green implements Color {
         GREEN,
-        SPRINGGREEN, // ´ºÂÌÉ«
+        SPRINGGREEN, // æ˜¥ç»¿è‰²
         SEAGREEN,
     }
     public static void main(String...args) {

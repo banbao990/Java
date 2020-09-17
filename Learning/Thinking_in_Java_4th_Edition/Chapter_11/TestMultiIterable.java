@@ -39,7 +39,7 @@ public class TestMultiIterable implements Iterable<Integer>{
         };
     }
     
-    // ÁíÍâ·µ»ØÒ»¸ö Iterable ÊµÏÖ·´Ïò foreach
+    // å¦å¤–è¿”å›ä¸€ä¸ª Iterable å®ç°åå‘ foreach
     public Iterable<Integer> reverse(){
         return new Iterable<Integer>() {
             @Override

@@ -1,11 +1,11 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.lang.reflect.*;
 import java.util.*;
-import net.mindview.util.*; // ĞèÒª½« `ExampleCode` ¼Óµ½ cp ÖĞ
+import net.mindview.util.*; // éœ€è¦å°† `ExampleCode` åŠ åˆ° cp ä¸­
 
 enum Explore { HERE, THERE }
 

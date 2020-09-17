@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.nio.*;
@@ -21,7 +21,7 @@ public class ChannelCopy {
         copy2(src, dst);
     }
     
-    // Ö±½ÓÁ¬½ÓÁ½¸öÍ¨µÀ
+    // ç›´æ¥è¿æ¥ä¸¤ä¸ªé€šé“
     public static void copy2 (String src, String dst) throws Exception {
         FileChannel
             in = new FileInputStream(src).getChannel(),
@@ -30,7 +30,7 @@ public class ChannelCopy {
         // out.transferFrom(in, 0, in.size());
     }
 
-    // Á½¸öÍ¨µÀ¶ÀÁ¢
+    // ä¸¤ä¸ªé€šé“ç‹¬ç«‹
     public static void copy (String src, String dst) throws Exception {
         FileChannel
             in = new FileInputStream(src).getChannel(),

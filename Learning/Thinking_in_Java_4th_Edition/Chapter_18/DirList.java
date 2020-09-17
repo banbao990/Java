@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç 
  */
 
 import java.util.Arrays;
@@ -12,9 +12,9 @@ import java.util.regex.Matcher;
 public class DirList {
        
     public static void main(String...args) {
-        // ´«Èëµ±Ç°×÷Îª»ùÄ¿Â¼
+        // ä¼ å…¥å½“å‰ä½œä¸ºåŸºç›®å½•
         File path = new File(".");
-        // ËùÓĞÎÄ¼ş
+        // æ‰€æœ‰æ–‡ä»¶
         System.out.println("All Files:");
         String[] list = path.list();
         print(list);
@@ -22,7 +22,7 @@ public class DirList {
         // FilenameFilter
         String needed = ".*\\.java";
         System.out.println(needed + ":");
-        // ÄäÃûÀà
+        // åŒ¿åç±»
         list = path.list(
             new FilenameFilter() {
                 private Pattern regex = Pattern.compile(needed);

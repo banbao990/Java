@@ -1,6 +1,6 @@
 /**
  * @author banbao
- * @comment ĞŞ¸Ä×ÔÊ¾Àı´úÂë(¿ÉÒÔ×÷ÎªÒ»¸ö¹¤¾ß)
+ * @comment ä¿®æ”¹è‡ªç¤ºä¾‹ä»£ç (å¯ä»¥ä½œä¸ºä¸€ä¸ªå·¥å…·)
  */
 import java.util.Random;
 public class Enums {
