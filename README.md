@@ -103,3 +103,9 @@ java Dump FileName # 默认输出到标准输出
 ## 6. [Kit](./Kit/README.md)
 
 + 一些不便分类的小工具
+
+
+
+## 7. [Application](./Application/README.md)
+
++ [半自动虾米音乐专辑下载器](Application/xiamiAlbumCrawler2/README.md)
