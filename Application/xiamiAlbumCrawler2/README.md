@@ -28,4 +28,5 @@
 
 ## 3. Release
 
-+ [zip-link](https://github.com/banbao990/Java/Application/xiamiAlbumCrawler2/release/XiamiAlbumCrawler.v.1.0.zip)
++ [zip-link](https://github.com/banbao990/Java/blob/master/Application/xiamiAlbumCrawler2/release/XiamiAlbumCrawler.v.1.0.zip)
+
