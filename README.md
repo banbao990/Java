@@ -106,6 +106,6 @@ java Dump FileName # 默认输出到标准输出
 
 
 
-## 7. [Application](./Application/README.md)
+## 7. [Application](./Application/)
 
 + [半自动虾米音乐专辑下载器](Application/xiamiAlbumCrawler2/README.md)
