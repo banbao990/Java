@@ -1,0 +1,8 @@
+.settings/*
+download/*
+bin/*
+ImageWithDetails
+.classpath
+.project
+run.bat
+*.jar
