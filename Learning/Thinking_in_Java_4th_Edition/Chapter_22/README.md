@@ -1406,4 +1406,4 @@ addPaintListener(new PaintListener() {
 
 
 
-[JTabbedPane](../Example_Code/swt/JTabbedPane.java)
+[JTabbedPane](../Example_Code/swt/TabbedPane.java)
